@@ -59,12 +59,20 @@
 				9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */,
 				9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */,
 				9FD9B2FE27DA67050077EA98 /* ViewController.swift */,
+				9FD9B30E27DA67290077EA98 /* Screens */,
 				9FD9B30027DA67050077EA98 /* Main.storyboard */,
 				9FD9B30327DA67080077EA98 /* Assets.xcassets */,
 				9FD9B30527DA67080077EA98 /* LaunchScreen.storyboard */,
 				9FD9B30827DA67080077EA98 /* Info.plist */,
 			);
 			path = currency;
+			sourceTree = "<group>";
+		};
+		9FD9B30E27DA67290077EA98 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
