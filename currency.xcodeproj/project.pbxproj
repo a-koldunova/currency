@@ -36,6 +36,10 @@
 		9FD9B34127DB935F0077EA98 /* BlackMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */; };
 		9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */; };
 		9FD9B34527DB93920077EA98 /* BlackMarketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34427DB93920077EA98 /* BlackMarketPresenter.swift */; };
+		9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */; };
+		9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */; };
+		9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34A27DBCAF20077EA98 /* Constant.swift */; };
+		9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34D27DBCD8E0077EA98 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BlackMarket.storyboard; sourceTree = "<group>"; };
 		9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketViewController.swift; sourceTree = "<group>"; };
 		9FD9B34427DB93920077EA98 /* BlackMarketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketPresenter.swift; sourceTree = "<group>"; };
+		9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlackMarketView.xib; sourceTree = "<group>"; };
+		9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketView.swift; sourceTree = "<group>"; };
+		9FD9B34A27DBCAF20077EA98 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9FD9B34D27DBCD8E0077EA98 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 				9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */,
 				9FD9B2FE27DA67050077EA98 /* ViewController.swift */,
 				9FD9B31527DB81520077EA98 /* Resourses */,
+				9FD9B34C27DBCD700077EA98 /* Extension */,
 				9FD9B31227DB7E550077EA98 /* Infrastracture */,
 				9FD9B30E27DA67290077EA98 /* Screens */,
 				9FD9B30027DA67050077EA98 /* Main.storyboard */,
@@ -160,6 +169,7 @@
 		9FD9B31527DB81520077EA98 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				9FD9B34A27DBCAF20077EA98 /* Constant.swift */,
 				9FD9B31627DB81590077EA98 /* Font */,
 			);
 			path = Resourses;
@@ -216,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */,
+				9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,8 +235,17 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */,
+				9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9FD9B34C27DBCD700077EA98 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34D27DBCD8E0077EA98 /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		EC6A41FBA0305284FAA6D6BF /* Pods */ = {
@@ -312,6 +332,7 @@
 				9FD9B32427DB81800077EA98 /* Ubuntu-Italic.ttf in Resources */,
 				9FD9B32327DB81800077EA98 /* Ubuntu-Bold.ttf in Resources */,
 				9FD9B32027DB81800077EA98 /* Ubuntu-Light.ttf in Resources */,
+				9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */,
 				9FD9B32627DB81800077EA98 /* Ubuntu-BoldItalic.ttf in Resources */,
 				9FD9B30427DA67080077EA98 /* Assets.xcassets in Resources */,
 				9FD9B32527DB81800077EA98 /* Ubuntu-Regular.ttf in Resources */,
@@ -371,12 +392,15 @@
 			files = (
 				9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */,
 				9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */,
+				9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */,
 				9FD9B2FB27DA67050077EA98 /* AppDelegate.swift in Sources */,
 				9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */,
 				9FD9B31427DB7EAA0077EA98 /* MainViewController.swift in Sources */,
 				9FD9B34527DB93920077EA98 /* BlackMarketPresenter.swift in Sources */,
 				9FD9B33C27DB86180077EA98 /* Router.swift in Sources */,
+				9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */,
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
+				9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

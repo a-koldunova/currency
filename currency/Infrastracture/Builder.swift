@@ -1,11 +1,26 @@
 import UIKit
 
 protocol BuilderProtocol {
-//    static func resolveBlackMarcket()
+    init()
+    func resolveBlackMarketViewController() -> BlackMarketViewController
 }
 
 class Builder: BuilderProtocol {
 
-    let shared : Builder = Builder()
+    static let shared : Builder = Builder()
     
+    required init() {
+        
+    }
+    
+    func resolveBlackMarketViewController() -> BlackMarketViewController {
+        let vc = BlackMarketViewController.instantiateMyViewController(name: .blackMarket)
+        vc.presenter = BlackMarketPresenter(view: vc)
+        return vc
+    }
+    
+}
+
+enum ViewControllerKeys : String {
+    case blackMarket = "BlackMarket"
 }
