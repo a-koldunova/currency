@@ -9,13 +9,46 @@ import UIKit
 
 class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol>, BlackMarketProtocol {
     
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var stackView: UIStackView! {
+        didSet {
+            stackView.layer.cornerRadius = 16
+            stackView.setViewShadow()
+        }
+    }
+    @IBOutlet weak var rubleView: BlackMarketView! {
+        didSet {
+            rubleView.configure(sellText: "30.00", buyText: "30.00", image: .rubleImage)
+            rubleView.separator.isHidden = true 
+        }
+    }
+    @IBOutlet weak var euroView: BlackMarketView! {
+        didSet {
+            euroView.configure(sellText: "30.00", buyText: "30.00", image: .euroImage)
+        }
+    }
+    @IBOutlet weak var dollarView: BlackMarketView! {
+        didSet {
+            dollarView.configure(sellText: "30.00", buyText: "30.00", image: .dollarImage)
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationItem.title = "Черный рынок"
+        initRefreshControl()
+        refreshControl!.addTarget(self, action: #selector(self.updateScrollView), for: .valueChanged)
+        scrollView.addSubview(refreshControl!)
     }
     
+    
+    @objc func updateScrollView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.refreshControl!.endRefreshing()
+        }
+    }
 
     /*
     // MARK: - Navigation
