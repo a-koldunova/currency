@@ -1,0 +1,22 @@
+PODS:
+  - lottie-ios (3.3.0)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+
+DEPENDENCIES:
+  - lottie-ios
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+
+PODFILE CHECKSUM: b6717504434f63bb1c5df0f3ede157947a768db9
+
+COCOAPODS: 1.11.2

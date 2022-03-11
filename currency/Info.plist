@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Ubuntu-Bold</string>
+		<string>Ubuntu-BoldItalic</string>
+		<string>Ubuntu-Italic</string>
+		<string>Ubuntu-Light</string>
+		<string>Ubuntu-LightItalic</string>
+		<string>Ubuntu-Medium</string>
+		<string>Ubuntu-MediumItalic</string>
+		<string>Ubuntu-Regular</string>
+		<string>Cabin-Medium</string>
+		<string>Cabin-SemiBoldItalic</string>
+		<string>Cabin-SemiBold</string>
+		<string>Cabin-MediumItalic</string>
+		<string>Cabin-BoldItalic</string>
+		<string>Cabin-Regular</string>
+		<string>Cabin-Bold</string>
+		<string>Cabin-Italic</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
