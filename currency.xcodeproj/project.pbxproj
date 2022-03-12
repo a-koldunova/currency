@@ -49,6 +49,10 @@
 		D19C56C727DBE05900D30904 /* NSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C627DBE05900D30904 /* NSData+zlib.m */; };
 		D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C827DBE4B000D30904 /* BanksModel.swift */; };
 		D19C56CB27DBFFD200D30904 /* QueryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56CA27DBFFD100D30904 /* QueryHelper.swift */; };
+		9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */; };
+		9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */; };
+		9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34A27DBCAF20077EA98 /* Constant.swift */; };
+		9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34D27DBCD8E0077EA98 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,10 @@
 		D19C56C627DBE05900D30904 /* NSData+zlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+zlib.m"; sourceTree = "<group>"; };
 		D19C56C827DBE4B000D30904 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		D19C56CA27DBFFD100D30904 /* QueryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHelper.swift; sourceTree = "<group>"; };
+		9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlackMarketView.xib; sourceTree = "<group>"; };
+		9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketView.swift; sourceTree = "<group>"; };
+		9FD9B34A27DBCAF20077EA98 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9FD9B34D27DBCD8E0077EA98 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,8 @@
 				9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */,
 				9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */,
 				9FD9B2FE27DA67050077EA98 /* ViewController.swift */,
+				9FD9B31527DB81520077EA98 /* Resourses */,
+				9FD9B34C27DBCD700077EA98 /* Extension */,
 				9FD9B31227DB7E550077EA98 /* Infrastracture */,
 				D19C56B527DBD6C000D30904 /* API */,
 				9FD9B30E27DA67290077EA98 /* Screens */,
@@ -193,6 +203,7 @@
 		9FD9B31527DB81520077EA98 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				9FD9B34A27DBCAF20077EA98 /* Constant.swift */,
 				9FD9B31627DB81590077EA98 /* Font */,
 			);
 			path = Resourses;
@@ -249,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */,
+				9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */,
+				9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -341,6 +354,14 @@
 				D19C56C427DBE05600D30904 /* currency-Bridging-Header.h */,
 			);
 			path = Crypto;
+            sourceTree = "<group>";
+        };
+		9FD9B34C27DBCD700077EA98 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34D27DBCD8E0077EA98 /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		EC6A41FBA0305284FAA6D6BF /* Pods */ = {
@@ -429,6 +450,7 @@
 				9FD9B32427DB81800077EA98 /* Ubuntu-Italic.ttf in Resources */,
 				9FD9B32327DB81800077EA98 /* Ubuntu-Bold.ttf in Resources */,
 				9FD9B32027DB81800077EA98 /* Ubuntu-Light.ttf in Resources */,
+				9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */,
 				9FD9B32627DB81800077EA98 /* Ubuntu-BoldItalic.ttf in Resources */,
 				D19C56A327DBC27700D30904 /* rcurra.db in Resources */,
 				9FD9B30427DA67080077EA98 /* Assets.xcassets in Resources */,
@@ -490,6 +512,7 @@
 				9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */,
 				9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */,
 				D19C56BD27DBD95C00D30904 /* BanksAPI.swift in Sources */,
+				9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */,
 				9FD9B2FB27DA67050077EA98 /* AppDelegate.swift in Sources */,
 				9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */,
 				D19C56A627DBC37200D30904 /* DBManager.swift in Sources */,
@@ -506,6 +529,9 @@
 				D19C56A827DBC4CB00D30904 /* FileUtils.swift in Sources */,
 				D19C56B227DBD11300D30904 /* BanksViewController.swift in Sources */,
 				D19C56B027DBCD0000D30904 /* BanksTableViewCell.swift in Sources */,
+				9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */,
+				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
+				9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
