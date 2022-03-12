@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cabin-Regular.ttf">
+            <string>Cabin-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Banks View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Banks" id="Y6W-OH-hqX" customClass="BanksViewController" customModule="currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uxx-sr-lH0">
+                                <rect key="frame" x="20" y="52" width="374" height="32"/>
+                                <segments>
+                                    <segment title="USD"/>
+                                    <segment title="EUR"/>
+                                    <segment title="RUB"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.9137254901960784" green="1" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeBankSegmentControl:" destination="Y6W-OH-hqX" eventType="valueChanged" id="1If-1g-fwX"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LLR-l6-mQ2">
+                                <rect key="frame" x="0.0" y="91" width="414" height="805"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="banks" rowHeight="93" id="hGc-7u-9vh" customClass="BanksTableViewCell" customModule="currency" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hGc-7u-9vh" id="aua-RO-8UH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGZ-eU-tVN">
+                                                    <rect key="frame" x="32" y="7" width="350" height="79"/>
+                                                    <color key="backgroundColor" red="0.98039215686274506" green="1" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QdC-VS-rWn">
+                                                    <rect key="frame" x="40" y="26.5" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="QdC-VS-rWn" secondAttribute="height" multiplier="1:1" id="IZg-bY-QVU"/>
+                                                        <constraint firstAttribute="width" constant="40" id="ZgL-2U-DDH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPV-pX-Jhn">
+                                                    <rect key="frame" x="96" y="36.5" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                    <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-1L-CUi">
+                                                    <rect key="frame" x="321" y="15" width="45" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                    <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-vr-0Sg">
+                                                    <rect key="frame" x="321" y="58" width="45" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                    <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="oGZ-eU-tVN" firstAttribute="leading" secondItem="aua-RO-8UH" secondAttribute="leadingMargin" constant="12" id="BrW-M5-wvl"/>
+                                                <constraint firstItem="VPV-pX-Jhn" firstAttribute="centerY" secondItem="aua-RO-8UH" secondAttribute="centerY" id="DMt-ad-m7V"/>
+                                                <constraint firstItem="oGZ-eU-tVN" firstAttribute="top" secondItem="aua-RO-8UH" secondAttribute="top" constant="7" id="GXW-Tb-w8T"/>
+                                                <constraint firstItem="bnh-1L-CUi" firstAttribute="top" secondItem="oGZ-eU-tVN" secondAttribute="top" constant="8" id="Jgr-zd-Smc"/>
+                                                <constraint firstItem="oGZ-eU-tVN" firstAttribute="trailing" secondItem="kYZ-vr-0Sg" secondAttribute="trailing" constant="16" id="NvF-lU-RYc"/>
+                                                <constraint firstItem="QdC-VS-rWn" firstAttribute="centerY" secondItem="aua-RO-8UH" secondAttribute="centerY" id="Qcx-R3-Xnl"/>
+                                                <constraint firstItem="oGZ-eU-tVN" firstAttribute="trailing" secondItem="bnh-1L-CUi" secondAttribute="trailing" constant="16" id="Vhq-uB-dfG"/>
+                                                <constraint firstItem="QdC-VS-rWn" firstAttribute="leading" secondItem="oGZ-eU-tVN" secondAttribute="leading" constant="8" id="dcW-lc-Lf3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oGZ-eU-tVN" secondAttribute="trailing" constant="12" id="kLe-cg-xhj"/>
+                                                <constraint firstItem="VPV-pX-Jhn" firstAttribute="leading" secondItem="QdC-VS-rWn" secondAttribute="trailing" constant="16" id="piC-3Q-UbV"/>
+                                                <constraint firstAttribute="bottom" secondItem="oGZ-eU-tVN" secondAttribute="bottom" constant="7" id="pmu-eY-fjV"/>
+                                                <constraint firstItem="oGZ-eU-tVN" firstAttribute="bottom" secondItem="kYZ-vr-0Sg" secondAttribute="bottom" constant="8" id="qL0-HO-x8b"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="bankImageView" destination="QdC-VS-rWn" id="PBF-gD-ryP"/>
+                                            <outlet property="bankLabel" destination="VPV-pX-Jhn" id="u1Z-tt-PfI"/>
+                                            <outlet property="bankView" destination="oGZ-eU-tVN" id="30T-65-fTj"/>
+                                            <outlet property="buyLabel" destination="bnh-1L-CUi" id="tZn-72-Upp"/>
+                                            <outlet property="sellLabel" destination="kYZ-vr-0Sg" id="h5d-eN-wdE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Uxx-sr-lH0" secondAttribute="trailing" constant="20" id="2eg-Wv-FQ4"/>
+                            <constraint firstItem="Uxx-sr-lH0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="2j5-5d-E4t"/>
+                            <constraint firstItem="Uxx-sr-lH0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8yg-G2-nca"/>
+                            <constraint firstItem="LLR-l6-mQ2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="KAT-zh-uCC"/>
+                            <constraint firstItem="LLR-l6-mQ2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wvn-PN-X4j"/>
+                            <constraint firstItem="LLR-l6-mQ2" firstAttribute="top" secondItem="Uxx-sr-lH0" secondAttribute="bottom" constant="8" symbolic="YES" id="oyy-qi-6QX"/>
+                            <constraint firstAttribute="bottom" secondItem="LLR-l6-mQ2" secondAttribute="bottom" id="zVr-zY-SP2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="banksSegmentControl" destination="Uxx-sr-lH0" id="vgQ-Ld-zle"/>
+                        <outlet property="banksTableView" destination="LLR-l6-mQ2" id="X9f-xi-NAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
