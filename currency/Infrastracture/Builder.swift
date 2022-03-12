@@ -1,19 +1,27 @@
 import UIKit
 
 protocol BuilderProtocol {
+
     init()
-    func resolveBlackMarketViewController() -> BlackMarketViewController
+    static func resolveBanksViewController()->BanksViewController
+    static func resolveBlackMarketViewController() -> BlackMarketViewController
 }
 
 class Builder: BuilderProtocol {
-
-    static let shared : Builder = Builder()
     
     required init() {
         
     }
     
-    func resolveBlackMarketViewController() -> BlackMarketViewController {
+    static func resolveBanksViewController()->BanksViewController {
+        let vc = BanksViewController.instantiateMyViewController(name: .banks)
+        vc.presenter = BanksPresenter(view: vc, banksAPI: BankAPI())
+        return vc
+    }
+
+    
+    
+    static func resolveBlackMarketViewController() -> BlackMarketViewController {
         let vc = BlackMarketViewController.instantiateMyViewController(name: .blackMarket)
         vc.presenter = BlackMarketPresenter(view: vc)
         return vc
@@ -23,4 +31,6 @@ class Builder: BuilderProtocol {
 
 enum ViewControllerKeys : String {
     case blackMarket = "BlackMarket"
+    case banks = "Banks"
 }
+    
