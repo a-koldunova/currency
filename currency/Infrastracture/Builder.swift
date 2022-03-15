@@ -5,6 +5,8 @@ protocol BuilderProtocol {
     init()
     static func resolveBanksViewController()->BanksViewController
     static func resolveBlackMarketViewController() -> BlackMarketViewController
+    static func resolveNationalBankViewController() -> NationalBankViewController
+    static func resolveBankMapViewController() -> BankMapViewController
 }
 
 class Builder: BuilderProtocol {
@@ -19,12 +21,23 @@ class Builder: BuilderProtocol {
         return vc
     }
 
-    
-    
+
     static func resolveBlackMarketViewController() -> BlackMarketViewController {
         let vc = BlackMarketViewController.instantiateMyViewController(name: .blackMarket)
         vc.presenter = BlackMarketPresenter(view: vc)
         return vc
+    }
+    
+    static func resolveNationalBankViewController() -> NationalBankViewController {
+        let vc = NationalBankViewController.instantiateMyViewController(name: .nationalBank)
+        vc.presenter = NationalBankPresenter(view: vc, nationalBankAPI: NationalBankAPI())
+        return vc
+    }
+    
+    static func resolveBankMapViewController() -> BankMapViewController {
+        let vc = BankMapViewController.instantiateMyViewController(name: .bankMap)
+        vc.presenter = BankMapPresenter(view: vc, bankNearMeAPI: BankMapAPI())
+        return vc 
     }
     
 }
@@ -32,5 +45,7 @@ class Builder: BuilderProtocol {
 enum ViewControllerKeys : String {
     case blackMarket = "BlackMarket"
     case banks = "Banks"
+    case nationalBank = "NationalBank"
+    case bankMap = "BankMap"
 }
     

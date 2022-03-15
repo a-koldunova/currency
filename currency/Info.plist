@@ -4,6 +4,10 @@
 <dict>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>MKDirectionsApplicationSupportedModes</key>
+	<array>
+		<string>MKDirectionsModePlane</string>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ubuntu-Bold</string>
