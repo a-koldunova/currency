@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Cabin-Bold.ttf">
+            <string>Cabin-Bold</string>
+        </array>
         <array key="Cabin-Regular.ttf">
             <string>Cabin-Regular</string>
         </array>
@@ -27,61 +30,80 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcv-Kg-riG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="837.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dWX-6Y-7ck">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="beO-9X-ug8">
                                                 <rect key="frame" x="48" y="41" width="318" height="272"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3R-kC-6Ov">
-                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="68"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLM-qJ-pmK">
-                                                                <rect key="frame" x="214.5" y="24.5" width="64" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                                                <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продажа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ret-0o-V4E">
-                                                                <rect key="frame" x="37" y="24.5" width="69.5" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                                                <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-fA-3nu">
-                                                                <rect key="frame" x="0.0" y="67" width="318" height="1"/>
-                                                                <color key="backgroundColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="1" id="Zi3-t0-Ex3"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="eLM-qJ-pmK" firstAttribute="centerY" secondItem="G3R-kC-6Ov" secondAttribute="centerY" id="5rE-7t-swK"/>
-                                                            <constraint firstItem="eLM-qJ-pmK" firstAttribute="centerX" secondItem="G3R-kC-6Ov" secondAttribute="centerX" multiplier="1.55" id="77o-CN-G7e"/>
-                                                            <constraint firstItem="DFo-fA-3nu" firstAttribute="leading" secondItem="G3R-kC-6Ov" secondAttribute="leading" id="EQl-x9-CpX"/>
-                                                            <constraint firstAttribute="trailing" secondItem="DFo-fA-3nu" secondAttribute="trailing" id="EcH-CU-OKX"/>
-                                                            <constraint firstAttribute="bottom" secondItem="DFo-fA-3nu" secondAttribute="bottom" id="Ftz-N4-zJn"/>
-                                                            <constraint firstItem="ret-0o-V4E" firstAttribute="centerY" secondItem="G3R-kC-6Ov" secondAttribute="centerY" id="Ly9-WV-8KO"/>
-                                                            <constraint firstItem="ret-0o-V4E" firstAttribute="centerX" secondItem="G3R-kC-6Ov" secondAttribute="centerX" multiplier="0.45" id="OWv-Yc-0yd"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0F-dJ-bm0" customClass="BlackMarketView" customModule="currency" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="68" width="318" height="68"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ox-yp-rIg" customClass="BlackMarketView" customModule="currency" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="136" width="318" height="68"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fq-yd-6OL" customClass="BlackMarketView" customModule="currency" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="204" width="318" height="68"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                </subviews>
                                                 <color key="backgroundColor" red="0.98039215686274506" green="1" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="272" id="Juw-PI-dwX"/>
+                                                    <constraint firstAttribute="height" constant="272" id="NsC-3E-Ytr"/>
                                                 </constraints>
-                                            </stackView>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buy_sell" rowHeight="68" id="dZb-BZ-Pgt">
+                                                        <rect key="frame" x="0.0" y="44.5" width="318" height="68"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dZb-BZ-Pgt" id="A9c-vC-8qi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="68"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продажа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNe-10-WkZ">
+                                                                    <rect key="frame" x="27" y="24" width="73" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="16"/>
+                                                                    <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wT1-qo-tSL">
+                                                                    <rect key="frame" x="220" y="24" width="69" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="16"/>
+                                                                    <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-Mg-UW7">
+                                                                    <rect key="frame" x="0.0" y="67" width="318" height="1"/>
+                                                                    <color key="backgroundColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="hTf-0d-8WS"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="Kie-Mg-UW7" secondAttribute="bottom" id="5pN-OK-keE"/>
+                                                                <constraint firstItem="MNe-10-WkZ" firstAttribute="centerX" secondItem="A9c-vC-8qi" secondAttribute="centerX" multiplier="0.4" id="H8G-dQ-tfM"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Kie-Mg-UW7" secondAttribute="trailing" id="amD-Iz-06J"/>
+                                                                <constraint firstItem="MNe-10-WkZ" firstAttribute="centerY" secondItem="A9c-vC-8qi" secondAttribute="centerY" id="iei-m4-1KA"/>
+                                                                <constraint firstItem="wT1-qo-tSL" firstAttribute="centerY" secondItem="A9c-vC-8qi" secondAttribute="centerY" id="rlU-Qd-LJK"/>
+                                                                <constraint firstItem="wT1-qo-tSL" firstAttribute="centerX" secondItem="A9c-vC-8qi" secondAttribute="centerX" multiplier="1.6" id="tyF-ur-oBo"/>
+                                                                <constraint firstItem="Kie-Mg-UW7" firstAttribute="leading" secondItem="A9c-vC-8qi" secondAttribute="leading" id="vRq-Mk-Krh"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="blackMarket_cell" rowHeight="68" id="nIa-xy-bnU" customClass="BlackMarketTableViewCell" customModule="currency" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="112.5" width="318" height="68"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nIa-xy-bnU" id="dVN-Cy-r0c">
+                                                            <rect key="frame" x="0.0" y="0.0" width="318" height="68"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wo3-aN-atv" customClass="BlackMarketView" customModule="currency" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="318" height="68"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="Wo3-aN-atv" secondAttribute="bottom" id="IRx-At-rP8"/>
+                                                                <constraint firstItem="Wo3-aN-atv" firstAttribute="top" secondItem="dVN-Cy-r0c" secondAttribute="top" id="STJ-Y0-3lC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Wo3-aN-atv" secondAttribute="trailing" id="VY7-sb-XQC"/>
+                                                                <constraint firstItem="Wo3-aN-atv" firstAttribute="leading" secondItem="dVN-Cy-r0c" secondAttribute="leading" id="bNI-6A-boe"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <outlet property="blackMarketView" destination="Wo3-aN-atv" id="hFb-l5-8R6"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прогноз:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au3-iI-a4g">
                                                 <rect key="frame" x="174.5" y="354" width="65" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
@@ -98,16 +120,15 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="beO-9X-ug8" firstAttribute="leading" secondItem="dcv-Kg-riG" secondAttribute="leading" constant="48" id="55g-ik-J7U"/>
                                             <constraint firstItem="fyW-sT-Oe7" firstAttribute="leading" secondItem="dcv-Kg-riG" secondAttribute="leading" constant="16" id="8rB-nb-FnA"/>
                                             <constraint firstAttribute="trailing" secondItem="fyW-sT-Oe7" secondAttribute="trailing" constant="16" id="D4v-Yj-KMM"/>
-                                            <constraint firstItem="dWX-6Y-7ck" firstAttribute="top" secondItem="dcv-Kg-riG" secondAttribute="top" constant="41" id="Exz-Vz-uxx"/>
-                                            <constraint firstItem="dWX-6Y-7ck" firstAttribute="centerX" secondItem="dcv-Kg-riG" secondAttribute="centerX" id="IFt-ML-HBl"/>
+                                            <constraint firstItem="au3-iI-a4g" firstAttribute="top" secondItem="beO-9X-ug8" secondAttribute="bottom" constant="41" id="IGK-nv-bFD"/>
                                             <constraint firstItem="au3-iI-a4g" firstAttribute="centerX" secondItem="dcv-Kg-riG" secondAttribute="centerX" id="L4t-jP-aAU"/>
-                                            <constraint firstItem="dWX-6Y-7ck" firstAttribute="leading" secondItem="dcv-Kg-riG" secondAttribute="leading" constant="48" id="c3q-lf-joU"/>
-                                            <constraint firstAttribute="trailing" secondItem="dWX-6Y-7ck" secondAttribute="trailing" constant="48" id="faa-cX-dgX"/>
-                                            <constraint firstItem="au3-iI-a4g" firstAttribute="top" secondItem="dWX-6Y-7ck" secondAttribute="bottom" constant="41" id="kTM-Vv-X2N"/>
+                                            <constraint firstItem="beO-9X-ug8" firstAttribute="top" secondItem="dcv-Kg-riG" secondAttribute="top" constant="41" id="bWm-zG-IVs"/>
                                             <constraint firstAttribute="bottom" secondItem="fyW-sT-Oe7" secondAttribute="bottom" constant="200" id="kWa-AT-iR9"/>
                                             <constraint firstItem="fyW-sT-Oe7" firstAttribute="top" secondItem="au3-iI-a4g" secondAttribute="bottom" constant="21" id="rED-6a-QbV"/>
+                                            <constraint firstAttribute="trailing" secondItem="beO-9X-ug8" secondAttribute="trailing" constant="48" id="zZL-DK-dTT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -135,11 +156,9 @@
                     <navigationItem key="navigationItem" id="xhq-li-WOz"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
-                        <outlet property="dollarView" destination="u0F-dJ-bm0" id="SIh-bw-UYR"/>
-                        <outlet property="euroView" destination="8Ox-yp-rIg" id="den-Co-tmc"/>
-                        <outlet property="rubleView" destination="0fq-yd-6OL" id="oo5-5e-Wjm"/>
+                        <outlet property="anView" destination="fyW-sT-Oe7" id="7zf-wS-DNc"/>
                         <outlet property="scrollView" destination="xLS-yS-DLT" id="wcG-hd-qGW"/>
-                        <outlet property="stackView" destination="dWX-6Y-7ck" id="1ie-4p-f4a"/>
+                        <outlet property="tableView" destination="beO-9X-ug8" id="cJq-oa-Vzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

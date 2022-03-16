@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0E8A285E2550B13D9299E690 /* Pods_currency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A5A12115BB07B8C6192E78 /* Pods_currency.framework */; };
+		9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168B27DF9F620091729F /* BlackMarketAPI.swift */; };
+		9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */; };
+		9F95169127DFC3290091729F /* chartView.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169027DFC3290091729F /* chartView.json */; };
+		9F95169427DFE2740091729F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95169327DFE2740091729F /* MainTabBarController.swift */; };
+		9F95169A27DFEE200091729F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169927DFEE200091729F /* Calculator.storyboard */; };
+		9F95169C27DFEE4D0091729F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */; };
+		9F95169E27DFEE820091729F /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95169D27DFEE820091729F /* CalculatorPresenter.swift */; };
+		9F9516A327E011870091729F /* BlackMarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */; };
+		9FCE931F27E2391B00497B30 /* SwiftMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */; };
 		9FD9B2FB27DA67050077EA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */; };
 		9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */; };
 		9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B2FE27DA67050077EA98 /* ViewController.swift */; };
@@ -36,6 +45,10 @@
 		9FD9B34127DB935F0077EA98 /* BlackMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */; };
 		9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */; };
 		9FD9B34527DB93920077EA98 /* BlackMarketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34427DB93920077EA98 /* BlackMarketPresenter.swift */; };
+		9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */; };
+		9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */; };
+		9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34A27DBCAF20077EA98 /* Constant.swift */; };
+		9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34D27DBCD8E0077EA98 /* UIView.swift */; };
 		D19C56A327DBC27700D30904 /* rcurra.db in Resources */ = {isa = PBXBuildFile; fileRef = D19C56A227DBC27700D30904 /* rcurra.db */; };
 		D19C56A627DBC37200D30904 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56A527DBC37200D30904 /* DBManager.swift */; };
 		D19C56A827DBC4CB00D30904 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56A727DBC4CB00D30904 /* FileUtils.swift */; };
@@ -49,16 +62,23 @@
 		D19C56C727DBE05900D30904 /* NSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C627DBE05900D30904 /* NSData+zlib.m */; };
 		D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C827DBE4B000D30904 /* BanksModel.swift */; };
 		D19C56CB27DBFFD200D30904 /* QueryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56CA27DBFFD100D30904 /* QueryHelper.swift */; };
-		9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */; };
-		9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */; };
-		9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34A27DBCAF20077EA98 /* Constant.swift */; };
-		9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34D27DBCD8E0077EA98 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07BA83B9FA95B4EC92345AF5 /* Pods-currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.release.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.release.xcconfig"; sourceTree = "<group>"; };
 		873A09E4783B44361A4023AE /* Pods-currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.debug.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.debug.xcconfig"; sourceTree = "<group>"; };
 		90A5A12115BB07B8C6192E78 /* Pods_currency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_currency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F95168B27DF9F620091729F /* BlackMarketAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketAPI.swift; sourceTree = "<group>"; };
+		9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketModel.swift; sourceTree = "<group>"; };
+		9F95169027DFC3290091729F /* chartView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chartView.json; sourceTree = "<group>"; };
+		9F95169327DFE2740091729F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9F95169927DFEE200091729F /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		9F95169D27DFEE820091729F /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
+		9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketTableViewCell.swift; sourceTree = "<group>"; };
+		9F9516A427E0194F0091729F /* currencyRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = currencyRelease.entitlements; sourceTree = "<group>"; };
+		9F9516A527E0195C0091729F /* currency.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = currency.entitlements; sourceTree = "<group>"; };
+		9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesManager.swift; sourceTree = "<group>"; };
 		9FD9B2F727DA67050077EA98 /* currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +109,10 @@
 		9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BlackMarket.storyboard; sourceTree = "<group>"; };
 		9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketViewController.swift; sourceTree = "<group>"; };
 		9FD9B34427DB93920077EA98 /* BlackMarketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketPresenter.swift; sourceTree = "<group>"; };
+		9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlackMarketView.xib; sourceTree = "<group>"; };
+		9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketView.swift; sourceTree = "<group>"; };
+		9FD9B34A27DBCAF20077EA98 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9FD9B34D27DBCD8E0077EA98 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D19C56A227DBC27700D30904 /* rcurra.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = rcurra.db; sourceTree = "<group>"; };
 		D19C56A527DBC37200D30904 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D19C56A727DBC4CB00D30904 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
@@ -104,10 +128,6 @@
 		D19C56C627DBE05900D30904 /* NSData+zlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+zlib.m"; sourceTree = "<group>"; };
 		D19C56C827DBE4B000D30904 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		D19C56CA27DBFFD100D30904 /* QueryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHelper.swift; sourceTree = "<group>"; };
-		9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlackMarketView.xib; sourceTree = "<group>"; };
-		9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketView.swift; sourceTree = "<group>"; };
-		9FD9B34A27DBCAF20077EA98 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		9FD9B34D27DBCD8E0077EA98 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +148,81 @@
 				90A5A12115BB07B8C6192E78 /* Pods_currency.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F95168F27DFC30E0091729F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169027DFC3290091729F /* chartView.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		9F95169227DFE1FB0091729F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169327DFE2740091729F /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		9F95169527DFED9F0091729F /* CalculatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169827DFEDC80091729F /* UI */,
+				9F95169727DFEDC60091729F /* View */,
+				9F95169627DFEDC40091729F /* Presenter */,
+			);
+			path = CalculatorScreen;
+			sourceTree = "<group>";
+		};
+		9F95169627DFEDC40091729F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169D27DFEE820091729F /* CalculatorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F95169727DFEDC60091729F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F95169827DFEDC80091729F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169927DFEE200091729F /* Calculator.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9F95169F27E0109A0091729F /* BlackMarketView */ = {
+			isa = PBXGroup;
+			children = (
+				9F9516A027E010CA0091729F /* UI */,
+				9F9516A127E011260091729F /* View */,
+			);
+			path = BlackMarketView;
+			sourceTree = "<group>";
+		};
+		9F9516A027E010CA0091729F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9F9516A127E011260091729F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9FD9B2EE27DA67050077EA98 = {
@@ -152,10 +247,11 @@
 		9FD9B2F927DA67050077EA98 /* currency */ = {
 			isa = PBXGroup;
 			children = (
+				9F9516A527E0195C0091729F /* currency.entitlements */,
+				9F9516A427E0194F0091729F /* currencyRelease.entitlements */,
 				9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */,
 				9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */,
 				9FD9B2FE27DA67050077EA98 /* ViewController.swift */,
-				9FD9B31527DB81520077EA98 /* Resourses */,
 				9FD9B34C27DBCD700077EA98 /* Extension */,
 				9FD9B31227DB7E550077EA98 /* Infrastracture */,
 				D19C56B527DBD6C000D30904 /* API */,
@@ -172,6 +268,9 @@
 		9FD9B30E27DA67290077EA98 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9F95169527DFED9F0091729F /* CalculatorScreen */,
+				9F95169227DFE1FB0091729F /* TabBarController */,
+				9F95169F27E0109A0091729F /* BlackMarketView */,
 				D19C56A927DBC86200D30904 /* Banks */,
 				9FD9B30F27DA6BFD0077EA98 /* Black Market Screen */,
 			);
@@ -203,6 +302,7 @@
 		9FD9B31527DB81520077EA98 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				9F95168F27DFC30E0091729F /* Animations */,
 				9FD9B34A27DBCAF20077EA98 /* Constant.swift */,
 				9FD9B31627DB81590077EA98 /* Font */,
 			);
@@ -260,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */,
-				9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */,
+				9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,9 +369,16 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */,
-				9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9FD9B34C27DBCD700077EA98 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34D27DBCD8E0077EA98 /* UIView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D19C56A427DBC35F00D30904 /* Helpers */ = {
@@ -280,6 +387,7 @@
 				D19C56A527DBC37200D30904 /* DBManager.swift */,
 				D19C56A727DBC4CB00D30904 /* FileUtils.swift */,
 				D19C56BA27DBD89F00D30904 /* CryptoUtils.swift */,
+				9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +442,7 @@
 			children = (
 				D19C56B827DBD6F800D30904 /* APIManager.swift */,
 				D19C56BC27DBD95C00D30904 /* BanksAPI.swift */,
+				9F95168B27DF9F620091729F /* BlackMarketAPI.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -342,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				D19C56C827DBE4B000D30904 /* BanksModel.swift */,
+				9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,14 +464,6 @@
 				D19C56C427DBE05600D30904 /* currency-Bridging-Header.h */,
 			);
 			path = Crypto;
-            sourceTree = "<group>";
-        };
-		9FD9B34C27DBCD700077EA98 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				9FD9B34D27DBCD8E0077EA98 /* UIView.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		EC6A41FBA0305284FAA6D6BF /* Pods */ = {
@@ -435,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD9B33627DB82CE0077EA98 /* Cabin-Regular.ttf in Resources */,
+				9F95169A27DFEE200091729F /* Calculator.storyboard in Resources */,
 				9FD9B31F27DB81800077EA98 /* Ubuntu-LightItalic.ttf in Resources */,
 				9FD9B33527DB82CE0077EA98 /* Cabin-BoldItalic.ttf in Resources */,
 				9FD9B33427DB82CE0077EA98 /* Cabin-MediumItalic.ttf in Resources */,
@@ -450,6 +553,7 @@
 				9FD9B32427DB81800077EA98 /* Ubuntu-Italic.ttf in Resources */,
 				9FD9B32327DB81800077EA98 /* Ubuntu-Bold.ttf in Resources */,
 				9FD9B32027DB81800077EA98 /* Ubuntu-Light.ttf in Resources */,
+				9F95169127DFC3290091729F /* chartView.json in Resources */,
 				9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */,
 				9FD9B32627DB81800077EA98 /* Ubuntu-BoldItalic.ttf in Resources */,
 				D19C56A327DBC27700D30904 /* rcurra.db in Resources */,
@@ -514,13 +618,17 @@
 				D19C56BD27DBD95C00D30904 /* BanksAPI.swift in Sources */,
 				9FD9B34E27DBCD8E0077EA98 /* UIView.swift in Sources */,
 				9FD9B2FB27DA67050077EA98 /* AppDelegate.swift in Sources */,
+				9FCE931F27E2391B00497B30 /* SwiftMessagesManager.swift in Sources */,
 				9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */,
 				D19C56A627DBC37200D30904 /* DBManager.swift in Sources */,
+				9F95169427DFE2740091729F /* MainTabBarController.swift in Sources */,
 				D19C56B427DBD16200D30904 /* BanksPresenter.swift in Sources */,
 				D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */,
 				D19C56B927DBD6F800D30904 /* APIManager.swift in Sources */,
+				9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */,
 				9FD9B31427DB7EAA0077EA98 /* MainViewController.swift in Sources */,
 				D19C56BB27DBD89F00D30904 /* CryptoUtils.swift in Sources */,
+				9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */,
 				9FD9B34527DB93920077EA98 /* BlackMarketPresenter.swift in Sources */,
 				D19C56CB27DBFFD200D30904 /* QueryHelper.swift in Sources */,
 				9FD9B33C27DB86180077EA98 /* Router.swift in Sources */,
@@ -528,10 +636,13 @@
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
 				D19C56A827DBC4CB00D30904 /* FileUtils.swift in Sources */,
 				D19C56B227DBD11300D30904 /* BanksViewController.swift in Sources */,
+				9F95169E27DFEE820091729F /* CalculatorPresenter.swift in Sources */,
 				D19C56B027DBCD0000D30904 /* BanksTableViewCell.swift in Sources */,
 				9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */,
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
+				9F95169C27DFEE4D0091729F /* CalculatorViewController.swift in Sources */,
 				9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */,
+				9F9516A327E011870091729F /* BlackMarketTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +791,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = currency/currency.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 62C374FX49;
@@ -712,6 +824,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = currency/currencyRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 62C374FX49;

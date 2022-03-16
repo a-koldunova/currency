@@ -18,10 +18,27 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = ""
+        navigationItem.title = "Banks"
+        presenter.getBanks()
+        
     }
     @IBAction func changeBankSegmentControl(_ sender: Any) {
         reloadData()
+    }
+    
+    func configureAlert(title: String, message: String, link: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let action2 = UIAlertAction(title: "Go to site", style: .default) { action in
+            self.presenter.goToTheSite(for: link)
+        }
+        let action3 = UIAlertAction(title:"Go to calculator", style: .default) { action in
+            self.presenter.goToCalculatorVC(self)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        alert.addAction(action2)
+        alert.addAction(action3)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
@@ -33,7 +50,9 @@ extension BanksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "banks", for: indexPath) as! BanksTableViewCell
-        cell.configure(presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row], currecy: presenter.getCurrency(banksSegmentControl.selectedSegmentIndex))
+        let data = presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row]
+        guard let bankName = presenter.getBankName(id: data.id) else { return UITableViewCell()}
+        cell.configure(bankName: bankName, buy: data.b, sell: data.s, currecy: presenter.getCurrency(banksSegmentControl.selectedSegmentIndex))
         return cell
     }
     
@@ -41,6 +60,13 @@ extension BanksViewController: UITableViewDelegate, UITableViewDataSource {
         return 75
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row]
+        guard let bankName = presenter.getBankName(id: data.id) else { return }
+        let link = presenter.getBankLink(id: data.id) ?? ""
+        configureAlert(title: bankName, message: "", link: link)
+        tableView.selectRow(at: nil, animated: true, scrollPosition: .none)
+    }
     
 }
 

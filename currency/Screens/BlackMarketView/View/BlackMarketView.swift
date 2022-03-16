@@ -55,7 +55,7 @@ class BlackMarketView: UIView {
         configureView()
     }
     
-    func configure(sellText : String, buyText : String, image : CoinImage) {
+    func configure(sellText : String, buyText : String, image : AppImage) {
         sellLabel.text = sellText
         buyLabel.text = buyText
         coinImage.image = image.image
