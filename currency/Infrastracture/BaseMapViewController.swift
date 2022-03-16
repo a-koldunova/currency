@@ -116,7 +116,7 @@ class BaseMapViewController<T>: MainViewController<T>, CLLocationManagerDelegate
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? BankMapAnnotation else {return nil}
         let  pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: annotation.address)
-        pinView.image = MainImage.bankIcon.image
+        pinView.image = AppImage.bankIcon.image
         pinView.glyphImage = PictureUtils.getImageWithColor(UIColor.clear)
         pinView.markerTintColor = UIColor.clear
         pinView.annotation = annotation

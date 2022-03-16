@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0E8A285E2550B13D9299E690 /* Pods_currency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A5A12115BB07B8C6192E78 /* Pods_currency.framework */; };
+		9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168B27DF9F620091729F /* BlackMarketAPI.swift */; };
+		9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */; };
+		9F95169127DFC3290091729F /* chartView.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169027DFC3290091729F /* chartView.json */; };
+		9F95169427DFE2740091729F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95169327DFE2740091729F /* MainTabBarController.swift */; };
+		9F95169A27DFEE200091729F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169927DFEE200091729F /* Calculator.storyboard */; };
+		9F95169C27DFEE4D0091729F /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */; };
+		9F95169E27DFEE820091729F /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95169D27DFEE820091729F /* CalculatorPresenter.swift */; };
+		9F9516A327E011870091729F /* BlackMarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */; };
+		9FCE931F27E2391B00497B30 /* SwiftMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */; };
 		9FD9B2FB27DA67050077EA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */; };
 		9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */; };
 		9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B2FE27DA67050077EA98 /* ViewController.swift */; };
@@ -79,6 +88,17 @@
 		07BA83B9FA95B4EC92345AF5 /* Pods-currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.release.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.release.xcconfig"; sourceTree = "<group>"; };
 		873A09E4783B44361A4023AE /* Pods-currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.debug.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.debug.xcconfig"; sourceTree = "<group>"; };
 		90A5A12115BB07B8C6192E78 /* Pods_currency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_currency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F95168B27DF9F620091729F /* BlackMarketAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketAPI.swift; sourceTree = "<group>"; };
+		9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketModel.swift; sourceTree = "<group>"; };
+		9F95169027DFC3290091729F /* chartView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chartView.json; sourceTree = "<group>"; };
+		9F95169327DFE2740091729F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9F95169927DFEE200091729F /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		9F95169D27DFEE820091729F /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
+		9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketTableViewCell.swift; sourceTree = "<group>"; };
+		9F9516A427E0194F0091729F /* currencyRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = currencyRelease.entitlements; sourceTree = "<group>"; };
+		9F9516A527E0195C0091729F /* currency.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = currency.entitlements; sourceTree = "<group>"; };
+		9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesManager.swift; sourceTree = "<group>"; };
 		9FD9B2F727DA67050077EA98 /* currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +191,81 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F95168F27DFC30E0091729F /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169027DFC3290091729F /* chartView.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		9F95169227DFE1FB0091729F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169327DFE2740091729F /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		9F95169527DFED9F0091729F /* CalculatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169827DFEDC80091729F /* UI */,
+				9F95169727DFEDC60091729F /* View */,
+				9F95169627DFEDC40091729F /* Presenter */,
+			);
+			path = CalculatorScreen;
+			sourceTree = "<group>";
+		};
+		9F95169627DFEDC40091729F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169D27DFEE820091729F /* CalculatorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9F95169727DFEDC60091729F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F95169827DFEDC80091729F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169927DFEE200091729F /* Calculator.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9F95169F27E0109A0091729F /* BlackMarketView */ = {
+			isa = PBXGroup;
+			children = (
+				9F9516A027E010CA0091729F /* UI */,
+				9F9516A127E011260091729F /* View */,
+			);
+			path = BlackMarketView;
+			sourceTree = "<group>";
+		};
+		9F9516A027E010CA0091729F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9F9516A127E011260091729F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9FD9B2EE27DA67050077EA98 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +312,9 @@
 				D1811EF727DFB35100B4D274 /* Bank Map */,
 				D1E4424227E25B7300E9A1BA /* BankMapPosition */,
 				D1811EE727DF510B00B4D274 /* National Bank */,
+				9F95169527DFED9F0091729F /* CalculatorScreen */,
+				9F95169227DFE1FB0091729F /* TabBarController */,
+				9F95169F27E0109A0091729F /* BlackMarketView */,
 				D19C56A927DBC86200D30904 /* Banks */,
 				9FD9B30F27DA6BFD0077EA98 /* Black Market Screen */,
 			);
@@ -249,6 +347,7 @@
 		9FD9B31527DB81520077EA98 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				9F95168F27DFC30E0091729F /* Animations */,
 				9FD9B34A27DBCAF20077EA98 /* Constant.swift */,
 				9FD9B31627DB81590077EA98 /* Font */,
 			);
@@ -306,7 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */,
-				9FD9B34827DBBF780077EA98 /* BlackMarketView.swift */,
+				9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,7 +414,6 @@
 			isa = PBXGroup;
 			children = (
 				9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */,
-				9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -413,6 +511,7 @@
 				D19C56A527DBC37200D30904 /* DBManager.swift */,
 				D19C56A727DBC4CB00D30904 /* FileUtils.swift */,
 				D19C56BA27DBD89F00D30904 /* CryptoUtils.swift */,
+				9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -470,6 +569,7 @@
 				D1811EF327DFA56300B4D274 /* NationalBankAPI.swift */,
 				D1811F0127DFCD2300B4D274 /* BankMapApi.swift */,
 				D1D00C6427E299EC002922ED /* BankPositionAPI.swift */,
+				9F95168B27DF9F620091729F /* BlackMarketAPI.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -479,6 +579,7 @@
 			children = (
 				D19C56C827DBE4B000D30904 /* BanksModel.swift */,
 				D1811EF527DFA59300B4D274 /* NationalBankModel.swift */,
+				9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -633,6 +734,7 @@
 			files = (
 				D1811EEC27DF515500B4D274 /* NationalBank.storyboard in Resources */,
 				9FD9B33627DB82CE0077EA98 /* Cabin-Regular.ttf in Resources */,
+				9F95169A27DFEE200091729F /* Calculator.storyboard in Resources */,
 				9FD9B31F27DB81800077EA98 /* Ubuntu-LightItalic.ttf in Resources */,
 				9FD9B33527DB82CE0077EA98 /* Cabin-BoldItalic.ttf in Resources */,
 				9FD9B33427DB82CE0077EA98 /* Cabin-MediumItalic.ttf in Resources */,
@@ -648,6 +750,7 @@
 				9FD9B32427DB81800077EA98 /* Ubuntu-Italic.ttf in Resources */,
 				9FD9B32327DB81800077EA98 /* Ubuntu-Bold.ttf in Resources */,
 				9FD9B32027DB81800077EA98 /* Ubuntu-Light.ttf in Resources */,
+				9F95169127DFC3290091729F /* chartView.json in Resources */,
 				9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */,
 				D1E4424727E25C2500E9A1BA /* BankMapPosition.storyboard in Resources */,
 				D1E4423D27E163A100E9A1BA /* BottomMapDetailView.xib in Resources */,
@@ -719,19 +822,23 @@
 				9FD9B2FB27DA67050077EA98 /* AppDelegate.swift in Sources */,
 				D1811EF227DF9A9000B4D274 /* FlagUtils.swift in Sources */,
 				D1E4424927E25C4100E9A1BA /* BankMapPositionViewController.swift in Sources */,
+				9FCE931F27E2391B00497B30 /* SwiftMessagesManager.swift in Sources */,
 				9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */,
 				D1811EF027DF519B00B4D274 /* NationalBankPresenter.swift in Sources */,
 				D1811EF627DFA59300B4D274 /* NationalBankModel.swift in Sources */,
 				D19C56A627DBC37200D30904 /* DBManager.swift in Sources */,
 				D1811F0027DFB40B00B4D274 /* BankMapPresenter.swift in Sources */,
+				9F95169427DFE2740091729F /* MainTabBarController.swift in Sources */,
 				D19C56B427DBD16200D30904 /* BanksPresenter.swift in Sources */,
 				D1811EEE27DF516800B4D274 /* NationalBankViewController.swift in Sources */,
 				D1E4424127E226C500E9A1BA /* BottomDetailPresenter.swift in Sources */,
 				D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */,
 				D19C56B927DBD6F800D30904 /* APIManager.swift in Sources */,
 				D1811F0227DFCD2300B4D274 /* BankMapApi.swift in Sources */,
+				9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */,
 				9FD9B31427DB7EAA0077EA98 /* MainViewController.swift in Sources */,
 				D19C56BB27DBD89F00D30904 /* CryptoUtils.swift in Sources */,
+				9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */,
 				9FD9B34527DB93920077EA98 /* BlackMarketPresenter.swift in Sources */,
 				D19C56CB27DBFFD200D30904 /* QueryHelper.swift in Sources */,
 				9FD9B33C27DB86180077EA98 /* Router.swift in Sources */,
@@ -745,10 +852,13 @@
 				D1E4423F27E168CA00E9A1BA /* BottomMapDetailView.swift in Sources */,
 				D19C56B227DBD11300D30904 /* BanksViewController.swift in Sources */,
 				D1811EFE27DFB3F600B4D274 /* BankMapViewController.swift in Sources */,
+                9F95169E27DFEE820091729F /* CalculatorPresenter.swift in Sources */,
 				D19C56B027DBCD0000D30904 /* BanksTableViewCell.swift in Sources */,
 				9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */,
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
+				9F95169C27DFEE4D0091729F /* CalculatorViewController.swift in Sources */,
 				9FD9B34927DBBF780077EA98 /* BlackMarketView.swift in Sources */,
+				9F9516A327E011870091729F /* BlackMarketTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

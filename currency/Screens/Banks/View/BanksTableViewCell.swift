@@ -8,6 +8,8 @@
 import UIKit
 
 class BanksTableViewCell: UITableViewCell {
+    
+    
     @IBOutlet weak var bankView: UIView! {
         didSet {
 
@@ -32,10 +34,11 @@ class BanksTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(_ model: BuySellModel, currecy: Currency) {
-        bankLabel.text = QueryHelper.shared.getNameOfBank(by: model.id)
-        buyLabel.text = String(format: (currecy == .rub) ? "%.3f" : "%.2f", model.b)
-        sellLabel.text = String(format: (currecy == .rub) ? "%.3f" : "%.2f", model.s)
+    func configure( bankName: String, buy: Double, sell : Double, currecy: Currency) {
+        
+        bankLabel.text = bankName
+        buyLabel.text = String(format: (currecy == .rub) ? "%.3f" : "%.2f", buy)
+        sellLabel.text = String(format: (currecy == .rub) ? "%.3f" : "%.2f", sell)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

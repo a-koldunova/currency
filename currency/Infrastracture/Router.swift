@@ -2,11 +2,18 @@ import UIKit
 
 
 protocol RouterProtocol {
-    
+    func goToCalculatorViewController(parentVC : UIViewController)
 }
 
 class Router: RouterProtocol {
-    let sharedInstance = Router()
+    
+    static let sharedInstance = Router()
+    
+    func goToCalculatorViewController(parentVC: UIViewController) {
+        let vc = Builder.resolveCalculatorViewController()
+        vc.modalPresentationStyle = .popover
+        parentVC.present(vc, animated: true, completion: nil)
+    }
     
     func pushBlackMarket() {
         
@@ -29,4 +36,5 @@ class Router: RouterProtocol {
             }
             return base
         }
+    
 }
