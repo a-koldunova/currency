@@ -2,12 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 	<key>MKDirectionsApplicationSupportedModes</key>
-	<array>
-		<string>MKDirectionsModePlane</string>
-	</array>
+	<array/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ubuntu-Bold</string>
@@ -46,5 +42,18 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your position is required to find ships near you. Please consider to give permissions</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Your position is required to find ships near you. Please consider to give permissions</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Your position is required to find ships near you. Please consider to give permissions</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your position is required to find ships near you. Please consider to give permissions</string>
 </dict>
 </plist>

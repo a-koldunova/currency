@@ -90,7 +90,7 @@ struct PictureUtils{
         return resizeImage(image, newWidth: newWidth, newHeight: newHeight)
     }
     
-    fileprivate static func resizeImage(_ image: UIImage, newWidth: CGFloat, newHeight: CGFloat) ->UIImage{
+     static func resizeImage(_ image: UIImage, newWidth: CGFloat, newHeight: CGFloat) ->UIImage{
         UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
         image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()

@@ -8,7 +8,7 @@ enum CoinImage  {
     
     var image : UIImage {
         switch self {
-        case .dollarImage: return UIImage(named: "dollarCoin")!
+        case .dollarImage: return UIImage(named: "dollarCoin")! 
         case .euroImage: return UIImage(named: "euroCoin")!
         case .rubleImage: return UIImage(named: "rubleCoin")!
         }
@@ -17,10 +17,14 @@ enum CoinImage  {
 
 enum MainColors {
     case fontColor
+    case bottomSheetColor
+    case selectedColor
     
     var color: UIColor {
         switch self {
         case .fontColor: return UIColor(named: "fontColor")!
+        case .bottomSheetColor: return UIColor(named: "bottomSheetColor")!
+        case .selectedColor: return UIColor(named: "selectedColor")!
         }
     }
 }
@@ -30,7 +34,7 @@ enum MainImage {
     
     var image: UIImage {
         switch self {
-        case .bankIcon: return UIImage(named: "bankIcon")!
+        case .bankIcon: return PictureUtils.resizeImage(UIImage(named: "bankIcon")!, newWidth: 30, newHeight: 30)// UIImage(named: "bankIcon")!
         }
     }
 }

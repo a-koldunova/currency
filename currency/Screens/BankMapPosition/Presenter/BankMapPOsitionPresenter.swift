@@ -1,42 +1,42 @@
 //
-//  BankMapPresenter.swift
+//  BankMapPOsitionPresenter.swift
 //  currency
 //
-//  Created by Tanya Koldunova on 14.03.2022.
+//  Created by Tanya Koldunova on 16.03.2022.
 //
 
 import Foundation
 import MapKit
 
-protocol BankMapViewProtocol: AnyObject {
+protocol BankMapPositionViewProtocol: AnyObject {
    func setAnnotation(annotations: [BankMapAnnotation])
 }
 
-protocol BankMapPresenterProtocol: AnyObject {
-    init(view: BankMapViewProtocol, bankNearMeAPI: BankMapApiProtocol)
+protocol BankMapPositionPresenterProtocol: AnyObject {
+    init(view: BankMapPositionViewProtocol, positionAPI: BankMapPositionApiProtocol, bankId: Int)
     var banksPositionAnnotation : [BankMapAnnotation]? { get set }
-    func getNearMePosition(lat: Double, lon: Double)
+    func getBankPositionModel(lat: Double, lon: Double)
     func centerMapOnLocation(mapView: MKMapView, lat:Double , lon: Double, radius:Double)
     func shallUpdate(location:CLLocation?, userLocation: CLLocation?)->Bool
 }
 
-class BankMapPresenter: BankMapPresenterProtocol {
-    weak var view: BankMapViewProtocol?
+class BankMapPositionPresenter: BankMapPositionPresenterProtocol {
+    weak var view: BankMapPositionViewProtocol?
     var banksPositionAnnotation : [BankMapAnnotation]?
-    private var bankNearMeAPI: BankMapApiProtocol
+    var bankId: Int
+    private var positionAPI: BankMapPositionApiProtocol
     
-    required init(view: BankMapViewProtocol, bankNearMeAPI: BankMapApiProtocol) {
+    required init(view: BankMapPositionViewProtocol, positionAPI: BankMapPositionApiProtocol, bankId: Int) {
         self.view = view
-        self.bankNearMeAPI = bankNearMeAPI
+        self.positionAPI = positionAPI
+        self.bankId = bankId
     }
     
-    func getNearMePosition(lat: Double, lon: Double) {
-            bankNearMeAPI.getModelNearMe(lat: lat, lon: lon) { model in
-                self.banksPositionAnnotation = model
-                self.view?.setAnnotation(annotations: model)
-            
+    func getBankPositionModel(lat: Double, lon: Double) {
+        positionAPI.getPositionModel(lat: lat, lon: lon, bankId: bankId) { model in
+            self.view?.setAnnotation(annotations: model)
         }
-    }
+        }
     
     func centerMapOnLocation(mapView: MKMapView, lat:Double , lon: Double, radius:Double) {
         let location = CLLocation(latitude: lat, longitude: lon)

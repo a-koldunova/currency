@@ -7,6 +7,7 @@ protocol BuilderProtocol {
     static func resolveBlackMarketViewController() -> BlackMarketViewController
     static func resolveNationalBankViewController() -> NationalBankViewController
     static func resolveBankMapViewController() -> BankMapViewController
+    static func resolveBottobMapDetailView(banksPositionAnnotation: BankMapAnnotation) -> BottomMapDetailView
 }
 
 class Builder: BuilderProtocol {
@@ -40,6 +41,24 @@ class Builder: BuilderProtocol {
         return vc 
     }
     
+    static func resolveBankMapPositionViewController(bankId: Int) -> BankMapPositionViewController {
+        let vc = BankMapPositionViewController.instantiateMyViewController(name: .bankPositionMap)
+        vc.presenter = BankMapPositionPresenter(view: vc, positionAPI: BankMapPositionAPI(), bankId: bankId)
+        return vc
+    }
+    
+    static func resolveBottobMapDetailView(banksPositionAnnotation: BankMapAnnotation) -> BottomMapDetailView {
+        let view = BottomMapDetailView(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 400))
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.allowUserInteraction], animations: {
+            view.frame = CGRect(x: 0, y: UIScreen.main.bounds.height-380, width: UIScreen.main.bounds.width, height: 400)
+        })
+        view.presenter = BottomMapDetailPresenter(view: view, banksPositionAnnotation: banksPositionAnnotation)
+        return view
+        
+    }
+    
+    
+    
 }
 
 enum ViewControllerKeys : String {
@@ -47,5 +66,6 @@ enum ViewControllerKeys : String {
     case banks = "Banks"
     case nationalBank = "NationalBank"
     case bankMap = "BankMap"
+    case bankPositionMap = "BankMapPosition"
 }
     

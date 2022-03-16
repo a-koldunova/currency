@@ -9,83 +9,48 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class BankMapViewController: MainViewController<BankMapPresenterProtocol> {
-    @IBOutlet weak var bankMapView: MKMapView! {
-        didSet {
-            bankMapView.delegate = self
-        }
-    }
-    
-    var locationManager = CLLocationManager()
-    var userLocation:CLLocation? {
-        didSet{
-            if userLocation != nil {
-                DispatchQueue.main.async {
-                    self.presenter.centerMapOnLocation(mapView: self.bankMapView)
-                }
-            }
-        }
-    }
+class BankMapViewController: BaseMapViewController<BankMapPresenterProtocol>  {
+    @IBOutlet weak var bankMapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.requestAlwaysAuthorization()
-           // self.locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
-        }
-        bankMapView.isZoomEnabled = true
-        bankMapView.isScrollEnabled = true
+        baseMapDelegate = self
         navigationController?.navigationBar.isHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
 
 }
 
-extension BankMapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? BankMapAnnotation else {return nil}
-        let  pinView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: annotation.address)
-        pinView.image = MainImage.bankIcon.image
-        pinView.glyphImage = PictureUtils.getImageWithColor(UIColor.clear)
-        pinView.markerTintColor = UIColor.clear
-        pinView.annotation = annotation
-        return pinView
-    }
-}
-
-extension BankMapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("got following error from loaction manager")
-        print(error.localizedDescription)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if presenter.shallUpdate(location: locations.first, userLocation: userLocation)  {
-            userLocation = locations.first
-        }
+extension BankMapViewController: BaseMapDelegate {
+    func getMap() -> MKMapView {
+        return bankMapView
     }
     
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        if manager.authorizationStatus == .authorizedWhenInUse{
-            userLocation = manager.location
-            if userLocation != nil{
-                presenter.centerMapOnLocation(mapView: self.bankMapView)
-            }
-        }
+    func findBanks(lat:Double , lon: Double) {
+        presenter.getNearMePosition(lat: lat, lon: lon)
     }
+    
+    func centerMapOnLocation(lat: Double, lon: Double, radius: Double) {
+        presenter.centerMapOnLocation(mapView: bankMapView, lat: lat, lon: lon, radius: 1000.0)
+    }
+    
+    func shallUpdate(location: CLLocation?, userLocation: CLLocation?) -> Bool {
+        presenter.shallUpdate(location: location, userLocation: userLocation)
+    }
+    
+    
 }
 
 extension BankMapViewController: BankMapViewProtocol {
-    func getLocation() -> CLLocation? {
-        return userLocation
-    }
     
     func setAnnotation(annotations: [BankMapAnnotation]) {
-        self.bankMapView.addAnnotations(annotations)
+        DispatchQueue.main.async {
+            self.bankMapView.addAnnotations(annotations)
+        }
     }
     
     
