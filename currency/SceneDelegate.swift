@@ -20,8 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         window.makeKeyAndVisible()
         window.rootViewController = Builder.resolveTabBar()
-//        UINavigationController(rootViewController: Builder.resolveCalculatorViewController())
-       // window.rootViewController = UINavigationController(rootViewController: Builder.resolveBanksViewController())
         self.window = window
     }
 
