@@ -50,9 +50,7 @@ extension BanksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "banks", for: indexPath) as! BanksTableViewCell
-        let data = presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row]
-        guard let bankName = presenter.getBankName(id: data.id) else { return UITableViewCell()}
-        cell.configure(bankName: bankName, buy: data.b, sell: data.s, currecy: presenter.getCurrency(banksSegmentControl.selectedSegmentIndex))
+        cell.configure(presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row])
         return cell
     }
     
@@ -61,10 +59,8 @@ extension BanksViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row]
-        guard let bankName = presenter.getBankName(id: data.id) else { return }
-        let link = presenter.getBankLink(id: data.id) ?? ""
-        configureAlert(title: bankName, message: "", link: link)
+        let cell = tableView.cellForRow(at: indexPath) as! BanksTableViewCell
+        configureAlert(title: cell.bankLabel.text!, message: "", link: cell.link ?? "")
         tableView.selectRow(at: nil, animated: true, scrollPosition: .none)
     }
     

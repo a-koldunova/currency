@@ -17,7 +17,6 @@ class NationalBankAPI: APIManager, NationalBankAPIProtocol {
         jsonGetRequest(url: "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json", returningType: [NationalBankModel].self) { model, error in
             completion(model, error)
         }
-    }
-    
+    }    
     
 }

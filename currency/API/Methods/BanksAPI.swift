@@ -8,20 +8,64 @@
 import Foundation
 
 
-protocol BankAPIlmp: APIManager {
-    func getBankAPI(completion: @escaping(BanksModel?, Error?)->Void)
+protocol BankAPIProtocol: APIManager {
+    init(queryHelper: QueryHelperProtocol)
+    func getBankAPI(completion: @escaping(Bool?, Error?)->Void)
+    func getSaveData(completion: @escaping (BankCurrencyModel?)->Void)
+    func reloadData(completion: @escaping (BankCurrencyModel?, Error?)->Void)
 }
 
-class BankAPI: APIManager, BankAPIlmp {
+class BankAPI: APIManager, BankAPIProtocol {
     
-    func getBankAPI(completion: @escaping(BanksModel?, Error?)->Void) {
+    
+    let queryHelper: QueryHelperProtocol
+    
+    required init(queryHelper: QueryHelperProtocol) {
+        self.queryHelper = queryHelper
+    }
+    
+    func getBankAPI(completion: @escaping(Bool?, Error?)->Void) {
         jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
-            completion(model, error)
             if model != nil {
-                QueryHelper.shared.insertRates(model!)
+                let res = QueryHelper.shared.insertRates(model!)
+                completion(res, error)
+            }
+            
+        }
+    }
+    
+    func reloadData(completion: @escaping (BankCurrencyModel?, Error?)->Void) {
+        getBankAPI { go, error in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                if go == true {
+                    self.getSaveData { model in
+                        completion(model, nil)
+                    }
+                }
             }
         }
     }
     
+    func getSaveData(completion: @escaping (BankCurrencyModel?)->Void) {
+        let usdModel = getCurr(curr: .usd)
+        let eurModel = getCurr(curr: .eur)
+        let rubModel = getCurr(curr: .rub)
+        completion(BankCurrencyModel(usd: usdModel, eur: eurModel, rub: rubModel))
+    }
+    
+    func getCurr(curr: Currency) -> [BankFullInfoModel] {
+        let currData = queryHelper.getBanksRatesData(curr: curr.rawValue)
+        var currModel = [BankFullInfoModel]()
+        for c in currData {
+            let name = queryHelper.getNameOfBank(by: c.id)
+            let link = queryHelper.getLink(by: c.id)
+            if let name = name {
+                currModel.append(BankFullInfoModel(exchange: ExchangeBankModel(name: name, b: String(format: (curr == .rub) ? "%.3f" : "%.2f", c.b), s: String(format: (curr == .rub) ? "%.3f" : "%.2f", c.s)), link: link ?? ""))
+            }
+        }
+        return currModel
+    }
     
 }

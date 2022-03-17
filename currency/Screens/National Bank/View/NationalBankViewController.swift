@@ -19,6 +19,7 @@ class NationalBankViewController: MainViewController<NationalBankPresneterProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = NavigationTitle.nationalBank.title
+        presenter.getNationalBankApi()
     }
 
 }

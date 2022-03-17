@@ -8,6 +8,8 @@ enum AppImage  {
     case blackMarketIcon
     case banksIcon
     case bankIcon
+    case nationakBankIcon
+    case nearMeIcon
     
     var image : UIImage {
         switch self {
@@ -16,7 +18,10 @@ enum AppImage  {
         case .rubleImage: return UIImage(named: "rubleCoin")!
         case .blackMarketIcon: return UIImage(named: "blackMarket_ic")!
         case .banksIcon: return UIImage(named: "banks_ic")!
-        case .bankIcon: return PictureUtils.resizeImage(UIImage(named: "bankIcon")!, newWidth: 30, newHeight: 30)
+        case .bankIcon: return UIImage(named: "bankIcon")!
+        case .nationakBankIcon: return UIImage(named: "nationalBank_ic")!
+        case .nearMeIcon: return UIImage(named: "nearMe_ic")!
+        
         }
     }
 }
@@ -48,6 +53,12 @@ enum NavigationTitle {
         case .nationalBank: return "National Banks"
         }
     }
+}
+
+enum Currency: String {
+    case usd = "usd"
+    case eur = "eur"
+    case rub = "rub"
 }
 
 

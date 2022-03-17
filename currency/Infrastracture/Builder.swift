@@ -20,12 +20,14 @@ class Builder: BuilderProtocol {
     }
     
     static func resolveTabBar() -> MainTabBarController {
-        return MainTabBarController()
+        let vc = MainTabBarController()
+        vc.presenter = MainTabBarPresenter(view: vc, bankAPI: BankAPI(queryHelper: QueryHelper.shared))
+        return vc
     }
     
     static func resolveBanksViewController()->BanksViewController {
         let vc = BanksViewController.instantiateMyViewController(name: .banks)
-        vc.presenter = BanksPresenter(view: vc, banksAPI: BankAPI(), queryHelper: QueryHelper.shared, router: Router.sharedInstance)
+        vc.presenter = BanksPresenter(view: vc, banksAPI: BankAPI(queryHelper: QueryHelper.shared), router: Router.sharedInstance)
         return vc
     }
 

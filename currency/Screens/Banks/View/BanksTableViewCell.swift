@@ -29,16 +29,17 @@ class BanksTableViewCell: UITableViewCell {
     @IBOutlet weak var buyLabel: UILabel!
     @IBOutlet weak var sellLabel: UILabel!
     
+    var link: String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configure( bankName: String, buy: Double, sell : Double, currecy: Currency) {
-        
-        bankLabel.text = bankName
-        buyLabel.text = String(format: (currecy == .rub) ? "%.3f" : "%.2f", buy)
-        sellLabel.text = String(format: (currecy == .rub) ? "%.3f" : "%.2f", sell)
+    func configure(_ model: BankFullInfoModel) {
+        bankLabel.text = model.exchange.name
+        buyLabel.text = model.exchange.b
+        sellLabel.text = model.exchange.s
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -15,6 +15,7 @@ protocol NationalBankViewProtocol: AnyObject {
 protocol NationalBankPresneterProtocol: AnyObject {
     init(view: NationalBankViewProtocol, nationalBankAPI: NationalBankAPIProtocol)
     var nationalBankModel: [NationalBankModel]? { get set }
+    func getNationalBankApi()
 }
 
 class NationalBankPresenter: NationalBankPresneterProtocol {
@@ -25,7 +26,6 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
     required init(view: NationalBankViewProtocol, nationalBankAPI: NationalBankAPIProtocol) {
         self.view = view
         self.nationalBankAPI = nationalBankAPI
-        getNationalBankApi()
     }
     
     func getNationalBankApi() {

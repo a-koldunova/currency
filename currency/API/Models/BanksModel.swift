@@ -18,3 +18,14 @@ struct ExchangeBankModel: Codable {
     let b: String
     let s: String
 }
+
+struct BankFullInfoModel {
+    let exchange: ExchangeBankModel
+    let link: String
+}
+
+struct BankCurrencyModel {
+    let usd: [BankFullInfoModel]
+    let eur: [BankFullInfoModel]
+    let rub: [BankFullInfoModel]
+}

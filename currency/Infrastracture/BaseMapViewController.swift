@@ -35,7 +35,7 @@ class BaseMapViewController<T>: MainViewController<T>, CLLocationManagerDelegate
     }
     
     var fullViewY = UIScreen.main.bounds.height - 380
-    var partialViewY = UIScreen.main.bounds.height - 80
+    var partialViewY = UIScreen.main.bounds.height - 140
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,15 +2,27 @@ import UIKit
 
 
 class MainTabBarController: UITabBarController {
+    
+    var presenter: MainTabBarPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureTabBarController()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 1 {
+            presenter.getBankData()
+        }
     }
     
     func configureTabBarController() {
-        var vcList = [UIViewController]()
+        
         if #available(iOS 15, *) {
             let appearence = UITabBarAppearance()
             appearence.configureWithOpaqueBackground()
@@ -25,6 +37,14 @@ class MainTabBarController: UITabBarController {
             self.tabBar.unselectedItemTintColor = UIColor(red: 0.533, green: 0.6, blue: 0.49, alpha: 1)
             self.tabBar.tintColor = .green
         }
+        
+        let vcList = getControllers()
+        
+        self.setViewControllers(vcList, animated: true)
+    }
+    
+    func getControllers() -> [UIViewController] {
+        var vcList = [UIViewController]()
         let firstVC = UINavigationController(rootViewController: Builder.resolveBlackMarketViewController())
         firstVC.tabBarItem = UITabBarItem(title: "Black Market", image: AppImage.blackMarketIcon.image, tag: 0)
         vcList.append(firstVC)
@@ -33,7 +53,14 @@ class MainTabBarController: UITabBarController {
         secondVC.tabBarItem = UITabBarItem(title: "Banks", image: AppImage.banksIcon.image, tag: 1)
         vcList.append(secondVC)
         
-        self.setViewControllers(vcList, animated: true)
+        let thirdVC = UINavigationController(rootViewController: Builder.resolveNationalBankViewController())
+        thirdVC.tabBarItem = UITabBarItem(title: "National Banks", image: AppImage.nationakBankIcon.image, tag: 2)
+        vcList.append(thirdVC)
+        
+        let fourthVC = UINavigationController(rootViewController: Builder.resolveBankMapViewController())
+        fourthVC.tabBarItem = UITabBarItem(title: "Near me", image: AppImage.nearMeIcon.image, tag: 3)
+        vcList.append(fourthVC)
+        return vcList
     }
     
     func setTabBarItemColors( _ itemAppearence: UITabBarItemAppearance) {
@@ -42,14 +69,17 @@ class MainTabBarController: UITabBarController {
         itemAppearence.normal.titleTextAttributes = [.foregroundColor : UIColor(red: 0.529, green: 0.78, blue: 0.306, alpha: 1)]
         itemAppearence.normal.iconColor = UIColor(red: 0.529, green: 0.78, blue: 0.306, alpha: 1)
     }
-    /*
-    // MARK: - Navigation
+    
+    
+    
+   
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MainTabBarController: MainTabBarViewProtocol {
+    func getTabBar() -> UITabBar {
+        return self.tabBar
     }
-    */
-
+    
+    
 }

@@ -75,6 +75,7 @@
 		D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C827DBE4B000D30904 /* BanksModel.swift */; };
 		D19C56CB27DBFFD200D30904 /* QueryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56CA27DBFFD100D30904 /* QueryHelper.swift */; };
 		D1D00C6527E299EC002922ED /* BankPositionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D00C6427E299EC002922ED /* BankPositionAPI.swift */; };
+		D1D00C6A27E3989B002922ED /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D00C6927E3989B002922ED /* MainTabBarPresenter.swift */; };
 		D1E4423427E1515B00E9A1BA /* BaseMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4423327E1515B00E9A1BA /* BaseMapViewController.swift */; };
 		D1E4423D27E163A100E9A1BA /* BottomMapDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1E4423C27E163A100E9A1BA /* BottomMapDetailView.xib */; };
 		D1E4423F27E168CA00E9A1BA /* BottomMapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4423E27E168CA00E9A1BA /* BottomMapDetailView.swift */; };
@@ -96,8 +97,6 @@
 		9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		9F95169D27DFEE820091729F /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
 		9F9516A227E011860091729F /* BlackMarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketTableViewCell.swift; sourceTree = "<group>"; };
-		9F9516A427E0194F0091729F /* currencyRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = currencyRelease.entitlements; sourceTree = "<group>"; };
-		9F9516A527E0195C0091729F /* currency.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = currency.entitlements; sourceTree = "<group>"; };
 		9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesManager.swift; sourceTree = "<group>"; };
 		9FD9B2F727DA67050077EA98 /* currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = currency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +161,7 @@
 		D19C56C827DBE4B000D30904 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		D19C56CA27DBFFD100D30904 /* QueryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHelper.swift; sourceTree = "<group>"; };
 		D1D00C6427E299EC002922ED /* BankPositionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPositionAPI.swift; sourceTree = "<group>"; };
+		D1D00C6927E3989B002922ED /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
 		D1E4423327E1515B00E9A1BA /* BaseMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapViewController.swift; sourceTree = "<group>"; };
 		D1E4423C27E163A100E9A1BA /* BottomMapDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomMapDetailView.xib; sourceTree = "<group>"; };
 		D1E4423E27E168CA00E9A1BA /* BottomMapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMapDetailView.swift; sourceTree = "<group>"; };
@@ -197,14 +197,6 @@
 				9F95169027DFC3290091729F /* chartView.json */,
 			);
 			path = Animations;
-			sourceTree = "<group>";
-		};
-		9F95169227DFE1FB0091729F /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				9F95169327DFE2740091729F /* MainTabBarController.swift */,
-			);
-			path = TabBarController;
 			sourceTree = "<group>";
 		};
 		9F95169527DFED9F0091729F /* CalculatorScreen */ = {
@@ -308,12 +300,12 @@
 		9FD9B30E27DA67290077EA98 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D1D00C6627E390D7002922ED /* Main Tab Bar */,
 				D1E4423827E1626000E9A1BA /* BottomMapDetail */,
 				D1811EF727DFB35100B4D274 /* Bank Map */,
 				D1E4424227E25B7300E9A1BA /* BankMapPosition */,
 				D1811EE727DF510B00B4D274 /* National Bank */,
 				9F95169527DFED9F0091729F /* CalculatorScreen */,
-				9F95169227DFE1FB0091729F /* TabBarController */,
 				9F95169F27E0109A0091729F /* BlackMarketView */,
 				D19C56A927DBC86200D30904 /* Banks */,
 				9FD9B30F27DA6BFD0077EA98 /* Black Market Screen */,
@@ -594,6 +586,31 @@
 			path = Crypto;
 			sourceTree = "<group>";
 		};
+		D1D00C6627E390D7002922ED /* Main Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D1D00C6827E390E2002922ED /* View */,
+				D1D00C6727E390DF002922ED /* Presenter */,
+			);
+			path = "Main Tab Bar";
+			sourceTree = "<group>";
+		};
+		D1D00C6727E390DF002922ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1D00C6927E3989B002922ED /* MainTabBarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D1D00C6827E390E2002922ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F95169327DFE2740091729F /* MainTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D1E4423827E1626000E9A1BA /* BottomMapDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D00C6A27E3989B002922ED /* MainTabBarPresenter.swift in Sources */,
 				9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */,
 				9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */,
 				D1811EF427DFA56300B4D274 /* NationalBankAPI.swift in Sources */,
@@ -852,7 +870,7 @@
 				D1E4423F27E168CA00E9A1BA /* BottomMapDetailView.swift in Sources */,
 				D19C56B227DBD11300D30904 /* BanksViewController.swift in Sources */,
 				D1811EFE27DFB3F600B4D274 /* BankMapViewController.swift in Sources */,
-                9F95169E27DFEE820091729F /* CalculatorPresenter.swift in Sources */,
+				9F95169E27DFEE820091729F /* CalculatorPresenter.swift in Sources */,
 				D19C56B027DBCD0000D30904 /* BanksTableViewCell.swift in Sources */,
 				9FD9B34B27DBCAF20077EA98 /* Constant.swift in Sources */,
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
