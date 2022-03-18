@@ -62,7 +62,7 @@ class BankAPI: APIManager, BankAPIProtocol {
             let name = queryHelper.getNameOfBank(by: c.id)
             let link = queryHelper.getLink(by: c.id)
             if let name = name {
-                currModel.append(BankFullInfoModel(exchange: ExchangeBankModel(name: name, b: String(format: (curr == .rub) ? "%.3f" : "%.2f", c.b), s: String(format: (curr == .rub) ? "%.3f" : "%.2f", c.s)), link: link ?? ""))
+                currModel.append(BankFullInfoModel(id: c.id, exchange: ExchangeBankModel(name: name, b: String(format: (curr == .rub) ? "%.3f" : "%.2f", c.b), s: String(format: (curr == .rub) ? "%.3f" : "%.2f", c.s)), link: link ?? ""))
             }
         }
         return currModel

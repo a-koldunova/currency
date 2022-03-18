@@ -11,6 +11,7 @@ protocol BanksPresenterProtocol: AnyObject {
     func getBanks()
     func goToTheSite(for link : String)
     func goToCalculatorVC(_ self : UIViewController)
+    func goToMapViewController(bankId: Int)
 }
 
 class BanksPresenter: BanksPresenterProtocol {
@@ -36,6 +37,10 @@ class BanksPresenter: BanksPresenterProtocol {
     
     func goToCalculatorVC(_ self : UIViewController) {
         router.goToCalculatorViewController(parentVC: self)
+    }
+    
+    func goToMapViewController(bankId: Int) {
+        router.pushMapViewController(bankId: bankId)
     }
     
     func getBanks() {

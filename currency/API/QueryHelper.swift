@@ -55,9 +55,9 @@ class QueryHelper : QueryHelperProtocol {
     }
     
     func getBankPosition(lat: Double, lon: Double, bankId: Int) -> [BankMapAnnotation] {
-        let query = "SELECT BANK_NAME, ADDRESS, PHONE, LAT, LON, group_concat(CURR || \"/\" || BUY || \"/\" || SELL) as RATES from BANK_VIEW LEFT JOIN RATES on  RATES.BANK_ID = BANK_VIEW.BANK_ID where  BANK_VIEW.BANK_ID = ? and abs(BANK_VIEW.LAT - 46.482952) < 0.5 and abs(BANK_VIEW.LON - 30.712481) < 0.5 and CURR is not null group BY  BANK_NAME, LAT, LON"
+        let query = "SELECT BANK_NAME, ADDRESS, PHONE, LAT, LON, group_concat(CURR || \"/\" || BUY || \"/\" || SELL) as RATES from BANK_VIEW LEFT JOIN RATES on  RATES.BANK_ID = BANK_VIEW.BANK_ID where  BANK_VIEW.BANK_ID = ? and abs(BANK_VIEW.LAT - ?) < 0.5 and abs(BANK_VIEW.LON - ?) < 0.5 and CURR is not null group BY  BANK_NAME, LAT, LON"
         var res = [BankMapAnnotation]()
-        if let sql = db.executeQuery(query, withArgumentsIn: [lat, lon]) {
+        if let sql = db.executeQuery(query, withArgumentsIn: [bankId, lat, lon]) {
             while sql.next() {
                 var rates = [ExchangeBankModel]()
                 let curr = sql.string(forColumn: "RATES")!.components(separatedBy: ",")

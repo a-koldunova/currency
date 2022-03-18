@@ -36,7 +36,7 @@ class BankMapPositionPresenter: BankMapPositionPresenterProtocol {
         positionAPI.getPositionModel(lat: lat, lon: lon, bankId: bankId) { model in
             self.view?.setAnnotation(annotations: model)
         }
-        }
+    }
     
     func centerMapOnLocation(mapView: MKMapView, lat:Double , lon: Double, radius:Double) {
         let location = CLLocation(latitude: lat, longitude: lon)

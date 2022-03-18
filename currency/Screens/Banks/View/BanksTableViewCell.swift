@@ -30,6 +30,7 @@ class BanksTableViewCell: UITableViewCell {
     @IBOutlet weak var sellLabel: UILabel!
     
     var link: String?
+    var id: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,6 +41,8 @@ class BanksTableViewCell: UITableViewCell {
         bankLabel.text = model.exchange.name
         buyLabel.text = model.exchange.b
         sellLabel.text = model.exchange.s
+        link = model.link
+        id = model.id
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
