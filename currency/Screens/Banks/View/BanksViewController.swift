@@ -26,8 +26,11 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
         reloadData()
     }
     
-    func configureAlert(title: String, message: String, link: String) {
+    func configureAlert(title: String, message: String, link: String, id: Int) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let action1 = UIAlertAction(title: "Map", style: .default) { action in
+            self.presenter.goToMapViewController(bankId: id)
+        }
         let action2 = UIAlertAction(title: "Go to site", style: .default) { action in
             self.presenter.goToTheSite(for: link)
         }
@@ -35,6 +38,7 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
             self.presenter.goToCalculatorVC(self)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        alert.addAction(action1)
         alert.addAction(action2)
         alert.addAction(action3)
         alert.addAction(cancelAction)
@@ -60,7 +64,7 @@ extension BanksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! BanksTableViewCell
-        configureAlert(title: cell.bankLabel.text!, message: "", link: cell.link ?? "")
+        configureAlert(title: cell.bankLabel.text!, message: "", link: cell.link ?? "", id: cell.id)
         tableView.selectRow(at: nil, animated: true, scrollPosition: .none)
     }
     

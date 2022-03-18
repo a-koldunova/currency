@@ -20,6 +20,8 @@ class BottomMapDetailView: UIView {
             phoneButton.layer.cornerRadius = 6
         }
     }
+    @IBOutlet weak var usdRateView: BlackMarketView!
+    @IBOutlet weak var eurRateView: BlackMarketView!
     
     var contenView: UIView?
     var presenter: BottomMapDetailPresenterProtocol!
@@ -44,11 +46,11 @@ class BottomMapDetailView: UIView {
         
         let blurEffect = UIBlurEffect.init(style: .light)
 
-     //   let visualEffect = UIVisualEffectView.init(effect: blurEffect)
+        let visualEffect = UIVisualEffectView.init(effect: blurEffect)
         let bluredView = UIVisualEffectView.init(effect: blurEffect)
-      //  bluredView.contentView.addSubview(visualEffect)
+        bluredView.contentView.addSubview(visualEffect)
 
-     //   visualEffect.frame = UIScreen.main.bounds
+        visualEffect.frame = UIScreen.main.bounds
         bluredView.frame = view.frame
 
         view.insertSubview(bluredView, at: 0)
@@ -84,6 +86,11 @@ extension BottomMapDetailView: BottomMapDetailViewProtocol {
         bankNameLabel.text = model.title
         adressLabel.text = model.address
         phoneButton.setTitle(model.phone.description, for: .normal)
+        guard let exchangeModel = model.exchangeModel else {return}
+        usdRateView.configure(sellText: exchangeModel[0].s, buyText: exchangeModel[0].b, image: AppImage.dollarImage)
+        eurRateView.configure(sellText: exchangeModel[1].s, buyText: exchangeModel[1].b, image: AppImage.euroImage)
+        eurRateView.separator.isHidden = true
+        usdRateView.separator.isHidden = true
     }
     
     

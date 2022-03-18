@@ -20,6 +20,7 @@ struct ExchangeBankModel: Codable {
 }
 
 struct BankFullInfoModel {
+    let id: Int
     let exchange: ExchangeBankModel
     let link: String
 }

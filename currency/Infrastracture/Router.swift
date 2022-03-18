@@ -3,6 +3,7 @@ import UIKit
 
 protocol RouterProtocol {
     func goToCalculatorViewController(parentVC : UIViewController)
+    func pushMapViewController(bankId: Int)
 }
 
 class Router: RouterProtocol {
@@ -13,6 +14,11 @@ class Router: RouterProtocol {
         let vc = Builder.resolveCalculatorViewController()
         vc.modalPresentationStyle = .popover
         parentVC.present(vc, animated: true, completion: nil)
+    }
+    
+    func pushMapViewController(bankId: Int) {
+        let vc = Builder.resolveBankMapPositionViewController(bankId: bankId)
+        pushVc(vc)
     }
     
     func pushBlackMarket() {
