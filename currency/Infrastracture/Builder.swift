@@ -51,13 +51,13 @@ class Builder: BuilderProtocol {
     
     static func resolveBankMapViewController() -> BankMapViewController {
         let vc = BankMapViewController.instantiateMyViewController(name: .bankMap)
-        vc.presenter = BankMapPresenter(view: vc, bankNearMeAPI: BankMapAPI())
+        vc.presenter = BankMapPresenter(view: vc, bankNearMeAPI: BankMapAPI(queryHelper: QueryHelper.shared))
         return vc 
     }
     
     static func resolveBankMapPositionViewController(bankId: Int) -> BankMapPositionViewController {
         let vc = BankMapPositionViewController.instantiateMyViewController(name: .bankPositionMap)
-        vc.presenter = BankMapPositionPresenter(view: vc, positionAPI: BankMapPositionAPI(), bankId: bankId)
+        vc.presenter = BankMapPositionPresenter(view: vc, positionAPI: BankMapPositionAPI(queryHelper: QueryHelper.shared), bankId: bankId)
         return vc
     }
     
