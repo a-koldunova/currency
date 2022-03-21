@@ -2,7 +2,7 @@ import UIKit
 
 
 protocol RouterProtocol {
-    func goToCalculatorViewController(parentVC : UIViewController)
+    func goToCalculatorViewController(_ parentVC: UIViewController, buy : Double, sell : Double, title : String)
     func pushMapViewController(bankId: Int)
 }
 
@@ -10,8 +10,8 @@ class Router: RouterProtocol {
     
     static let sharedInstance = Router()
     
-    func goToCalculatorViewController(parentVC: UIViewController) {
-        let vc = Builder.resolveCalculatorViewController()
+    func goToCalculatorViewController(_ parentVC: UIViewController, buy : Double, sell : Double, title : String) {
+        let vc = UINavigationController(rootViewController: Builder.resolveCalculatorViewController(buy: buy, sell: sell, title: title))
         vc.modalPresentationStyle = .popover
         parentVC.present(vc, animated: true, completion: nil)
     }

@@ -10,7 +10,7 @@ protocol BuilderProtocol {
     static func resolveBankMapPositionViewController(bankId: Int) -> BankMapPositionViewController
     static func resolveBottobMapDetailView(banksPositionAnnotation: BankMapAnnotation) -> BottomMapDetailView
     static func resolveTabBar() -> MainTabBarController
-    static func resolveCalculatorViewController() -> CalculatorViewController
+    static func resolveCalculatorViewController(buy : Double, sell : Double, title : String) -> CalculatorViewController
 }
 
 class Builder: BuilderProtocol {
@@ -31,9 +31,9 @@ class Builder: BuilderProtocol {
         return vc
     }
 
-    static func resolveCalculatorViewController() -> CalculatorViewController {
+    static func resolveCalculatorViewController(buy : Double, sell : Double, title : String) -> CalculatorViewController {
         let vc = CalculatorViewController.instantiateMyViewController(name: .calculator)
-        vc.presenter = CalculatorPresenter(view: vc, buy: 30, sell: 30)
+        vc.presenter = CalculatorPresenter(view: vc, buy: buy, sell: sell, title: title)
         return vc
     }
     

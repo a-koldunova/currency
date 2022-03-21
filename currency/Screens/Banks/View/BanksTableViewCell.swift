@@ -43,6 +43,7 @@ class BanksTableViewCell: UITableViewCell {
         sellLabel.text = model.exchange.s
         link = model.link
         id = model.id
+        bankImageView.image = UIImage(named: id.description) ?? UIImage(named: "default")!
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

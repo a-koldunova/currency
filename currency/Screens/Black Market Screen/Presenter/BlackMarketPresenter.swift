@@ -7,7 +7,7 @@ protocol BlackMarketProtocol : SwiftMessagesManager {
 
 protocol BlackMarketPresenterProtocol : AnyObject {
     init(view : BlackMarketProtocol, blackMarketAPI : BlackMarketAPILMP, router : RouterProtocol)
-    func goToCalculator( _ self : UIViewController)
+    func goToCalculator( _ self : UIViewController, buy : Double, sell : Double, title : String)
     var blackMarketModel: BlackMarketModel? { get  set }
     var blackImage : [AppImage] { get set }
 }
@@ -18,6 +18,7 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     let blackMarketAPI : BlackMarketAPILMP
     var blackMarketModel : BlackMarketModel?
     let router :  RouterProtocol?
+    var curArr : [currencyEn] = [.usd, .eur, .rub]
     
     required init(view: BlackMarketProtocol, blackMarketAPI : BlackMarketAPILMP, router : RouterProtocol) {
         self.view = view
@@ -35,9 +36,15 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
         }
     }
     
-    func goToCalculator( _ self : UIViewController) {
-        router?.goToCalculatorViewController(parentVC: self)
+    func goToCalculator( _ self : UIViewController, buy : Double, sell : Double, title : String) {
+        router?.goToCalculatorViewController(self, buy: buy, sell: sell, title: title)
     }
     
+}
+
+enum currencyEn {
+    case usd
+    case eur
+    case rub
 }
 

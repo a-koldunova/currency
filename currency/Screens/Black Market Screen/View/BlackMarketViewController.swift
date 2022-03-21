@@ -114,7 +114,7 @@ extension BlackMarketViewController : UITableViewDataSource, UITableViewDelegate
             let cell = tableView.dequeueReusableCell(withIdentifier: "blackMarket_cell", for: indexPath) as! BlackMarketTableViewCell
             guard let data = presenter.blackMarketModel?.UAHrates[indexPath.row] else { return UITableViewCell() }
             let imageData = presenter.blackImage[indexPath.row]
-            cell.blackMarketView.configure(sellText: data.sell.description, buyText: data.buy.description, image: imageData)
+            cell.blackMarketView.configure(sellText: String(format: (indexPath.row == 2) ? "%.3f" : "%.2f", data.sell), buyText: String(format: (indexPath.row == 2) ? "%.3f" : "%.2f", data.buy), image: imageData)
             cell.blackMarketView.separator.isHidden = indexPath.row == 2
             return cell
         default:
@@ -123,8 +123,14 @@ extension BlackMarketViewController : UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.goToCalculator(self)
-        tableView.selectRow(at: nil, animated: true, scrollPosition: .none)
+        if indexPath.section == 1 {
+            guard let data = presenter.blackMarketModel?.UAHrates[indexPath.row] else { return }
+            let title = (indexPath.row == 0) ? "USD" : (indexPath.row == 1) ? "EURO" : "RUB"
+            let sell = data.sell
+            let buy = data.buy
+            presenter.goToCalculator(self, buy: buy, sell: sell, title: title)
+            tableView.selectRow(at: nil, animated: true, scrollPosition: .none)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
