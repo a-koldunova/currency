@@ -26,7 +26,7 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
         reloadData()
     }
     
-    func configureAlert(title: String, message: String, link: String, id: Int) {
+    func configureAlert(title: String, message: String, link: String, id: Int, buy : Double, sell : Double, titleCalc: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let action1 = UIAlertAction(title: "Map", style: .default) { action in
             self.presenter.goToMapViewController(bankId: id)
@@ -35,7 +35,7 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
             self.presenter.goToTheSite(for: link)
         }
         let action3 = UIAlertAction(title:"Go to calculator", style: .default) { action in
-            self.presenter.goToCalculatorVC(self)
+            self.presenter.goToCalculatorVC(self, buy: buy, sell: sell, title: titleCalc)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
         alert.addAction(action1)
@@ -64,7 +64,10 @@ extension BanksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! BanksTableViewCell
-        configureAlert(title: cell.bankLabel.text!, message: "", link: cell.link ?? "", id: cell.id)
+        let model = presenter.getArray(banksSegmentControl.selectedSegmentIndex)[indexPath.row]
+        let buy = (model.exchange.b as NSString).doubleValue
+        let sell = (model.exchange.s as NSString).doubleValue
+        configureAlert(title: cell.bankLabel.text!, message: "", link: cell.link ?? "", id: cell.id, buy: buy, sell: sell, titleCalc: model.exchange.name)
         tableView.selectRow(at: nil, animated: true, scrollPosition: .none)
     }
     

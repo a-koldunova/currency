@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +10,9 @@
     <customFonts key="customFonts">
         <array key="Cabin-Bold.ttf">
             <string>Cabin-Bold</string>
+        </array>
+        <array key="Cabin-Medium.ttf">
+            <string>Cabin-Medium</string>
         </array>
         <array key="Cabin-Regular.ttf">
             <string>Cabin-Regular</string>
@@ -24,44 +27,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите число" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-S3-C50">
-                                <rect key="frame" x="24" y="120" width="366" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите число" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-S3-C50">
+                                <rect key="frame" x="24" y="104" width="366" height="34"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-0b-i0u">
-                                <rect key="frame" x="24" y="190" width="366" height="105"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продажа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2U-Kt-jTM">
-                                        <rect key="frame" x="37" y="16" width="72.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="16"/>
-                                        <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UK-yT-lv8">
-                                        <rect key="frame" x="258.5" y="16" width="68.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="16"/>
-                                        <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-ko-wB3" customClass="BlackMarketView" customModule="currency" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="35.5" width="366" height="69.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.98039215686274506" green="1" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="p2U-Kt-jTM" firstAttribute="top" secondItem="LcE-0b-i0u" secondAttribute="top" constant="16" id="B1g-EC-TDN"/>
-                                    <constraint firstAttribute="trailing" secondItem="y4x-ko-wB3" secondAttribute="trailing" id="OUJ-Yj-Dd2"/>
-                                    <constraint firstAttribute="height" constant="105" id="Wlv-2I-5KM"/>
-                                    <constraint firstItem="y4x-ko-wB3" firstAttribute="top" secondItem="p2U-Kt-jTM" secondAttribute="bottom" id="eK8-Tj-62v"/>
-                                    <constraint firstAttribute="bottom" secondItem="y4x-ko-wB3" secondAttribute="bottom" id="fOV-47-WVd"/>
-                                    <constraint firstItem="p2U-Kt-jTM" firstAttribute="centerX" secondItem="LcE-0b-i0u" secondAttribute="centerX" multiplier="0.4" id="fep-Yj-l53"/>
-                                    <constraint firstItem="7UK-yT-lv8" firstAttribute="centerY" secondItem="p2U-Kt-jTM" secondAttribute="centerY" id="hf6-M4-nyh"/>
-                                    <constraint firstItem="7UK-yT-lv8" firstAttribute="centerX" secondItem="LcE-0b-i0u" secondAttribute="centerX" multiplier="1.6" id="o2w-aH-FEa"/>
-                                    <constraint firstItem="y4x-ko-wB3" firstAttribute="leading" secondItem="LcE-0b-i0u" secondAttribute="leading" id="xVY-pu-jez"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Cy6-YP-f2H">
                                 <rect key="frame" x="36" y="415" width="342" height="423"/>
                                 <subviews>
@@ -279,26 +250,56 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBx-VD-Ucx">
+                                <rect key="frame" x="318" y="154" width="64" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-Y4-dLE">
+                                <rect key="frame" x="24" y="181.5" width="366" height="34"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXf-4X-Ekx">
+                                <rect key="frame" x="24" y="259" width="366" height="34"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продажа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkJ-O4-wKZ">
+                                <rect key="frame" x="312.5" y="231.5" width="69.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LcE-0b-i0u" firstAttribute="top" secondItem="BHa-S3-C50" secondAttribute="bottom" constant="36" id="1mz-Pv-Jxk"/>
+                            <constraint firstItem="jBx-VD-Ucx" firstAttribute="trailing" secondItem="BHa-S3-C50" secondAttribute="trailing" constant="-8" id="3Rw-I9-vr0"/>
+                            <constraint firstItem="jTC-Y4-dLE" firstAttribute="trailing" secondItem="BHa-S3-C50" secondAttribute="trailing" id="4WL-cc-BLK"/>
                             <constraint firstItem="BHa-S3-C50" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="6d0-Pa-xWI"/>
-                            <constraint firstItem="BHa-S3-C50" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="BQb-jh-z7R"/>
+                            <constraint firstItem="BHa-S3-C50" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="BQb-jh-z7R"/>
                             <constraint firstItem="Cy6-YP-f2H" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CA9-wt-C58"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BHa-S3-C50" secondAttribute="trailing" constant="24" id="GVm-Tw-aam"/>
-                            <constraint firstItem="LcE-0b-i0u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="IAo-9k-lRW"/>
-                            <constraint firstItem="LcE-0b-i0u" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LO5-WU-zdC"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LcE-0b-i0u" secondAttribute="trailing" constant="24" id="Yr0-0r-Msg"/>
+                            <constraint firstItem="OXf-4X-Ekx" firstAttribute="trailing" secondItem="jTC-Y4-dLE" secondAttribute="trailing" id="N2S-qa-TkP"/>
+                            <constraint firstItem="jTC-Y4-dLE" firstAttribute="top" secondItem="jBx-VD-Ucx" secondAttribute="bottom" constant="8" id="Wfc-y1-wS5"/>
+                            <constraint firstItem="OXf-4X-Ekx" firstAttribute="leading" secondItem="jTC-Y4-dLE" secondAttribute="leading" id="hXX-B5-uQd"/>
+                            <constraint firstItem="dkJ-O4-wKZ" firstAttribute="trailing" secondItem="jBx-VD-Ucx" secondAttribute="trailing" id="nHC-gn-a0m"/>
+                            <constraint firstItem="jTC-Y4-dLE" firstAttribute="leading" secondItem="BHa-S3-C50" secondAttribute="leading" id="qXf-cL-6pH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Cy6-YP-f2H" secondAttribute="bottom" constant="24" id="s20-qm-DDU"/>
+                            <constraint firstItem="dkJ-O4-wKZ" firstAttribute="top" secondItem="jTC-Y4-dLE" secondAttribute="bottom" constant="16" id="uId-CH-A43"/>
+                            <constraint firstItem="OXf-4X-Ekx" firstAttribute="top" secondItem="dkJ-O4-wKZ" secondAttribute="bottom" constant="8" id="w61-O6-xWk"/>
+                            <constraint firstItem="jBx-VD-Ucx" firstAttribute="top" secondItem="BHa-S3-C50" secondAttribute="bottom" constant="16" id="wvg-om-0oD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MV1-N7-0PG"/>
                     <connections>
-                        <outlet property="currencyView" destination="LcE-0b-i0u" id="NXy-3w-jPz"/>
-                        <outlet property="dataView" destination="y4x-ko-wB3" id="TiY-fg-KkR"/>
-                        <outlet property="textField" destination="BHa-S3-C50" id="TW6-mp-cY4"/>
+                        <outlet property="buyTextField" destination="jTC-Y4-dLE" id="BDg-QD-cIE"/>
+                        <outlet property="sellTextField" destination="OXf-4X-Ekx" id="RX4-Yy-Igt"/>
+                        <outlet property="userTextField" destination="BHa-S3-C50" id="TW6-mp-cY4"/>
                         <outletCollection property="calculatorButtons" destination="2ge-Dw-M8X" collectionClass="NSMutableArray" id="XMf-oV-6oW"/>
                         <outletCollection property="calculatorButtons" destination="UMK-hS-mOa" collectionClass="NSMutableArray" id="f8u-4Y-a6c"/>
                         <outletCollection property="calculatorButtons" destination="MYi-Od-gkb" collectionClass="NSMutableArray" id="Bmm-hJ-3sW"/>

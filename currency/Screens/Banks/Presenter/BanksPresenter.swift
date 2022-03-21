@@ -10,8 +10,8 @@ protocol BanksPresenterProtocol: AnyObject {
     var banksModel: BankCurrencyModel? { get set }
     func getBanks()
     func goToTheSite(for link : String)
-    func goToCalculatorVC(_ self : UIViewController)
     func goToMapViewController(bankId: Int)
+    func goToCalculatorVC(_ self : UIViewController, buy : Double, sell : Double, title : String)
 }
 
 class BanksPresenter: BanksPresenterProtocol {
@@ -35,8 +35,8 @@ class BanksPresenter: BanksPresenterProtocol {
         }
     }
     
-    func goToCalculatorVC(_ self : UIViewController) {
-        router.goToCalculatorViewController(parentVC: self)
+    func goToCalculatorVC(_ self : UIViewController, buy : Double, sell : Double, title : String) {
+        router.goToCalculatorViewController(self, buy: buy, sell: sell, title: title)
     }
     
     func goToMapViewController(bankId: Int) {
