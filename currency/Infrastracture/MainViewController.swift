@@ -29,9 +29,11 @@ class MainViewController<T>: UIViewController, MainViewProtocol {
             appearance.backgroundColor = UIColor(named: "navigationBarColor")
             navigationController?.navigationBar.standardAppearance = appearance;
             navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            
         } else {
             navigationController?.navigationBar.barTintColor = UIColor(named: "navigationBarColor")
         }
+        navigationController?.navigationBar.tintColor = UIColor(red: 0.533, green: 0.6, blue: 0.49, alpha: 1)
     }
     
     static func instantiateMyViewController(name: ViewControllerKeys) -> Self {

@@ -9,6 +9,16 @@ import UIKit
 
 class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>, CalculatorProtocol {
     
+    @IBOutlet weak var sellLabel: UILabel! {
+        didSet {
+            sellLabel.text = L10n.Calculator.Sell.title
+        }
+    }
+    @IBOutlet weak var buyLabel: UILabel! {
+        didSet {
+            buyLabel.text = L10n.Calculator.Buy.title
+        }
+    }
     @IBOutlet weak var userTextField: UITextField! {
         didSet {
             setTextField(userTextField)
