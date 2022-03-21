@@ -39,6 +39,7 @@ extension NationalBankViewController: UITableViewDelegate, UITableViewDataSource
         content.attributedText = attributedText
         content.secondaryAttributedText = attributedSecondaryText
         content.image = FlagUtils.emojiToImage(emoji: FlagUtils.getflagByName(country: nationalBankModel[indexPath.row].cc))
+        
         cell.contentConfiguration = content
         return cell
     }

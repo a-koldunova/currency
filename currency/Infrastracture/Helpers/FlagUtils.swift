@@ -1,7 +1,12 @@
 import UIKit
 
+//protocol FlagUtils {
+//    static func getflagByName(country: String) -> String
+//    static func emojiToImage(emoji: String)-> UIImage?
+//}
+
 class FlagUtils {
-    class func getflagByName(country: String) -> String {
+    static func getflagByName(country: String) -> String {
         if country.prefix(1) == "X" {
             return "🪙"
         }
@@ -13,7 +18,7 @@ class FlagUtils {
         return String(s)
     }
 
-    class func emojiToImage(emoji: String)-> UIImage? {
+    static func emojiToImage(emoji: String)-> UIImage? {
         let size = CGSize(width: 40, height: 40)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         UIColor.clear.set()

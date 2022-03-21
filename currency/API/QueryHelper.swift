@@ -4,6 +4,8 @@ protocol QueryHelperProtocol {
     func getBanksRatesData(curr: String) -> [BuySellModel]
     func getNameOfBank(by id: Int) -> String?
     func getLink(by id : Int) -> String?
+    func getBanksNearMe(lat: Double, lon: Double) -> [BankMapAnnotation]
+    func getBankPosition(lat: Double, lon: Double, bankId: Int) -> [BankMapAnnotation] 
     func insertRates(_ inputData: BanksModel) -> Bool
 }
 
