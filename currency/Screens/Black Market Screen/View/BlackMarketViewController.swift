@@ -20,7 +20,7 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Черный рынок"
+        navigationItem.title = L10n.TabBar.Item.BlackMarket.title
         initRefreshControl()
         refreshControl!.addTarget(self, action: #selector(self.updateScrollView), for: .valueChanged)
         scrollView.addSubview(refreshControl!)

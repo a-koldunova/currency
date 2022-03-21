@@ -9,4 +9,5 @@ target 'currency' do
   pod 'lottie-ios'
   pod 'FMDB/SQLCipher'
   pod 'CryptoSwift'
+  pod 'SwiftGen'
 end

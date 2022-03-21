@@ -46,19 +46,19 @@ class MainTabBarController: UITabBarController {
     func getControllers() -> [UIViewController] {
         var vcList = [UIViewController]()
         let firstVC = UINavigationController(rootViewController: Builder.resolveBlackMarketViewController())
-        firstVC.tabBarItem = UITabBarItem(title: "Black Market", image: AppImage.blackMarketIcon.image, tag: 0)
+        firstVC.tabBarItem = UITabBarItem(title: L10n.TabBar.Item.BlackMarket.title, image: AppImage.blackMarketIcon.image, tag: 0)
         vcList.append(firstVC)
         //         secondVC
         let secondVC = UINavigationController(rootViewController: Builder.resolveBanksViewController())
-        secondVC.tabBarItem = UITabBarItem(title: "Banks", image: AppImage.banksIcon.image, tag: 1)
+        secondVC.tabBarItem = UITabBarItem(title: L10n.TabBar.Item.Banks.title, image: AppImage.banksIcon.image, tag: 1)
         vcList.append(secondVC)
         
         let thirdVC = UINavigationController(rootViewController: Builder.resolveNationalBankViewController())
-        thirdVC.tabBarItem = UITabBarItem(title: "National Banks", image: AppImage.nationakBankIcon.image, tag: 2)
+        thirdVC.tabBarItem = UITabBarItem(title: L10n.TabBar.Item.NatBank.title, image: AppImage.nationakBankIcon.image, tag: 2)
         vcList.append(thirdVC)
         
         let fourthVC = UINavigationController(rootViewController: Builder.resolveBankMapViewController())
-        fourthVC.tabBarItem = UITabBarItem(title: "Near me", image: AppImage.nearMeIcon.image, tag: 3)
+        fourthVC.tabBarItem = UITabBarItem(title: L10n.TabBar.Item.Near.title, image: AppImage.nearMeIcon.image, tag: 3)
         vcList.append(fourthVC)
         return vcList
     }

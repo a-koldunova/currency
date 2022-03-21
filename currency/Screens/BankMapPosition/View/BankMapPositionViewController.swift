@@ -14,6 +14,7 @@ class BankMapPositionViewController: BaseMapViewController<BankMapPositionPresen
     override func viewDidLoad() {
         super.viewDidLoad()
         baseMapDelegate = self
+//        navigationItem.title = presenter.title
         // Do any additional setup after loading the view.
     }
 

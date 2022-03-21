@@ -13,12 +13,14 @@ class QueryHelper : QueryHelperProtocol {
     
     public static var shared = QueryHelper()
     let db = DBManager.sharedInstance.db!
-    
+    private let bankName = L10n.DataBase.BankName.title
+    private let bankAdress = L10n.DataBase.Adress.title
+        
     func getNameOfBank(by id: Int) -> String? {
-        let query = "SELECT BANK_NAME FROM BANKS WHERE F_ID = " + id.description
+        let query = "SELECT " + bankName + " FROM BANKS WHERE F_ID = " + id.description
         if let sql = db.executeQuery(query, withArgumentsIn: []) {
             if sql.next() {
-                return sql.string(forColumn: "BANK_NAME")!
+                return sql.string(forColumn: bankName)!
             }
             sql.close()
         }
@@ -37,7 +39,7 @@ class QueryHelper : QueryHelperProtocol {
     }
     
     func getBanksNearMe(lat: Double, lon: Double) -> [BankMapAnnotation] {
-        let query = "SELECT BANK_NAME, ADDRESS, PHONE, LAT, LON, group_concat(CURR || \"/\" || BUY || \"/\" || SELL) as RATES from BANK_VIEW  LEFT JOIN RATES on  RATES.BANK_ID = BANK_VIEW.BANK_ID  where abs(BANK_VIEW.LAT - ?) < 0.5 and abs(BANK_VIEW.LON - ?) < 0.5 and CURR is not null group BY  BANK_NAME, LAT, LON"
+        let query = "SELECT " + bankName + ", " + bankAdress + ", PHONE, LAT, LON, group_concat(CURR || \"/\" || BUY || \"/\" || SELL) as RATES from BANK_VIEW  LEFT JOIN RATES on  RATES.BANK_ID = BANK_VIEW.BANK_ID  where abs(BANK_VIEW.LAT - ?) < 0.5 and abs(BANK_VIEW.LON - ?) < 0.5 and CURR is not null group BY  " + bankName + ", LAT, LON"
         var res = [BankMapAnnotation]()
         if let sql = db.executeQuery(query, withArgumentsIn: [lat, lon]) {
             while sql.next() {
@@ -48,7 +50,7 @@ class QueryHelper : QueryHelperProtocol {
                     rates.append(ExchangeBankModel(name: rate[0], b: rate[1], s: rate[2]))
                 }
                
-                res.append(BankMapAnnotation(bankName: sql.string(forColumn: "BANK_NAME")!, address: sql.string(forColumn: "ADDRESS")!, phone: sql.long(forColumn: "PHONE"), lat: sql.double(forColumn: "LAT"), lon: sql.double(forColumn: "LON"), exchangeModel: rates))
+                res.append(BankMapAnnotation(bankName: sql.string(forColumn: bankName)!, address: sql.string(forColumn: bankAdress)!, phone: sql.long(forColumn: "PHONE"), lat: sql.double(forColumn: "LAT"), lon: sql.double(forColumn: "LON"), exchangeModel: rates))
                
             }
             sql.close()
@@ -57,7 +59,7 @@ class QueryHelper : QueryHelperProtocol {
     }
     
     func getBankPosition(lat: Double, lon: Double, bankId: Int) -> [BankMapAnnotation] {
-        let query = "SELECT BANK_NAME, ADDRESS, PHONE, LAT, LON, group_concat(CURR || \"/\" || BUY || \"/\" || SELL) as RATES from BANK_VIEW LEFT JOIN RATES on  RATES.BANK_ID = BANK_VIEW.BANK_ID where  BANK_VIEW.BANK_ID = ? and abs(BANK_VIEW.LAT - ?) < 0.5 and abs(BANK_VIEW.LON - ?) < 0.5 and CURR is not null group BY  BANK_NAME, LAT, LON"
+        let query = "SELECT " + bankName + ", " + bankAdress + ", PHONE, LAT, LON, group_concat(CURR || \"/\" || BUY || \"/\" || SELL) as RATES from BANK_VIEW LEFT JOIN RATES on  RATES.BANK_ID = BANK_VIEW.BANK_ID where  BANK_VIEW.BANK_ID = ? and abs(BANK_VIEW.LAT - ?) < 0.5 and abs(BANK_VIEW.LON - ?) < 0.5 and CURR is not null group BY  " + bankName + ", LAT, LON"
         var res = [BankMapAnnotation]()
         if let sql = db.executeQuery(query, withArgumentsIn: [bankId, lat, lon]) {
             while sql.next() {
@@ -68,7 +70,7 @@ class QueryHelper : QueryHelperProtocol {
                     rates.append(ExchangeBankModel(name: rate[0], b: rate[1], s: rate[2]))
                 }
                
-                res.append(BankMapAnnotation(bankName: sql.string(forColumn: "BANK_NAME")!, address: sql.string(forColumn: "ADDRESS")!, phone: sql.long(forColumn: "PHONE"), lat: sql.double(forColumn: "LAT"), lon: sql.double(forColumn: "LON"), exchangeModel: rates))
+                res.append(BankMapAnnotation(bankName: sql.string(forColumn: bankName)!, address: sql.string(forColumn: bankAdress)!, phone: sql.long(forColumn: "PHONE"), lat: sql.double(forColumn: "LAT"), lon: sql.double(forColumn: "LON"), exchangeModel: rates))
             }
             sql.close()
         }

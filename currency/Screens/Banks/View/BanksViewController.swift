@@ -18,7 +18,7 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Banks"
+        navigationItem.title = L10n.TabBar.Item.Banks.title
         presenter.getBanks()
         
     }
@@ -28,16 +28,16 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
     
     func configureAlert(title: String, message: String, link: String, id: Int, buy : Double, sell : Double, titleCalc: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let action1 = UIAlertAction(title: "Map", style: .default) { action in
+        let action1 = UIAlertAction(title: L10n.Alert.Action.Map.title, style: .default) { action in
             self.presenter.goToMapViewController(bankId: id)
         }
-        let action2 = UIAlertAction(title: "Go to site", style: .default) { action in
+        let action2 = UIAlertAction(title: L10n.Alert.Action.Site.title, style: .default) { action in
             self.presenter.goToTheSite(for: link)
         }
-        let action3 = UIAlertAction(title:"Go to calculator", style: .default) { action in
+        let action3 = UIAlertAction(title: L10n.Alert.Action.Calculator.title, style: .default) { action in
             self.presenter.goToCalculatorVC(self, buy: buy, sell: sell, title: titleCalc)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        let cancelAction = UIAlertAction(title: L10n.Alert.Action.Cancel.title, style: .destructive, handler: { (action) -> Void in })
         alert.addAction(action1)
         alert.addAction(action2)
         alert.addAction(action3)

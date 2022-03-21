@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0E8A285E2550B13D9299E690 /* Pods_currency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A5A12115BB07B8C6192E78 /* Pods_currency.framework */; };
+		9F309F9227E8D40200458CBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F309F9427E8D40200458CBB /* Localizable.strings */; };
+		9F309F9727E8D70C00458CBB /* BlackMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F309F9927E8D70C00458CBB /* BlackMarket.storyboard */; };
+		9F309FA127E921CD00458CBB /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9F309FA027E921CD00458CBB /* swiftgen.yml */; };
+		9F309FA727E925FB00458CBB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309FA627E925FB00458CBB /* Strings.swift */; };
 		9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168B27DF9F620091729F /* BlackMarketAPI.swift */; };
 		9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */; };
 		9F95169127DFC3290091729F /* chartView.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169027DFC3290091729F /* chartView.json */; };
@@ -42,7 +46,6 @@
 		9FD9B33827DB82CE0077EA98 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B33027DB82CE0077EA98 /* Cabin-Italic.ttf */; };
 		9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B33927DB83930077EA98 /* Builder.swift */; };
 		9FD9B33C27DB86180077EA98 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B33B27DB86180077EA98 /* Router.swift */; };
-		9FD9B34127DB935F0077EA98 /* BlackMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */; };
 		9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */; };
 		9FD9B34527DB93920077EA98 /* BlackMarketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD9B34427DB93920077EA98 /* BlackMarketPresenter.swift */; };
 		9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */; };
@@ -89,6 +92,19 @@
 		07BA83B9FA95B4EC92345AF5 /* Pods-currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.release.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.release.xcconfig"; sourceTree = "<group>"; };
 		873A09E4783B44361A4023AE /* Pods-currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.debug.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.debug.xcconfig"; sourceTree = "<group>"; };
 		90A5A12115BB07B8C6192E78 /* Pods_currency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_currency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F309F8E27E8D3EE00458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		9F309F8F27E8D3EE00458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9F309F9027E8D3F900458CBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		9F309F9127E8D3F900458CBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9F309F9327E8D40200458CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9F309F9527E8D40400458CBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9F309F9627E8D40800458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9F309F9827E8D70C00458CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BlackMarket.storyboard; sourceTree = "<group>"; };
+		9F309F9B27E8D71F00458CBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/BlackMarket.strings; sourceTree = "<group>"; };
+		9F309F9D27E8D75100458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/BlackMarket.strings; sourceTree = "<group>"; };
+		9F309F9F27E8D75800458CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlackMarket.strings; sourceTree = "<group>"; };
+		9F309FA027E921CD00458CBB /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		9F309FA627E925FB00458CBB /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9F95168B27DF9F620091729F /* BlackMarketAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketAPI.swift; sourceTree = "<group>"; };
 		9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketModel.swift; sourceTree = "<group>"; };
 		9F95169027DFC3290091729F /* chartView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chartView.json; sourceTree = "<group>"; };
@@ -125,7 +141,6 @@
 		9FD9B33027DB82CE0077EA98 /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
 		9FD9B33927DB83930077EA98 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		9FD9B33B27DB86180077EA98 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BlackMarket.storyboard; sourceTree = "<group>"; };
 		9FD9B34227DB937C0077EA98 /* BlackMarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketViewController.swift; sourceTree = "<group>"; };
 		9FD9B34427DB93920077EA98 /* BlackMarketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketPresenter.swift; sourceTree = "<group>"; };
 		9FD9B34627DBBC0C0077EA98 /* BlackMarketView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlackMarketView.xib; sourceTree = "<group>"; };
@@ -189,6 +204,14 @@
 				90A5A12115BB07B8C6192E78 /* Pods_currency.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F309FA227E921E700458CBB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9F309FA627E925FB00458CBB /* Strings.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		9F95168F27DFC30E0091729F /* Animations */ = {
@@ -262,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				D19C56A227DBC27700D30904 /* rcurra.db */,
+				9F309FA027E921CD00458CBB /* swiftgen.yml */,
 				9FD9B2F927DA67050077EA98 /* currency */,
 				9FD9B2F827DA67050077EA98 /* Products */,
 				EC6A41FBA0305284FAA6D6BF /* Pods */,
@@ -284,6 +308,7 @@
 				9FD9B2FA27DA67050077EA98 /* AppDelegate.swift */,
 				9FD9B2FC27DA67050077EA98 /* SceneDelegate.swift */,
 				9FD9B2FE27DA67050077EA98 /* ViewController.swift */,
+				9F309FA227E921E700458CBB /* Constants */,
 				9FD9B34C27DBCD700077EA98 /* Extension */,
 				9FD9B31227DB7E550077EA98 /* Infrastracture */,
 				D19C56B527DBD6C000D30904 /* API */,
@@ -342,6 +367,7 @@
 				9F95168F27DFC30E0091729F /* Animations */,
 				9FD9B34A27DBCAF20077EA98 /* Constant.swift */,
 				9FD9B31627DB81590077EA98 /* Font */,
+				9F309F9427E8D40200458CBB /* Localizable.strings */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -405,7 +431,7 @@
 		9FD9B33F27DB93020077EA98 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9FD9B34027DB935F0077EA98 /* BlackMarket.storyboard */,
+				9F309F9927E8D70C00458CBB /* BlackMarket.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -700,6 +726,7 @@
 				9FD9B2F427DA67050077EA98 /* Frameworks */,
 				9FD9B2F527DA67050077EA98 /* Resources */,
 				B557BCC4F67A673D9966CB2F /* [CP] Embed Pods Frameworks */,
+				9F309FA327E922CC00458CBB /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -733,6 +760,8 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
+				ru,
 			);
 			mainGroup = 9FD9B2EE27DA67050077EA98;
 			productRefGroup = 9FD9B2F827DA67050077EA98 /* Products */;
@@ -759,8 +788,9 @@
 				9FD9B32227DB81800077EA98 /* Ubuntu-Medium.ttf in Resources */,
 				9FD9B33227DB82CE0077EA98 /* Cabin-SemiBoldItalic.ttf in Resources */,
 				9FD9B33727DB82CE0077EA98 /* Cabin-Bold.ttf in Resources */,
+				9F309FA127E921CD00458CBB /* swiftgen.yml in Resources */,
 				9FD9B33127DB82CE0077EA98 /* Cabin-Medium.ttf in Resources */,
-				9FD9B34127DB935F0077EA98 /* BlackMarket.storyboard in Resources */,
+				9F309F9727E8D70C00458CBB /* BlackMarket.storyboard in Resources */,
 				9FD9B33327DB82CE0077EA98 /* Cabin-SemiBold.ttf in Resources */,
 				9FD9B32127DB81800077EA98 /* Ubuntu-MediumItalic.ttf in Resources */,
 				D19C56AE27DBC89500D30904 /* Banks.storyboard in Resources */,
@@ -774,6 +804,7 @@
 				D1811EFC27DFB3D200B4D274 /* BankMap.storyboard in Resources */,
 				9FD9B32627DB81800077EA98 /* Ubuntu-BoldItalic.ttf in Resources */,
 				D19C56A327DBC27700D30904 /* rcurra.db in Resources */,
+				9F309F9227E8D40200458CBB /* Localizable.strings in Resources */,
 				9FD9B30427DA67080077EA98 /* Assets.xcassets in Resources */,
 				9FD9B32527DB81800077EA98 /* Ubuntu-Regular.ttf in Resources */,
 				9FD9B33827DB82CE0077EA98 /* Cabin-Italic.ttf in Resources */,
@@ -805,6 +836,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9F309FA327E922CC00458CBB /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
 		};
 		B557BCC4F67A673D9966CB2F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -864,6 +913,7 @@
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
 				D1D00C6527E299EC002922ED /* BankPositionAPI.swift in Sources */,
 				D1E4423427E1515B00E9A1BA /* BaseMapViewController.swift in Sources */,
+				9F309FA727E925FB00458CBB /* Strings.swift in Sources */,
 				D1811F0427DFDBC700B4D274 /* BankMapAnnotation.swift in Sources */,
 				D1811F0727DFFD1100B4D274 /* PictureUtils.swift in Sources */,
 				D19C56A827DBC4CB00D30904 /* FileUtils.swift in Sources */,
@@ -883,10 +933,33 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9F309F9427E8D40200458CBB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F309F9327E8D40200458CBB /* en */,
+				9F309F9527E8D40400458CBB /* ru */,
+				9F309F9627E8D40800458CBB /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9F309F9927E8D70C00458CBB /* BlackMarket.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F309F9827E8D70C00458CBB /* Base */,
+				9F309F9B27E8D71F00458CBB /* ru */,
+				9F309F9D27E8D75100458CBB /* uk */,
+				9F309F9F27E8D75800458CBB /* en */,
+			);
+			name = BlackMarket.storyboard;
+			sourceTree = "<group>";
+		};
 		9FD9B30027DA67050077EA98 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9FD9B30127DA67050077EA98 /* Base */,
+				9F309F8E27E8D3EE00458CBB /* uk */,
+				9F309F9027E8D3F900458CBB /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -895,6 +968,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				9FD9B30627DA67080077EA98 /* Base */,
+				9F309F8F27E8D3EE00458CBB /* uk */,
+				9F309F9127E8D3F900458CBB /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -906,6 +981,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -967,6 +1043,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
