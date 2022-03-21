@@ -52,14 +52,10 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
     @IBAction func CalculatorButtonPressed(_ sender: UIButton) {
         if 0 ... 9 ~= sender.tag {
             switch action {
-            case .userNumber:
-                userNumberAction(sender.tag)
-            case .buy:
-                buyAction(sender.tag)
-            case .sell:
-                sellAction(sender.tag)
-            case .none:
-                break
+            case .userNumber: userNumberAction(sender.tag)
+            case .buy: buyAction(sender.tag)
+            case .sell: sellAction(sender.tag)
+            case .none: break
             }
         } else if sender.tag == 11 {
             clearTextField()
@@ -67,10 +63,26 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
             presenter.clearBuyTF = true
             presenter.clearSellTF = true
         } else {
-            
+            switch action {
+            case .userNumber : addDot(userTextField)
+            case .buy : addDot(buyTextField)
+            case .sell : addDot(sellTextField)
+                print("")
+            case .none : break
+            }
         }
     }
     // MARK: Fuctions
+    
+    
+    func addDot(_ textField : UITextField) {
+        if let str = textField.text {
+            if str.last != "." && !str.contains(".") && !str.isEmpty {
+                textField.text = str + "."
+            }
+        }
+    }
+    
     func clearTextField() {
         userTextField.text = ""
         sellTextField.text = "0"
