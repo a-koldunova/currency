@@ -1,5 +1,6 @@
 import UIKit
 
+public var rootWindow: UIWindow?
 
 enum AppImage  {
     case dollarImage

@@ -3,6 +3,7 @@ import UIKit
 protocol BuilderProtocol {
 
     init()
+    static func resolveIntroductionViewController() -> IntroductionViewController
     static func resolveBanksViewController()->BanksViewController
     static func resolveBlackMarketViewController() -> BlackMarketViewController
     static func resolveNationalBankViewController() -> NationalBankViewController
@@ -17,6 +18,12 @@ class Builder: BuilderProtocol {
    
     required init() {
         
+    }
+    
+    static func resolveIntroductionViewController() -> IntroductionViewController {
+        let vc = IntroductionViewController.instantiateMyViewController(name: .introduction)
+        vc.presenter = IntroductionPresenter(view: vc)
+        return vc
     }
     
     static func resolveTabBar() -> MainTabBarController {
@@ -82,5 +89,6 @@ enum ViewControllerKeys : String {
     case bankMap = "BankMap"
     case bankPositionMap = "BankMapPosition"
     case calculator = "Calculator"
+    case introduction = "Introduction"
 }
     
