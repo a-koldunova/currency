@@ -29,12 +29,15 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
     }
     
     func getNationalBankApi() {
+        nationalBankModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .nationalBank)
+        if nationalBankModel == nil {
         nationalBankAPI.getNationalBankModel { model, error in
             if let error = error {
                 print(error.localizedDescription)
             }
             self.nationalBankModel = model
             self.view?.reloadData()
+        }
         }
     }
     

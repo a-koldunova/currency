@@ -7,14 +7,15 @@
 
 import Foundation
 
-protocol NationalBankAPIProtocol: APIManager  {
+protocol NationalBankAPIProtocol: NSObject  {
     func getNationalBankModel(completion: @escaping ([NationalBankModel]?, Error?)->Void)
 }
 
-class NationalBankAPI: APIManager, NationalBankAPIProtocol {
+class NationalBankAPI: NSObject, NationalBankAPIProtocol {
     
     func getNationalBankModel(completion: @escaping ([NationalBankModel]?, Error?) -> Void) {
-        jsonGetRequest(url: "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json", returningType: [NationalBankModel].self) { model, error in
+        APIManager.jsonGetRequest(url: "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json", returningType: [NationalBankModel].self) { model, error in
+            FileUtils.writeToFile(directoryName: directoryName, fileName: .nationalBank, model: model)
             completion(model, error)
         }
     }    

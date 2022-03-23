@@ -5,10 +5,10 @@ protocol BlackMarketAPILMP {
     func getBlackMarketData(complition : @escaping (BlackMarketModel?, Error?) -> Void)
 }
 
-class BlackMarketAPI : APIManager, BlackMarketAPILMP {
+class BlackMarketAPI : NSObject, BlackMarketAPILMP {
     
     func getBlackMarketData(complition: @escaping (BlackMarketModel?, Error?) -> Void) {
-        jsonGetRequest(url: "https://infoship.xyz/curr/uah.php?cli=9", returningType: BlackMarketModel.self) { model, error in
+        APIManager.jsonGetRequest(url: "https://infoship.xyz/curr/uah.php?cli=9", returningType: BlackMarketModel.self) { model, error in
             complition(model, error)
         }
     }
