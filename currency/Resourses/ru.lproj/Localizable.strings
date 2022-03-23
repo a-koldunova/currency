@@ -18,4 +18,9 @@
 // Database
 "dataBase.bankName.title"="BANK_NAME";
 "dataBase.adress.title"="ADDRESS";
+// Introduction Screen
+"introduction.view1.label.title" = "Получите точный\nобмен валюты";
+"introduction.view2.label.title" = "Получите позиции\nбанков по всему миру";
+"introduction.view3.label.title" = "Посчитайте необходимую сумму в долларах и евро";
+"introduction.button.title" = "Дальше";
 

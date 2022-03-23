@@ -60,6 +60,33 @@ internal enum L10n {
     }
   }
 
+  internal enum Introduction {
+    internal enum Button {
+      /// Next
+      internal static let title = L10n.tr("Localizable", "introduction.button.title")
+    }
+    internal enum View1 {
+      internal enum Label {
+        /// Get accurate
+        /// currency exchange
+        internal static let title = L10n.tr("Localizable", "introduction.view1.label.title")
+      }
+    }
+    internal enum View2 {
+      internal enum Label {
+        /// Get banks posotions
+        /// all over the word
+        internal static let title = L10n.tr("Localizable", "introduction.view2.label.title")
+      }
+    }
+    internal enum View3 {
+      internal enum Label {
+        /// Сalculate the amount you need to dollars and euros
+        internal static let title = L10n.tr("Localizable", "introduction.view3.label.title")
+      }
+    }
+  }
+
   internal enum NotMessages {
     internal enum Error {
       /// Error

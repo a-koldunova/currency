@@ -14,14 +14,17 @@ class IntroductionViewController: MainViewController<IntroductionPresenterProtoc
     }
     @IBOutlet weak var view1TitleLabel: UILabel! {
         didSet {
+            view1TitleLabel.text = L10n.Introduction.View1.Label.title
         }
     }
     @IBOutlet weak var view2TitleLabel: UILabel! {
         didSet {
+            view2TitleLabel.text = L10n.Introduction.View2.Label.title
         }
     }
     @IBOutlet weak var view3TitleLabel: UILabel! {
         didSet {
+            view3TitleLabel.text = L10n.Introduction.View3.Label.title
         }
     }
     @IBOutlet weak var scrollView: UIScrollView!
@@ -30,6 +33,7 @@ class IntroductionViewController: MainViewController<IntroductionPresenterProtoc
         didSet {
             firstNextButton.layer.cornerRadius = 10
             firstNextButton.setViewShadow()
+            firstNextButton.setTitle(L10n.Introduction.Button.title, for: .normal)
         }
     }
     @IBOutlet weak var secondNextButton: UIButton! {
