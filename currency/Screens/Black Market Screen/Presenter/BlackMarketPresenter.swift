@@ -28,9 +28,15 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     }
     
     func getBlackMarket() {
-        blackMarketAPI.getBlackMarketData { model, error in
-            if let error = error { print(error.localizedDescription); self.view.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil); return }
-            self.blackMarketModel = model
+        blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)
+        if blackMarketModel == nil {
+            blackMarketAPI.getBlackMarketData { model, error in
+                if let error = error { print(error.localizedDescription); self.view.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil); return }
+                self.blackMarketModel = model
+                self.view.tableViewReloadData()
+                if let id = self.blackMarketModel?.forecast { self.view.setAnimationStart(id: id) }
+            }
+        } else {
             self.view.tableViewReloadData()
             if let id = self.blackMarketModel?.forecast { self.view.setAnimationStart(id: id) }
         }

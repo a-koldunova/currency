@@ -2,6 +2,13 @@ import UIKit
 
 public var rootWindow: UIWindow?
 
+var directoryName = "currency"
+
+enum FileNames: String {
+    case blackMarcket = "blackMarcket.txt"
+    case nationalBank = "nationalBank.txt"
+}
+
 enum AppImage  {
     case dollarImage
     case euroImage

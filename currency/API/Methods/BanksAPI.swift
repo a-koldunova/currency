@@ -8,14 +8,14 @@
 import Foundation
 
 
-protocol BankAPIProtocol: APIManager {
+protocol BankAPIProtocol: NSObject {
     init(queryHelper: QueryHelperProtocol)
     func getBankAPI(completion: @escaping(Bool?, Error?)->Void)
     func getSaveData(completion: @escaping (BankCurrencyModel?)->Void)
     func reloadData(completion: @escaping (BankCurrencyModel?, Error?)->Void)
 }
 
-class BankAPI: APIManager, BankAPIProtocol {
+class BankAPI: NSObject, BankAPIProtocol {
     
     
     let queryHelper: QueryHelperProtocol
@@ -25,7 +25,7 @@ class BankAPI: APIManager, BankAPIProtocol {
     }
     
     func getBankAPI(completion: @escaping(Bool?, Error?)->Void) {
-        jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
+        APIManager.jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
             if model != nil {
                 let res = QueryHelper.shared.insertRates(model!)
                 completion(res, error)
