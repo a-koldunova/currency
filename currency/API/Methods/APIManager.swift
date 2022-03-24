@@ -8,9 +8,9 @@
 
 import Foundation
 
-class APIManager: NSObject {
+class APIManager {
     
-    func jsonGetRequest<T>(url: String, returningType: T.Type, completion: @escaping (T?, Error?)->Void) where T: Codable {
+    class func jsonGetRequest<T>(url: String, returningType: T.Type, completion: @escaping (T?, Error?)->Void) where T: Codable {
             guard let url = URL(string: url) else {return}
             var request = URLRequest(url: url)
             request.timeoutInterval=15

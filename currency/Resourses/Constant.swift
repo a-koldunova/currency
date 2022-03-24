@@ -1,5 +1,11 @@
 import UIKit
 
+var directoryName = "currency"
+
+enum FileNames: String {
+    case blackMarcket = "blackMarcket.txt"
+    case nationalBank = "nationalBank.txt"
+}
 
 enum AppImage  {
     case dollarImage

@@ -37,7 +37,7 @@ class FileUtils {
         return cacheURL.appendingPathComponent(directoryName, isDirectory: true)
     }
     
-    class func deleteDirectoryByImo(_ directoryName:String){
+    class func deleteDirectory(_ directoryName:String){
         let fileManager = FileManager.default
         let dirUrl=getDirectoryUrl(directoryName)
         if let lst=try?fileManager.contentsOfDirectory(atPath: dirUrl.path){
@@ -50,7 +50,7 @@ class FileUtils {
     }
     
     // create folder whith imo
-    class func createDirectoryByImo (_ name: String) {
+    class func createDirectory (_ name: String) {
         let cacheUrl=getDirectoryUrl(name)
         do {
             try  FileManager.default.createDirectory(atPath: cacheUrl.path, withIntermediateDirectories: true, attributes: nil)
@@ -61,8 +61,8 @@ class FileUtils {
     }
     
     
-    class func writeToFile<T>(directoryName: String, fileName: String, model: T)-> Bool where T: Codable {
-        let fileName=FileUtils.getDirectoryUrl(directoryName).appendingPathComponent(fileName)
+    class func writeToFile<T>(directoryName: String, fileName: FileNames, model: T)-> Bool where T: Codable {
+        let fileName=FileUtils.getDirectoryUrl(directoryName).appendingPathComponent(fileName.rawValue)
         do {
             let json = try JSONEncoder().encode(model)
             let jsonString = String(data: json, encoding: .utf8)!
@@ -74,8 +74,8 @@ class FileUtils {
         
     }
     
-    class func writeToFile(directoryName: Int, fileName: String, image: UIImage)->Bool {
-        let fileName=FileUtils.getDirectoryUrl(directoryName.description).appendingPathComponent(fileName)
+    class func writeToFile(directoryName: Int, fileName: FileNames, image: UIImage)->Bool {
+        let fileName=FileUtils.getDirectoryUrl(directoryName.description).appendingPathComponent(fileName.rawValue)
        
         if let data = image.jpegData(compressionQuality: 0.8) {
             do {
@@ -88,8 +88,8 @@ class FileUtils {
         return false
     }
     
-    class func writeToFile(directoryName: Int, fileName: String, text: String)->Bool {
-        let fileName=FileUtils.getDirectoryUrl(directoryName.description).appendingPathComponent(fileName)
+    class func writeToFile(directoryName: Int, fileName: FileNames, text: String)->Bool {
+        let fileName=FileUtils.getDirectoryUrl(directoryName.description).appendingPathComponent(fileName.rawValue)
         do {
         try text.write(toFile: fileName.path, atomically: true, encoding: .utf8)
             return true
@@ -99,16 +99,16 @@ class FileUtils {
         
     }
     
-    class func getImageFromFile(directoryName: Int, fileName: String)->UIImage? {
-        let fileName=FileUtils.getDirectoryUrl(directoryName.description).appendingPathComponent(fileName)
+    class func getImageFromFile(directoryName: Int, fileName: FileNames)->UIImage? {
+        let fileName=FileUtils.getDirectoryUrl(directoryName.description).appendingPathComponent(fileName.rawValue)
         if FileManager.default.fileExists(atPath: fileName.path){
             return UIImage(contentsOfFile: fileName.path)
         }
         return nil
     }
     
-    class func getStructFromFile<T>(directoryName: String, fileName: String)->T? where T: Codable {
-        let fileName=FileUtils.getDirectoryUrl(directoryName).appendingPathComponent(fileName)
+    class func getStructFromFile<T>(directoryName: String, fileName: FileNames)->T? where T: Codable {
+        let fileName=FileUtils.getDirectoryUrl(directoryName).appendingPathComponent(fileName.rawValue)
         if FileManager.default.fileExists(atPath: fileName.path){
             do {
                  let jsonString = try String(contentsOfFile: fileName.path, encoding: String.Encoding.utf8)
@@ -122,8 +122,8 @@ class FileUtils {
         return nil
     }
     
-    class func getTextFromFile(directoryName: String, fileName: String)-> String? {
-        let filename = FileUtils.getDirectoryUrl(directoryName).appendingPathComponent(fileName)
+    class func getTextFromFile(directoryName: String, fileName: FileNames)-> String? {
+        let filename = FileUtils.getDirectoryUrl(directoryName).appendingPathComponent(fileName.rawValue)
         if FileManager.default.fileExists(atPath: filename.path){
             do {
                let res = try String(contentsOfFile: filename.path, encoding: .utf8)
@@ -189,11 +189,11 @@ class FileUtils {
             }
         }
         
-        class func renameFile(_ directoryName:String, fromFileName:String, toFileName:String ){
+        class func renameFile(_ directoryName:String, fromFileName:FileNames, toFileName:FileNames ){
             let fm=FileManager.default
-            let fromPath=getDirectoryUrl(directoryName).appendingPathComponent(fromFileName)
+            let fromPath=getDirectoryUrl(directoryName).appendingPathComponent(fromFileName.rawValue)
             if fm.fileExists(atPath: fromPath.path){
-                let toPath=getDirectoryUrl(directoryName).appendingPathComponent(toFileName)
+                let toPath=getDirectoryUrl(directoryName).appendingPathComponent(toFileName.rawValue)
                 do {
                     try  fm.copyItem(at: fromPath, to: toPath)
                 }

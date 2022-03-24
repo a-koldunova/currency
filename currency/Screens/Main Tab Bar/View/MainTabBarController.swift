@@ -7,6 +7,7 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        FileUtils.createDirectory(directoryName)
         configureTabBarController()
         
     }
