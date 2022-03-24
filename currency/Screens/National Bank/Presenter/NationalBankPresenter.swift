@@ -38,6 +38,8 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
             self.nationalBankModel = model
             self.view?.reloadData()
         }
+        } else {
+            view?.reloadData()
         }
     }
     
