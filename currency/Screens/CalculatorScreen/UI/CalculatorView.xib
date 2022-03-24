@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cabin-SemiBold.ttf">
+            <string>Cabin-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorView" customModule="currency" customModuleProvider="target">
+            <connections>
+                <outlet property="gotButton" destination="x4z-Ph-IHE" id="pQe-BU-76y"/>
+                <outlet property="swipeAnimation" destination="J8i-Pv-7hA" id="esh-DV-IuY"/>
+                <outlet property="titleLabel" destination="KaT-TF-vUo" id="ywA-w6-Lgf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right at text field to delete one character" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaT-TF-vUo">
+                    <rect key="frame" x="24" y="16" width="202" height="44"/>
+                    <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                    <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4z-Ph-IHE">
+                    <rect key="frame" x="56" y="190" width="138" height="36"/>
+                    <color key="backgroundColor" name="navigationBarColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Z3t-wG-8V6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Got it!">
+                        <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8i-Pv-7hA" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="0.0" y="84" width="250" height="80"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="LYX-Q7-bMb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="swipe"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="J8i-Pv-7hA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="5Wl-Pu-OkY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="x4z-Ph-IHE" secondAttribute="bottom" constant="24" id="8fB-52-DVL"/>
+                <constraint firstItem="x4z-Ph-IHE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="J8i-Pv-7hA" secondAttribute="bottom" constant="4" id="IjZ-iq-yTf"/>
+                <constraint firstItem="J8i-Pv-7hA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bkI-17-ila"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x4z-Ph-IHE" secondAttribute="trailing" constant="56" id="dRN-Hg-onj"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KaT-TF-vUo" secondAttribute="trailing" constant="16" id="g2b-Iw-gjt"/>
+                <constraint firstItem="KaT-TF-vUo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="hzb-PH-5Uj"/>
+                <constraint firstItem="J8i-Pv-7hA" firstAttribute="top" secondItem="KaT-TF-vUo" secondAttribute="bottom" constant="24" id="jwf-pf-3Ww"/>
+                <constraint firstItem="KaT-TF-vUo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="nsM-l2-vwp"/>
+                <constraint firstItem="x4z-Ph-IHE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="56" id="r2c-m1-ebm"/>
+                <constraint firstItem="KaT-TF-vUo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="z1B-y1-X2q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="navigationBarColor">
+            <color red="0.875" green="1" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

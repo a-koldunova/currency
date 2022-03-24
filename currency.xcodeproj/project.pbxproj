@@ -19,6 +19,9 @@
 		9F37297B27EA735700919A28 /* exchange.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F37297827EA735700919A28 /* exchange.json */; };
 		9F37297C27EA735700919A28 /* map-markers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F37297927EA735700919A28 /* map-markers.json */; };
 		9F37297D27EA735700919A28 /* calculator.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F37297A27EA735700919A28 /* calculator.json */; };
+		9F6F0E6627EBC18E00489836 /* CalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F0E6527EBC18E00489836 /* CalculatorView.xib */; };
+		9F6F0E6827EBC42B00489836 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F0E6727EBC42B00489836 /* CalculatorView.swift */; };
+		9F6F0E6A27EBC4CE00489836 /* swipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F0E6927EBC4CE00489836 /* swipe.json */; };
 		9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168B27DF9F620091729F /* BlackMarketAPI.swift */; };
 		9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */; };
 		9F95169127DFC3290091729F /* chartView.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169027DFC3290091729F /* chartView.json */; };
@@ -119,6 +122,9 @@
 		9F37297827EA735700919A28 /* exchange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exchange.json; sourceTree = "<group>"; };
 		9F37297927EA735700919A28 /* map-markers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "map-markers.json"; sourceTree = "<group>"; };
 		9F37297A27EA735700919A28 /* calculator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calculator.json; sourceTree = "<group>"; };
+		9F6F0E6527EBC18E00489836 /* CalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorView.xib; sourceTree = "<group>"; };
+		9F6F0E6727EBC42B00489836 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		9F6F0E6927EBC4CE00489836 /* swipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swipe.json; sourceTree = "<group>"; };
 		9F95168B27DF9F620091729F /* BlackMarketAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketAPI.swift; sourceTree = "<group>"; };
 		9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketModel.swift; sourceTree = "<group>"; };
 		9F95169027DFC3290091729F /* chartView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chartView.json; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 		9F95168F27DFC30E0091729F /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				9F6F0E6927EBC4CE00489836 /* swipe.json */,
 				9F37297A27EA735700919A28 /* calculator.json */,
 				9F37297827EA735700919A28 /* exchange.json */,
 				9F37297927EA735700919A28 /* map-markers.json */,
@@ -295,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */,
+				9F6F0E6727EBC42B00489836 /* CalculatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				9F95169927DFEE200091729F /* Calculator.storyboard */,
+				9F6F0E6527EBC18E00489836 /* CalculatorView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -842,6 +851,7 @@
 				9FD9B33227DB82CE0077EA98 /* Cabin-SemiBoldItalic.ttf in Resources */,
 				9FD9B33727DB82CE0077EA98 /* Cabin-Bold.ttf in Resources */,
 				9F309FA127E921CD00458CBB /* swiftgen.yml in Resources */,
+				9F6F0E6627EBC18E00489836 /* CalculatorView.xib in Resources */,
 				9F37297D27EA735700919A28 /* calculator.json in Resources */,
 				9FD9B33127DB82CE0077EA98 /* Cabin-Medium.ttf in Resources */,
 				9F37297C27EA735700919A28 /* map-markers.json in Resources */,
@@ -854,6 +864,7 @@
 				9FD9B32327DB81800077EA98 /* Ubuntu-Bold.ttf in Resources */,
 				9FD9B32027DB81800077EA98 /* Ubuntu-Light.ttf in Resources */,
 				9F95169127DFC3290091729F /* chartView.json in Resources */,
+				9F6F0E6A27EBC4CE00489836 /* swipe.json in Resources */,
 				9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */,
 				D1E4424727E25C2500E9A1BA /* BankMapPosition.storyboard in Resources */,
 				D1E4423D27E163A100E9A1BA /* BottomMapDetailView.xib in Resources */,
@@ -972,6 +983,7 @@
 				D19C56C727DBE05900D30904 /* NSData+zlib.m in Sources */,
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
 				D1D00C6527E299EC002922ED /* BankPositionAPI.swift in Sources */,
+				9F6F0E6827EBC42B00489836 /* CalculatorView.swift in Sources */,
 				D1E4423427E1515B00E9A1BA /* BaseMapViewController.swift in Sources */,
 				9F309FA727E925FB00458CBB /* Strings.swift in Sources */,
 				D1811F0427DFDBC700B4D274 /* BankMapAnnotation.swift in Sources */,
