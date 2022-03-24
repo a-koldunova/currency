@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0E8A285E2550B13D9299E690 /* Pods_currency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A5A12115BB07B8C6192E78 /* Pods_currency.framework */; };
+		9F0E462A27EA28BF006E8EE8 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0E462527EA28BF006E8EE8 /* Introduction.storyboard */; };
+		9F0E462B27EA28BF006E8EE8 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462727EA28BF006E8EE8 /* IntroductionViewController.swift */; };
+		9F0E462C27EA28BF006E8EE8 /* IntroductionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462927EA28BF006E8EE8 /* IntroductionPresenter.swift */; };
+		9F0E462E27EA2DD0006E8EE8 /* CurvedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */; };
 		9F309F9227E8D40200458CBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F309F9427E8D40200458CBB /* Localizable.strings */; };
 		9F309F9727E8D70C00458CBB /* BlackMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F309F9927E8D70C00458CBB /* BlackMarket.storyboard */; };
 		9F309FA127E921CD00458CBB /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9F309FA027E921CD00458CBB /* swiftgen.yml */; };
 		9F309FA727E925FB00458CBB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F309FA627E925FB00458CBB /* Strings.swift */; };
+		9F37297B27EA735700919A28 /* exchange.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F37297827EA735700919A28 /* exchange.json */; };
+		9F37297C27EA735700919A28 /* map-markers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F37297927EA735700919A28 /* map-markers.json */; };
+		9F37297D27EA735700919A28 /* calculator.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F37297A27EA735700919A28 /* calculator.json */; };
+		9F6F0E6627EBC18E00489836 /* CalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F0E6527EBC18E00489836 /* CalculatorView.xib */; };
+		9F6F0E6827EBC42B00489836 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F0E6727EBC42B00489836 /* CalculatorView.swift */; };
+		9F6F0E6A27EBC4CE00489836 /* swipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F6F0E6927EBC4CE00489836 /* swipe.json */; };
 		9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168B27DF9F620091729F /* BlackMarketAPI.swift */; };
 		9F95168E27DF9FFD0091729F /* BlackMarketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */; };
 		9F95169127DFC3290091729F /* chartView.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F95169027DFC3290091729F /* chartView.json */; };
@@ -92,6 +102,10 @@
 		07BA83B9FA95B4EC92345AF5 /* Pods-currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.release.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.release.xcconfig"; sourceTree = "<group>"; };
 		873A09E4783B44361A4023AE /* Pods-currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-currency.debug.xcconfig"; path = "Target Support Files/Pods-currency/Pods-currency.debug.xcconfig"; sourceTree = "<group>"; };
 		90A5A12115BB07B8C6192E78 /* Pods_currency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_currency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0E462527EA28BF006E8EE8 /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
+		9F0E462727EA28BF006E8EE8 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		9F0E462927EA28BF006E8EE8 /* IntroductionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPresenter.swift; sourceTree = "<group>"; };
+		9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedHeaderView.swift; sourceTree = "<group>"; };
 		9F309F8E27E8D3EE00458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		9F309F8F27E8D3EE00458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9F309F9027E8D3F900458CBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -105,6 +119,12 @@
 		9F309F9F27E8D75800458CBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlackMarket.strings; sourceTree = "<group>"; };
 		9F309FA027E921CD00458CBB /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		9F309FA627E925FB00458CBB /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		9F37297827EA735700919A28 /* exchange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exchange.json; sourceTree = "<group>"; };
+		9F37297927EA735700919A28 /* map-markers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "map-markers.json"; sourceTree = "<group>"; };
+		9F37297A27EA735700919A28 /* calculator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calculator.json; sourceTree = "<group>"; };
+		9F6F0E6527EBC18E00489836 /* CalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorView.xib; sourceTree = "<group>"; };
+		9F6F0E6727EBC42B00489836 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		9F6F0E6927EBC4CE00489836 /* swipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = swipe.json; sourceTree = "<group>"; };
 		9F95168B27DF9F620091729F /* BlackMarketAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketAPI.swift; sourceTree = "<group>"; };
 		9F95168D27DF9FFD0091729F /* BlackMarketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackMarketModel.swift; sourceTree = "<group>"; };
 		9F95169027DFC3290091729F /* chartView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chartView.json; sourceTree = "<group>"; };
@@ -206,6 +226,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F0E462327EA28BF006E8EE8 /* Introduction Screen  */ = {
+			isa = PBXGroup;
+			children = (
+				9F0E462427EA28BF006E8EE8 /* UI */,
+				9F0E462627EA28BF006E8EE8 /* View */,
+				9F0E462827EA28BF006E8EE8 /* Presenter */,
+			);
+			path = "Introduction Screen ";
+			sourceTree = "<group>";
+		};
+		9F0E462427EA28BF006E8EE8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9F0E462527EA28BF006E8EE8 /* Introduction.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9F0E462627EA28BF006E8EE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F0E462727EA28BF006E8EE8 /* IntroductionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F0E462827EA28BF006E8EE8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9F0E462927EA28BF006E8EE8 /* IntroductionPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		9F309FA227E921E700458CBB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +271,10 @@
 		9F95168F27DFC30E0091729F /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				9F6F0E6927EBC4CE00489836 /* swipe.json */,
+				9F37297A27EA735700919A28 /* calculator.json */,
+				9F37297827EA735700919A28 /* exchange.json */,
+				9F37297927EA735700919A28 /* map-markers.json */,
 				9F95169027DFC3290091729F /* chartView.json */,
 			);
 			path = Animations;
@@ -244,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				9F95169B27DFEE4D0091729F /* CalculatorViewController.swift */,
+				9F6F0E6727EBC42B00489836 /* CalculatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				9F95169927DFEE200091729F /* Calculator.storyboard */,
+				9F6F0E6527EBC18E00489836 /* CalculatorView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -325,6 +385,7 @@
 		9FD9B30E27DA67290077EA98 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9F0E462327EA28BF006E8EE8 /* Introduction Screen  */,
 				D1D00C6627E390D7002922ED /* Main Tab Bar */,
 				D1E4423827E1626000E9A1BA /* BottomMapDetail */,
 				D1811EF727DFB35100B4D274 /* Bank Map */,
@@ -530,6 +591,7 @@
 				D19C56A727DBC4CB00D30904 /* FileUtils.swift */,
 				D19C56BA27DBD89F00D30904 /* CryptoUtils.swift */,
 				9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */,
+				9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -789,15 +851,20 @@
 				9FD9B33227DB82CE0077EA98 /* Cabin-SemiBoldItalic.ttf in Resources */,
 				9FD9B33727DB82CE0077EA98 /* Cabin-Bold.ttf in Resources */,
 				9F309FA127E921CD00458CBB /* swiftgen.yml in Resources */,
+				9F6F0E6627EBC18E00489836 /* CalculatorView.xib in Resources */,
+				9F37297D27EA735700919A28 /* calculator.json in Resources */,
 				9FD9B33127DB82CE0077EA98 /* Cabin-Medium.ttf in Resources */,
+				9F37297C27EA735700919A28 /* map-markers.json in Resources */,
 				9F309F9727E8D70C00458CBB /* BlackMarket.storyboard in Resources */,
 				9FD9B33327DB82CE0077EA98 /* Cabin-SemiBold.ttf in Resources */,
 				9FD9B32127DB81800077EA98 /* Ubuntu-MediumItalic.ttf in Resources */,
 				D19C56AE27DBC89500D30904 /* Banks.storyboard in Resources */,
+				9F0E462A27EA28BF006E8EE8 /* Introduction.storyboard in Resources */,
 				9FD9B32427DB81800077EA98 /* Ubuntu-Italic.ttf in Resources */,
 				9FD9B32327DB81800077EA98 /* Ubuntu-Bold.ttf in Resources */,
 				9FD9B32027DB81800077EA98 /* Ubuntu-Light.ttf in Resources */,
 				9F95169127DFC3290091729F /* chartView.json in Resources */,
+				9F6F0E6A27EBC4CE00489836 /* swipe.json in Resources */,
 				9FD9B34727DBBC0C0077EA98 /* BlackMarketView.xib in Resources */,
 				D1E4424727E25C2500E9A1BA /* BankMapPosition.storyboard in Resources */,
 				D1E4423D27E163A100E9A1BA /* BottomMapDetailView.xib in Resources */,
@@ -809,6 +876,7 @@
 				9FD9B32527DB81800077EA98 /* Ubuntu-Regular.ttf in Resources */,
 				9FD9B33827DB82CE0077EA98 /* Cabin-Italic.ttf in Resources */,
 				9FD9B30227DA67050077EA98 /* Main.storyboard in Resources */,
+				9F37297B27EA735700919A28 /* exchange.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +949,7 @@
 			files = (
 				D1D00C6A27E3989B002922ED /* MainTabBarPresenter.swift in Sources */,
 				9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */,
+				9F0E462E27EA2DD0006E8EE8 /* CurvedHeaderView.swift in Sources */,
 				9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */,
 				D1811EF427DFA56300B4D274 /* NationalBankAPI.swift in Sources */,
 				D19C56BD27DBD95C00D30904 /* BanksAPI.swift in Sources */,
@@ -892,6 +961,8 @@
 				9FCE931F27E2391B00497B30 /* SwiftMessagesManager.swift in Sources */,
 				9FD9B2FD27DA67050077EA98 /* SceneDelegate.swift in Sources */,
 				D1811EF027DF519B00B4D274 /* NationalBankPresenter.swift in Sources */,
+				9F0E462B27EA28BF006E8EE8 /* IntroductionViewController.swift in Sources */,
+				9F0E462C27EA28BF006E8EE8 /* IntroductionPresenter.swift in Sources */,
 				D1811EF627DFA59300B4D274 /* NationalBankModel.swift in Sources */,
 				D19C56A627DBC37200D30904 /* DBManager.swift in Sources */,
 				D1811F0027DFB40B00B4D274 /* BankMapPresenter.swift in Sources */,
@@ -912,6 +983,7 @@
 				D19C56C727DBE05900D30904 /* NSData+zlib.m in Sources */,
 				9FD9B33A27DB83930077EA98 /* Builder.swift in Sources */,
 				D1D00C6527E299EC002922ED /* BankPositionAPI.swift in Sources */,
+				9F6F0E6827EBC42B00489836 /* CalculatorView.swift in Sources */,
 				D1E4423427E1515B00E9A1BA /* BaseMapViewController.swift in Sources */,
 				9F309FA727E925FB00458CBB /* Strings.swift in Sources */,
 				D1811F0427DFDBC700B4D274 /* BankMapAnnotation.swift in Sources */,

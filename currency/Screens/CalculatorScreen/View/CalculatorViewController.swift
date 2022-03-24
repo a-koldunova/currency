@@ -23,16 +23,22 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
         didSet {
             setTextField(userTextField)
             //            textField.backgroundColor = UIColor(red: 0.879, green: 0.942, blue: 0.881, alpha: 1)
+            let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(userTextFieldGesture(gesture:)))
+            userTextField.addGestureRecognizer(swipeRecognizer)
             
         }
     }
     @IBOutlet weak var buyTextField: UITextField! {
         didSet {
+            let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(buyTextFieldGesture(gesture:)))
+            buyTextField.addGestureRecognizer(swipeRecognizer)
             setTextField(buyTextField)
         }
     }
     @IBOutlet weak var sellTextField: UITextField! {
         didSet {
+            let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(sellTextFieldGesture(gesture:)))
+            sellTextField.addGestureRecognizer(swipeRecognizer)
             setTextField(sellTextField)
         }
     }
@@ -50,12 +56,16 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
             calculatorButtons[11].setTitle("C", for: .normal)
         }
     }
+    
+    let overlay = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+    let calculatorView = CalculatorView(frame: CGRect(x: 127, y: 248, width: 250, height: 250))
     var action : CalculatorAction?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = presenter.title
+        setUpCalculatorView()
     }
     
     // MARK: IBActions
@@ -84,6 +94,39 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
     }
     // MARK: Fuctions
     
+    func setUpCalculatorView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.view.addSubview(self.overlay)
+            self.calculatorView.center.y = self.view.center.y
+            self.calculatorView.center.x = self.view.center.x
+            self.calculatorView.swipeAnimation.loopMode = .loop
+            self.calculatorView.swipeAnimation.play()
+            self.view.addSubview(self.calculatorView)
+            self.calculatorView.gotButton.addTarget(self, action: #selector(self.removeView), for: .touchUpInside)
+            self.animateIn()
+        }
+    }
+    func animateIn() {
+        calculatorView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+        calculatorView.alpha = 0
+        overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0)
+        UIView.animate(withDuration: 0.4) {
+            self.calculatorView.alpha = 1
+            self.calculatorView.transform = CGAffineTransform.identity
+            self.overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.7)
+        }
+    }
+    
+    func animateOut() {
+        UIView.animate(withDuration: 0.4) {
+            self.calculatorView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.calculatorView.alpha = 0
+            self.overlay.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0)
+        } completion: { (_) in
+            self.calculatorView.removeFromSuperview()
+            self.overlay.removeFromSuperview()
+        }
+    }
     
     func addDot(_ textField : UITextField) {
         if let str = textField.text {
@@ -100,8 +143,9 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
     }
     
     func addCaracterToTextField(_ textField : UITextField, character : Int) {
-        let str = textField.text ?? ""
-        textField.text = str + character.description
+        let char = character.description
+        let str = textField.text == "0" ? "" : textField.text
+        textField.text = (str ?? "") + char
     }
     
     func setTextField(_ textField : UITextField) {
@@ -110,7 +154,16 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
         textField.delegate = self
         textField.setViewShadow()
     }
-    
+    func deleteChacterFromTextField(_ textField : UITextField) {
+        if textField.text != nil {
+            if !textField.text!.isEmpty {
+                textField.text!.removeLast()
+            }
+        }
+        if textField.text?.isEmpty ?? true {
+            textField.text = "0"
+        }
+    }
     func userNumberAction(_ tag : Int) {
         if presenter.clearUserTF {
             presenter.clearUserTF = false
@@ -144,7 +197,34 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
         buyTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.buy, from: 1)
     }
     
+    // MARK: objc functions
     
+    @objc func removeView() {
+        calculatorView.swipeAnimation.stop()
+        animateOut()
+    }
+    
+    @objc func userTextFieldGesture(gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .right {
+            deleteChacterFromTextField(userTextField)
+            buyTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.buy, from: 1)
+            sellTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.sell, from: 1)
+        }
+    }
+    @objc func buyTextFieldGesture(gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .right {
+            deleteChacterFromTextField(buyTextField)
+            userTextField.text = presenter.convert(value: (buyTextField.text! as NSString).doubleValue, to: 1, from: presenter.buy)
+            sellTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.sell, from: 1)
+        }
+    }
+    @objc func sellTextFieldGesture(gesture: UISwipeGestureRecognizer) {
+        if gesture.direction == .right {
+            deleteChacterFromTextField(sellTextField)
+            userTextField.text = presenter.convert(value: (sellTextField.text! as NSString).doubleValue, to: 1, from: presenter.sell)
+            buyTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.buy, from: 1)
+        }
+    }
     /*
      // MARK: - Navigation
      

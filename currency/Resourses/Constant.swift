@@ -1,5 +1,7 @@
 import UIKit
 
+public var rootWindow: UIWindow?
+
 var directoryName = "currency"
 
 enum FileNames: String {
