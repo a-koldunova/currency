@@ -19,8 +19,10 @@
                 <outlet property="bankNameLabel" destination="fZC-lt-rLO" id="1hq-94-ahL"/>
                 <outlet property="detailView" destination="Li4-5c-Qh0" id="V8T-9p-i4R"/>
                 <outlet property="eurRateView" destination="OZb-Bc-mRt" id="2TV-Id-FQR"/>
+                <outlet property="eurViewHeight" destination="Vmy-II-CTV" id="ZDT-Ej-IMK"/>
                 <outlet property="phoneButton" destination="GYa-U1-aT9" id="jN5-ta-Asz"/>
                 <outlet property="usdRateView" destination="sfG-mu-hg6" id="vNE-zI-7e8"/>
+                <outlet property="usdViewHeight" destination="N5C-Cp-1RT" id="44P-Vw-5wb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
