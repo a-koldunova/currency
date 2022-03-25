@@ -2,6 +2,8 @@ import UIKit
 
 protocol BanksViewProtocol: SwiftMessagesManager {
     func reloadData()
+    func activityIndicatorStartAnimating()
+    func activityIndicatorStopAnimating()
 }
 
 protocol BanksPresenterProtocol: AnyObject {
@@ -44,7 +46,9 @@ class BanksPresenter: BanksPresenterProtocol {
     }
     
     func getBanks() {
+        self.view?.activityIndicatorStartAnimating()
         banksAPI.getSaveData { model in
+            self.view?.activityIndicatorStopAnimating()
             self.banksModel = model
             self.view?.reloadData()
         }

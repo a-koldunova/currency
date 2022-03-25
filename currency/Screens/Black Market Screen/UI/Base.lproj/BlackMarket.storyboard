@@ -143,12 +143,18 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="O36-C4-8c0"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="KQL-VT-lOi"/>
                             </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TCe-9k-jue">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xLS-yS-DLT" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="4ZP-Ol-ghT"/>
                             <constraint firstItem="xLS-yS-DLT" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8eQ-XT-eJC"/>
+                            <constraint firstItem="TCe-9k-jue" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="DQP-lq-G38"/>
+                            <constraint firstItem="TCe-9k-jue" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iek-Qz-i6Z"/>
                             <constraint firstItem="xLS-yS-DLT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lji-Pt-uUr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xLS-yS-DLT" secondAttribute="trailing" id="wZo-oo-dXd"/>
                         </constraints>
@@ -156,6 +162,7 @@
                     <navigationItem key="navigationItem" id="xhq-li-WOz"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="TCe-9k-jue" id="XBV-XM-DKD"/>
                         <outlet property="anView" destination="fyW-sT-Oe7" id="7zf-wS-DNc"/>
                         <outlet property="scrollView" destination="xLS-yS-DLT" id="wcG-hd-qGW"/>
                         <outlet property="tableView" destination="beO-9X-ug8" id="cJq-oa-Vzd"/>

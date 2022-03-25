@@ -4,6 +4,20 @@ public var rootWindow: UIWindow?
 
 var directoryName = "currency"
 
+var isViewShown: Bool {
+    set {
+        UserDefaults.standard.set(!newValue, forKey: UserDefaultsKeys.isViewShown.rawValue)
+    }
+    get {
+        return !UserDefaults.standard.bool(forKey: UserDefaultsKeys.isViewShown.rawValue)
+    }
+}
+
+enum UserDefaultsKeys : String {
+    case isViewShown = "IS_VIEW_SHOWN"
+    case isfirstLaunch = "IS_FIRST_LAUCN"
+}
+
 enum FileNames: String {
     case blackMarcket = "blackMarcket.txt"
     case nationalBank = "nationalBank.txt"

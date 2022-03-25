@@ -8,14 +8,17 @@
 import Foundation
 
 
-protocol NationalBankViewProtocol: AnyObject {
+protocol NationalBankViewProtocol: SwiftMessagesManager {
     func reloadData()
+    func activityIndicatorStartAnimating()
+    func activityIndicatorStopAnimating()
 }
 
 protocol NationalBankPresneterProtocol: AnyObject {
     init(view: NationalBankViewProtocol, nationalBankAPI: NationalBankAPIProtocol)
     var nationalBankModel: [NationalBankModel]? { get set }
     func getNationalBankApi()
+    
 }
 
 class NationalBankPresenter: NationalBankPresneterProtocol {
@@ -31,10 +34,14 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
     func getNationalBankApi() {
         nationalBankModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .nationalBank)
         if nationalBankModel == nil {
+            self.view?.activityIndicatorStartAnimating()
         nationalBankAPI.getNationalBankModel { model, error in
             if let error = error {
                 print(error.localizedDescription)
+                self.view?.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil)
+                
             }
+            self.view?.activityIndicatorStopAnimating()
             self.nationalBankModel = model
             self.view?.reloadData()
         }
