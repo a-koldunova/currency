@@ -3,6 +3,8 @@ import UIKit
 public var rootWindow: UIWindow?
 
 var directoryName = "currency"
+var oneday =  24 * 60 * 60.0
+var updateNeededData = "01.01.1970"
 
 var isViewShown: Bool {
     set {
@@ -85,5 +87,6 @@ enum Currency: String {
 
 
 enum MessagesText : String {
+case errorStr = "error"
 case error = "Something went wrong. Try later"
 }

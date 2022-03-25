@@ -33,7 +33,7 @@ class BanksPresenter: BanksPresenterProtocol {
         if let url = URL(string: link), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
-            view?.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil)
+            view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
         }
     }
     

@@ -32,23 +32,18 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
     }
     
     func getNationalBankApi() {
-        nationalBankModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .nationalBank)
-        if nationalBankModel == nil {
-            self.view?.activityIndicatorStartAnimating()
         nationalBankAPI.getNationalBankModel { model, error in
-            if let error = error {
-                print(error.localizedDescription)
-                self.view?.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil)
-                
+            if let error = error, model == nil {
+                self.view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
+                self.nationalBankModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .nationalBank)
+            } else {
+                self.nationalBankModel = model
             }
             self.view?.activityIndicatorStopAnimating()
-            self.nationalBankModel = model
             self.view?.reloadData()
-        }
-        } else {
-            view?.reloadData()
         }
     }
     
     
 }
+

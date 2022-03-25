@@ -87,6 +87,8 @@
 		D19C56C727DBE05900D30904 /* NSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C627DBE05900D30904 /* NSData+zlib.m */; };
 		D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56C827DBE4B000D30904 /* BanksModel.swift */; };
 		D19C56CB27DBFFD200D30904 /* QueryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19C56CA27DBFFD100D30904 /* QueryHelper.swift */; };
+		D1A12C7027ECD68D00128FE0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A12C6F27ECD68D00128FE0 /* Keys.swift */; };
+		D1A12C7227ECDACC00128FE0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A12C7127ECDACC00128FE0 /* Date.swift */; };
 		D1D00C6527E299EC002922ED /* BankPositionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D00C6427E299EC002922ED /* BankPositionAPI.swift */; };
 		D1D00C6A27E3989B002922ED /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D00C6927E3989B002922ED /* MainTabBarPresenter.swift */; };
 		D1E4423427E1515B00E9A1BA /* BaseMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4423327E1515B00E9A1BA /* BaseMapViewController.swift */; };
@@ -195,6 +197,8 @@
 		D19C56C627DBE05900D30904 /* NSData+zlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+zlib.m"; sourceTree = "<group>"; };
 		D19C56C827DBE4B000D30904 /* BanksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksModel.swift; sourceTree = "<group>"; };
 		D19C56CA27DBFFD100D30904 /* QueryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryHelper.swift; sourceTree = "<group>"; };
+		D1A12C6F27ECD68D00128FE0 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		D1A12C7127ECDACC00128FE0 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D1D00C6427E299EC002922ED /* BankPositionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankPositionAPI.swift; sourceTree = "<group>"; };
 		D1D00C6927E3989B002922ED /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
 		D1E4423327E1515B00E9A1BA /* BaseMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +431,7 @@
 			children = (
 				9F95168F27DFC30E0091729F /* Animations */,
 				9FD9B34A27DBCAF20077EA98 /* Constant.swift */,
+				D1A12C6F27ECD68D00128FE0 /* Keys.swift */,
 				9FD9B31627DB81590077EA98 /* Font */,
 				9F309F9427E8D40200458CBB /* Localizable.strings */,
 			);
@@ -592,6 +597,7 @@
 				D19C56BA27DBD89F00D30904 /* CryptoUtils.swift */,
 				9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */,
 				9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */,
+				D1A12C7127ECDACC00128FE0 /* Date.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -969,8 +975,10 @@
 				9F95169427DFE2740091729F /* MainTabBarController.swift in Sources */,
 				D19C56B427DBD16200D30904 /* BanksPresenter.swift in Sources */,
 				D1811EEE27DF516800B4D274 /* NationalBankViewController.swift in Sources */,
+				D1A12C7027ECD68D00128FE0 /* Keys.swift in Sources */,
 				D1E4424127E226C500E9A1BA /* BottomDetailPresenter.swift in Sources */,
 				D19C56C927DBE4B000D30904 /* BanksModel.swift in Sources */,
+				D1A12C7227ECDACC00128FE0 /* Date.swift in Sources */,
 				D19C56B927DBD6F800D30904 /* APIManager.swift in Sources */,
 				D1811F0227DFCD2300B4D274 /* BankMapApi.swift in Sources */,
 				9F95168C27DF9F620091729F /* BlackMarketAPI.swift in Sources */,

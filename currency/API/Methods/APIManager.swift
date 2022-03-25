@@ -17,6 +17,7 @@ class APIManager {
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let error = error {
                     completion(nil, error)
+                    return
                 }
                 guard let data = data else { completion(nil, nil); return }
                 do {

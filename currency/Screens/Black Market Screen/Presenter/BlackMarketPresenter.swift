@@ -30,19 +30,19 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     }
     
     func getBlackMarket() {
-        blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)
-        if blackMarketModel == nil {
-            view.activityIndictorStartAnimating()
-            blackMarketAPI.getBlackMarketData { model, error in
-                self.view.activityIndictorStopAnimating()
-                if let error = error { print(error.localizedDescription); self.view.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil); return }
-                self.blackMarketModel = model
-                self.view.tableViewReloadData()
-                if let id = self.blackMarketModel?.forecast { self.view.setAnimationStart(id: id) }
+        blackMarketAPI.getBlackMarketData { model, error in
+            self.view.activityIndictorStopAnimating()
+            if error != nil || model == nil {
+                print(error!.localizedDescription)
+                self.blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)
+                DispatchQueue.main.async {
+                    self.view.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
+                }
+            } else {
+            self.blackMarketModel = model
             }
-        } else {
-            self.view.tableViewReloadData()
             if let id = self.blackMarketModel?.forecast { self.view.setAnimationStart(id: id) }
+            self.view.tableViewReloadData()
         }
     }
     

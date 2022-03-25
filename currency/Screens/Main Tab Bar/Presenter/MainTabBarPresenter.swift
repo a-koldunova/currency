@@ -32,7 +32,7 @@ class MainTabBarPresenter: MainTabBarPresenterProtocol {
         bankAPI.getBankAPI { res, error in
             if let error = error {
                 print(error.localizedDescription)
-                self.view?.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil)
+                self.view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
             } 
         }
     }
