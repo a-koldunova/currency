@@ -223,12 +223,20 @@ currency exchange</string>
                                 <viewLayoutGuide key="contentLayoutGuide" id="VPH-Oy-uNj"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="E3k-eI-GXC"/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ggo-UJ-zjl">
+                                <rect key="frame" x="563" y="678" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" name="selectedColor"/>
+                                <color key="currentPageIndicatorTintColor" name="fontColor"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Drt-Cv-Mo2"/>
                         <color key="backgroundColor" name="navigationBarColor"/>
                         <constraints>
                             <constraint firstItem="AeK-Co-4dW" firstAttribute="bottom" secondItem="n2j-L1-2Lh" secondAttribute="bottom" id="0qz-rq-nuD"/>
                             <constraint firstItem="gXt-9G-Dd3" firstAttribute="bottom" secondItem="vsf-5d-VFy" secondAttribute="bottom" id="27J-lu-pTt"/>
+                            <constraint firstItem="Ggo-UJ-zjl" firstAttribute="centerX" secondItem="n2j-L1-2Lh" secondAttribute="centerX" id="FWi-Vh-odQ"/>
+                            <constraint firstItem="HTS-cz-azx" firstAttribute="top" secondItem="Ggo-UJ-zjl" secondAttribute="bottom" constant="64" id="KdX-Gx-eTq"/>
+                            <constraint firstItem="Ggo-UJ-zjl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JMt-di-AcL" secondAttribute="bottom" constant="8" id="Mrj-Uj-YJB"/>
                             <constraint firstItem="stB-ao-e5u" firstAttribute="bottom" secondItem="Vi2-8o-o5T" secondAttribute="bottom" id="RY6-1F-IXn"/>
                             <constraint firstItem="AeK-Co-4dW" firstAttribute="width" secondItem="Drt-Cv-Mo2" secondAttribute="width" id="dvW-NB-jhW"/>
                             <constraint firstItem="AeK-Co-4dW" firstAttribute="top" secondItem="n2j-L1-2Lh" secondAttribute="top" id="f9Y-rm-yAF"/>
@@ -244,6 +252,7 @@ currency exchange</string>
                         <outlet property="exchangeAnimation" destination="vIN-hx-d3M" id="tLO-FP-PPa"/>
                         <outlet property="firstNextButton" destination="Jz3-0A-FJv" id="WyO-hj-tSo"/>
                         <outlet property="mapAnimation" destination="2M1-W5-Ft5" id="Ofl-Sq-Smm"/>
+                        <outlet property="pageControl" destination="Ggo-UJ-zjl" id="gor-Vm-HbG"/>
                         <outlet property="scrollView" destination="AeK-Co-4dW" id="MfJ-Rl-sGI"/>
                         <outlet property="secondNextButton" destination="HTS-cz-azx" id="FX8-qd-psS"/>
                         <outlet property="thirdNextButton" destination="dMi-wa-GDh" id="mZ4-WK-fXr"/>
@@ -269,6 +278,9 @@ currency exchange</string>
         </namedColor>
         <namedColor name="navigationBarColor">
             <color red="0.875" green="1" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="selectedColor">
+            <color red="0.87800002098083496" green="0.94099998474121094" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
