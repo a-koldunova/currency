@@ -65,7 +65,10 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
         super.viewDidLoad()
         
         navigationItem.title = presenter.title
-        setUpCalculatorView()
+        if isViewShown {
+            isViewShown = false
+            setUpCalculatorView()
+        }
     }
     
     // MARK: IBActions

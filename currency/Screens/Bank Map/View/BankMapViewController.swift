@@ -11,6 +11,7 @@ import CoreLocation
 
 class BankMapViewController: BaseMapViewController<BankMapPresenterProtocol>  {
     @IBOutlet weak var bankMapView: MKMapView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +47,19 @@ extension BankMapViewController: BaseMapDelegate {
 }
 
 extension BankMapViewController: BankMapViewProtocol {
-    
     func setAnnotation(annotations: [BankMapAnnotation]) {
         DispatchQueue.main.async {
             self.bankMapView.addAnnotations(annotations)
         }
     }
-    
-    
+    func activityIndicatorStartAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+    }
+    func activityIndicatorStopAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
+    }
 }

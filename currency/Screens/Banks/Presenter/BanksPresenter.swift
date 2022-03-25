@@ -2,6 +2,8 @@ import UIKit
 
 protocol BanksViewProtocol: SwiftMessagesManager {
     func reloadData()
+    func activityIndicatorStartAnimating()
+    func activityIndicatorStopAnimating()
 }
 
 protocol BanksPresenterProtocol: AnyObject {
@@ -31,7 +33,7 @@ class BanksPresenter: BanksPresenterProtocol {
         if let url = URL(string: link), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
-            view?.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil)
+            view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
         }
     }
     
@@ -44,14 +46,11 @@ class BanksPresenter: BanksPresenterProtocol {
     }
     
     func getBanks() {
-        var lastUpdate = UserDefaults.standard.double(forKey: banks_key)
-        if DateHelper.diffBtwNow(and: lastUpdate) > oneday {
+        self.view?.activityIndicatorStartAnimating()
         banksAPI.getSaveData { model in
+            self.view?.activityIndicatorStopAnimating()
             self.banksModel = model
             self.view?.reloadData()
-        }
-        } else {
-            reloadData()
         }
     }
     

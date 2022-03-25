@@ -10,6 +10,8 @@ import MapKit
 
 protocol BankMapPositionViewProtocol: AnyObject {
    func setAnnotation(annotations: [BankMapAnnotation])
+    func activityIndicatorStartAnimating()
+    func activityIndicatorStopAnimating()
 }
 
 protocol BankMapPositionPresenterProtocol: AnyObject {
@@ -33,8 +35,10 @@ class BankMapPositionPresenter: BankMapPositionPresenterProtocol {
     }
     
     func getBankPositionModel(lat: Double, lon: Double) {
+        self.view?.activityIndicatorStartAnimating()
         positionAPI.getPositionModel(lat: lat, lon: lon, bankId: bankId) { model in
             self.view?.setAnnotation(annotations: model)
+            self.view?.activityIndicatorStopAnimating()
         }
     }
     

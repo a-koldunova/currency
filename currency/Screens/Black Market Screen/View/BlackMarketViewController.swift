@@ -4,6 +4,7 @@ import Lottie
 
 class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol> {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -81,6 +82,18 @@ extension BlackMarketViewController : BlackMarketProtocol {
     func tableViewReloadData() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+    
+    func activityIndictorStartAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+    }
+    
+    func activityIndictorStopAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
         }
     }
     
