@@ -3,6 +3,8 @@ import UIKit
 public var rootWindow: UIWindow?
 
 var directoryName = "currency"
+var oneday =  24 * 60 * 60.0
+var updateNeededData = "01.01.1970"
 
 enum FileNames: String {
     case blackMarcket = "blackMarcket.txt"

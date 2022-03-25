@@ -44,9 +44,14 @@ class BanksPresenter: BanksPresenterProtocol {
     }
     
     func getBanks() {
+        var lastUpdate = UserDefaults.standard.double(forKey: banks_key)
+        if DateHelper.diffBtwNow(and: lastUpdate) > oneday {
         banksAPI.getSaveData { model in
             self.banksModel = model
             self.view?.reloadData()
+        }
+        } else {
+            reloadData()
         }
     }
     

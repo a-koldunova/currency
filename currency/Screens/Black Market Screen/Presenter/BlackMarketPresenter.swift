@@ -29,7 +29,7 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     
     func getBlackMarket() {
         blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)
-        if blackMarketModel == nil {
+        if blackMarketModel == nil || DateHelper.diffBtwNow(and: Double(blackMarketModel?.time ?? 0)) > oneday {
             blackMarketAPI.getBlackMarketData { model, error in
                 if let error = error { print(error.localizedDescription); self.view.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil); return }
                 self.blackMarketModel = model

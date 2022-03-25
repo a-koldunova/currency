@@ -30,7 +30,7 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
     
     func getNationalBankApi() {
         nationalBankModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .nationalBank)
-        if nationalBankModel == nil {
+        if nationalBankModel == nil || abs(DateHelper.differenceBtwNow(and: nationalBankModel?.last?.exchangedate ?? updateNeededData)) >  oneday {
         nationalBankAPI.getNationalBankModel { model, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -39,9 +39,11 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
             self.view?.reloadData()
         }
         } else {
+            //print(DateHelper.stringToDate(dateStr: nationalBankModel!.last!.exchangedate))
             view?.reloadData()
         }
     }
     
     
 }
+

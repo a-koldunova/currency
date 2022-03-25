@@ -7,40 +7,24 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95C7027C-13C7-4E3F-BEF9-2EDC207E7D4E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "currency/Infrastracture/Helpers/SwiftMessagesManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2"
-            endingLineNumber = "2"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0B1A82A5-89EA-4E0F-B91D-B091A563FD68"
+            uuid = "FE9F85C0-BAB9-4CB7-B9DF-08C05A4E168B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "currency/Screens/National Bank/Presenter/NationalBankPresenter.swift"
+            filePath = "currency/API/Methods/NationalBankAPI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "getNationalBankApi()"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getNationalBankModel(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7A15E034-8416-4A12-B8E6-454A60FFDDB3"
-            shouldBeEnabled = "Yes"
+            uuid = "57CFE40B-B5BE-4BF8-9FD1-D3D640557006"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "currency/Screens/National Bank/Presenter/NationalBankPresenter.swift"
@@ -55,32 +39,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "71B53190-35F2-4E99-A0ED-15EFE9F64633"
+            uuid = "BE41B3A0-77CC-41BF-B27A-9AC9470C9D2D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "currency/Screens/Black Market Screen/Presenter/BlackMarketPresenter.swift"
+            filePath = "currency/Screens/National Bank/Presenter/NationalBankPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "getBlackMarket()"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getNationalBankApi()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FFDDAC38-ED23-4D7A-A025-9FD4958610B6"
+            uuid = "2C981874-DE59-4EA9-B263-5BFFF4F9D520"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "currency/Screens/BottomMapDetail/View/BottomMapDetailView.swift"
+            filePath = "currency/Screens/National Bank/Presenter/NationalBankPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "configure(_:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getNationalBankApi()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED521110-0087-444A-9034-7F48C8CF3E89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "currency/Screens/National Bank/View/NationalBankViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
