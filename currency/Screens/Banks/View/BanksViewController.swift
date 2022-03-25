@@ -16,11 +16,15 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
         }
     }
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = L10n.TabBar.Item.Banks.title
         presenter.getBanks()
-        
+        initRefreshControl()
+        refreshControl!.addTarget(self, action: #selector(self.updateTableView), for: .valueChanged)
+        banksTableView.addSubview(refreshControl!)
     }
     @IBAction func changeBankSegmentControl(_ sender: Any) {
         reloadData()
@@ -43,6 +47,13 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
         alert.addAction(action3)
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK : @objc function
+    @objc func updateTableView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.refreshControl!.endRefreshing()
+        }
     }
     
 }
@@ -77,6 +88,16 @@ extension BanksViewController: BanksViewProtocol {
     func reloadData() {
         DispatchQueue.main.async {
             self.banksTableView.reloadData()
+        }
+    }
+    func activityIndicatorStartAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+    }
+    func activityIndicatorStopAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
         }
     }
 }

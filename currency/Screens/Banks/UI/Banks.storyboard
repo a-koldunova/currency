@@ -101,6 +101,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-fD-9Zp">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -110,11 +113,14 @@
                             <constraint firstItem="Uxx-sr-lH0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8yg-G2-nca"/>
                             <constraint firstItem="LLR-l6-mQ2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="KAT-zh-uCC"/>
                             <constraint firstItem="LLR-l6-mQ2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wvn-PN-X4j"/>
+                            <constraint firstItem="mfc-fD-9Zp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="crW-fW-CgD"/>
                             <constraint firstItem="LLR-l6-mQ2" firstAttribute="top" secondItem="Uxx-sr-lH0" secondAttribute="bottom" constant="8" symbolic="YES" id="oyy-qi-6QX"/>
+                            <constraint firstItem="mfc-fD-9Zp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="yeC-Wk-7Ut"/>
                             <constraint firstAttribute="bottom" secondItem="LLR-l6-mQ2" secondAttribute="bottom" id="zVr-zY-SP2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="mfc-fD-9Zp" id="lcS-5t-HJB"/>
                         <outlet property="banksSegmentControl" destination="Uxx-sr-lH0" id="vgQ-Ld-zle"/>
                         <outlet property="banksTableView" destination="LLR-l6-mQ2" id="X9f-xi-NAO"/>
                     </connections>

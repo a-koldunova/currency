@@ -20,8 +20,18 @@ class BottomMapDetailView: UIView {
             phoneButton.layer.cornerRadius = 6
         }
     }
-    @IBOutlet weak var usdRateView: BlackMarketView!
-    @IBOutlet weak var eurRateView: BlackMarketView!
+    @IBOutlet weak var usdRateView: BlackMarketView! {
+        didSet {
+            usdRateView.buyView.backgroundColor = .clear
+            usdRateView.sellView.backgroundColor = .clear
+        }
+    }
+    @IBOutlet weak var eurRateView: BlackMarketView! {
+        didSet {
+            eurRateView.buyView.backgroundColor = .clear
+            eurRateView.sellView.backgroundColor = .clear
+        }
+    }
     @IBOutlet weak var usdViewHeight: NSLayoutConstraint!
     @IBOutlet weak var eurViewHeight: NSLayoutConstraint!
     
@@ -57,7 +67,8 @@ class BottomMapDetailView: UIView {
 
         view.insertSubview(bluredView, at: 0)
         view.backgroundColor = MainColors.bottomSheetColor.color
-        phoneButton.backgroundColor = MainColors.selectedColor.color
+        phoneButton.backgroundColor = .clear
+//        MainColors.selectedColor.color
         addSubview(view)
         contenView = view
     }

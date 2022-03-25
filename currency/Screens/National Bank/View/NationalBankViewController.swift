@@ -9,6 +9,7 @@ import UIKit
 
 class NationalBankViewController: MainViewController<NationalBankPresneterProtocol> {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nationalBankTableView: UITableView! {
         didSet {
             nationalBankTableView.delegate = self
@@ -20,6 +21,15 @@ class NationalBankViewController: MainViewController<NationalBankPresneterProtoc
         super.viewDidLoad()
         navigationItem.title = L10n.TabBar.Item.NatBank.title
         presenter.getNationalBankApi()
+        initRefreshControl()
+        refreshControl!.addTarget(self, action: #selector(self.updateTableView), for: .valueChanged)
+        nationalBankTableView.addSubview(refreshControl!)
+    }
+     
+    @objc func updateTableView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.refreshControl?.endRefreshing()
+        }
     }
 
 }
@@ -32,6 +42,7 @@ extension NationalBankViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nationalBank", for: indexPath)
+        cell.selectionStyle = .none
         guard let nationalBankModel = presenter.nationalBankModel else {return UITableViewCell()}
         var content = cell.defaultContentConfiguration()
         let attributedText = NSAttributedString(string: nationalBankModel[indexPath.row].txt, attributes: [.font : UIFont(name: "Cabin-Regular", size: 16)!, .foregroundColor: MainColors.fontColor.color])
@@ -57,5 +68,15 @@ extension NationalBankViewController: NationalBankViewProtocol {
         }
     }
     
-    
+    func activityIndicatorStartAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+    }
+   
+    func activityIndicatorStopAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
+    }
 }

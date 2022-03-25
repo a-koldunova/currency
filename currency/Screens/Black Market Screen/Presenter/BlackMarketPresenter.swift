@@ -3,6 +3,8 @@ import UIKit
 protocol BlackMarketProtocol : SwiftMessagesManager {
     func setAnimationStart(id : Int)
     func tableViewReloadData()
+    func activityIndictorStartAnimating()
+    func activityIndictorStopAnimating()
 }
 
 protocol BlackMarketPresenterProtocol : AnyObject {
@@ -30,7 +32,9 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     func getBlackMarket() {
         blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)
         if blackMarketModel == nil {
+            view.activityIndictorStartAnimating()
             blackMarketAPI.getBlackMarketData { model, error in
+                self.view.activityIndictorStopAnimating()
                 if let error = error { print(error.localizedDescription); self.view.showMessages(theme: .error, withMessage: MessagesText.error.rawValue, isForeverDuration: false, actionText: nil, action: nil); return }
                 self.blackMarketModel = model
                 self.view.tableViewReloadData()

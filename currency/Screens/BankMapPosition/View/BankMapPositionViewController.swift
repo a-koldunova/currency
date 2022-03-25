@@ -10,6 +10,7 @@ import MapKit
 
 class BankMapPositionViewController: BaseMapViewController<BankMapPositionPresenter> {
     @IBOutlet weak var bankPositionMapView: MKMapView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +48,15 @@ extension BankMapPositionViewController: BankMapPositionViewProtocol {
         }
     }
     
+    func activityIndicatorStartAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+    }
+    func activityIndicatorStopAnimating() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
+    }
     
 }
