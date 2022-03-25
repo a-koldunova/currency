@@ -5,6 +5,7 @@ import Lottie
 
 class IntroductionViewController: MainViewController<IntroductionPresenterProtocol>, IntroductionProtocol {
 
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var calculatorAnimation: AnimationView!
     @IBOutlet weak var mapAnimation: AnimationView!
     @IBOutlet weak var exchangeAnimation: AnimationView! {
@@ -27,7 +28,11 @@ class IntroductionViewController: MainViewController<IntroductionPresenterProtoc
             view3TitleLabel.text = L10n.Introduction.View3.Label.title
         }
     }
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.delegate = self
+        }
+    }
 
     @IBOutlet weak var firstNextButton: UIButton! {
         didSet {
@@ -104,3 +109,9 @@ class IntroductionViewController: MainViewController<IntroductionPresenterProtoc
   
 }
 
+extension IntroductionViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
+    }
+}
