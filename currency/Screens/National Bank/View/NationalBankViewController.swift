@@ -62,6 +62,12 @@ extension NationalBankViewController: UITableViewDelegate, UITableViewDataSource
 }
 
 extension NationalBankViewController: NationalBankViewProtocol {
+    func endRefreshing() {
+        DispatchQueue.main.async {
+            self.refreshControl?.endRefreshing()
+        }
+    }
+    
     func reloadData() {
         DispatchQueue.main.async {
             self.nationalBankTableView.reloadData()
@@ -70,7 +76,9 @@ extension NationalBankViewController: NationalBankViewProtocol {
     
     func activityIndicatorStartAnimating() {
         DispatchQueue.main.async {
+            if !self.refreshControl!.isRefreshing {
             self.activityIndicator.startAnimating()
+            }
         }
     }
    

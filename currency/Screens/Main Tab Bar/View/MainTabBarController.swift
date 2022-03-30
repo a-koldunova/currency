@@ -13,13 +13,8 @@ class MainTabBarController: UITabBarController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.tag == 1 {
-            presenter.getBankData()
-        }
+        super.viewDidAppear(animated)
+        presenter.getBankData()
     }
     
     func configureTabBarController() {

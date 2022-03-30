@@ -5,6 +5,7 @@ protocol BlackMarketProtocol : SwiftMessagesManager {
     func tableViewReloadData()
     func activityIndictorStartAnimating()
     func activityIndictorStopAnimating()
+    func endRefreshing()
 }
 
 protocol BlackMarketPresenterProtocol : AnyObject {
@@ -12,6 +13,8 @@ protocol BlackMarketPresenterProtocol : AnyObject {
     func goToCalculator( _ self : UIViewController, buy : Double, sell : Double, title : String)
     var blackMarketModel: BlackMarketModel? { get  set }
     var blackImage : [AppImage] { get set }
+    func getBlackMarket()
+    
 }
 
 class BlackMarketPresenter : BlackMarketPresenterProtocol {
@@ -30,8 +33,10 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     }
     
     func getBlackMarket() {
+        self.view.activityIndictorStartAnimating()
         blackMarketAPI.getBlackMarketData { model, error in
             self.view.activityIndictorStopAnimating()
+            self.view.endRefreshing()
             if error != nil || model == nil {
                 print(error!.localizedDescription)
                 self.blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)

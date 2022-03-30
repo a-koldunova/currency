@@ -51,9 +51,7 @@ class BanksViewController: MainViewController<BanksPresenterProtocol> {
     
     // MARK : @objc function
     @objc func updateTableView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.refreshControl!.endRefreshing()
-        }
+        presenter.reloadData()
     }
     
 }
@@ -98,6 +96,11 @@ extension BanksViewController: BanksViewProtocol {
     func activityIndicatorStopAnimating() {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
+        }
+    }
+    func endResfreshing() {
+        DispatchQueue.main.async {
+            self.refreshControl!.endRefreshing()
         }
     }
 }

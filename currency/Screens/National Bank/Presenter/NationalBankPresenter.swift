@@ -12,6 +12,7 @@ protocol NationalBankViewProtocol: SwiftMessagesManager {
     func reloadData()
     func activityIndicatorStartAnimating()
     func activityIndicatorStopAnimating()
+    func endRefreshing()
 }
 
 protocol NationalBankPresneterProtocol: AnyObject {
@@ -32,6 +33,7 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
     }
     
     func getNationalBankApi() {
+        view?.activityIndicatorStartAnimating()
         nationalBankAPI.getNationalBankModel { model, error in
             if let error = error, model == nil {
                 self.view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)

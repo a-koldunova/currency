@@ -32,12 +32,13 @@ class APIManager {
     
     
      func testData(url: String, completion: @escaping (Data?, Error?)->Void)  {
-        guard let url = URL(string: url) else {return}
+        guard let url = URL(string: "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json") else {return}
         var request = URLRequest(url: url)
         request.timeoutInterval=15
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(nil, error)
+                return
             }
             guard let data = data else { completion(nil, nil); return }
             completion(data, nil)

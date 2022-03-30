@@ -4,6 +4,7 @@ import Lottie
 
 class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol> {
     
+    @IBOutlet weak var chartView: ChartView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableView: UITableView! {
@@ -15,9 +16,17 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
         }
     }
     
-    @IBOutlet weak var anView: UIView!
+    @IBOutlet weak var anView: UIView! {
+        didSet {
+            anView.setViewShadow()
+            anView.backgroundColor = UIColor(red: 0.98, green: 1, blue: 0.976, alpha: 1)
+            anView.layer.cornerRadius = 16
+//            anView.layer.borderColor =
+        }
+    }
     let animationView = AnimationView(name: "chartView")
-    
+    let chartUpAnimation = AnimationView(name: "chart_up")
+//    var chartView : ChartView?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,27 +34,37 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
         initRefreshControl()
         refreshControl!.addTarget(self, action: #selector(self.updateScrollView), for: .valueChanged)
         scrollView.addSubview(refreshControl!)
-        setAnimationView()
+//        chartView.animate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        chartView.setView(id: 1)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if let id = presenter.blackMarketModel?.forecast {
-            setAnimationStart(id: id)
+            setAnimationStart(id: 1)
         }
+
     }
     
-    func setAnimationView() {
-        animationView.frame = anView.bounds
-        anView.addSubview(animationView)
+    func setAnimationView(_ view : UIView) {
+        view.isHidden = true
+        if view === chartUpAnimation {
+        view.frame = CGRect(x: 0, y: anView.bounds.height/2 - anView.bounds.width/2, width: 300, height: anView.bounds.width)
+        } else {
+            view.frame = CGRect(x: 0, y: 0, width: anView.bounds.width, height: anView.bounds.height)
+        }
+        view.contentMode = .scaleAspectFit
+
+        anView.addSubview(view)
     }
     
     
     
     
     @objc func updateScrollView() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.refreshControl!.endRefreshing()
-        }
+//        presenter.getBlackMarket()
     }
     
     /*
@@ -63,19 +82,28 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
 extension BlackMarketViewController : BlackMarketProtocol {
     func setAnimationStart(id : Int) {
         DispatchQueue.main.async {
-            switch id {
-            case 0:
-                self.animationView.currentFrame = 60
-                self.animationView.play(fromFrame: 60, toFrame: 87)
-            case -1 :
-                self.animationView.currentFrame = 0
-                self.animationView.play(fromFrame: 0, toFrame: 60)
-            case 1:
-                self.animationView.currentFrame = 60
-                self.animationView.play(fromFrame: 60, toFrame: 120)
-            default:
-                break;
-            }
+            self.chartView.animate(id: id)
+//            self.animationView.isHidden = true
+//            self.chartUpAnimation.isHidden = true
+//            self.animationView.currentFrame = 82
+//            self.animationView.animationSpeed = 0.25
+//            self.animationView.play(fromFrame: 82, toFrame: 87)
+//            self.chartUpAnimation.animationSpeed = 0.5
+//            self.chartUpAnimation.play(fromFrame: 0, toFrame: 30)
+            
+//            switch id {
+//            case 0:
+//                self.animationView.currentFrame = 60
+//                self.animationView.play(fromFrame: 60, toFrame: 87)
+//            case -1 :
+//                self.animationView.currentFrame = 0
+//                self.animationView.play(fromFrame: 0, toFrame: 60)
+//            case 1:
+//                self.animationView.currentFrame = 60
+//                self.animationView.play(fromFrame: 60, toFrame: 120)
+//            default:
+//                break;
+//            }
         }
     }
     
@@ -87,13 +115,21 @@ extension BlackMarketViewController : BlackMarketProtocol {
     
     func activityIndictorStartAnimating() {
         DispatchQueue.main.async {
+            if !self.refreshControl!.isRefreshing {
             self.activityIndicator.startAnimating()
+            }
         }
     }
     
     func activityIndictorStopAnimating() {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
+        }
+    }
+    
+    func endRefreshing() {
+        DispatchQueue.main.async {
+                self.refreshControl!.endRefreshing()
         }
     }
     

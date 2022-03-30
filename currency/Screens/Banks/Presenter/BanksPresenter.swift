@@ -4,6 +4,7 @@ protocol BanksViewProtocol: SwiftMessagesManager {
     func reloadData()
     func activityIndicatorStartAnimating()
     func activityIndicatorStopAnimating()
+    func endResfreshing()
 }
 
 protocol BanksPresenterProtocol: AnyObject {
@@ -14,6 +15,7 @@ protocol BanksPresenterProtocol: AnyObject {
     func goToTheSite(for link : String)
     func goToMapViewController(bankId: Int)
     func goToCalculatorVC(_ self : UIViewController, buy : Double, sell : Double, title : String)
+    func reloadData()
 }
 
 class BanksPresenter: BanksPresenterProtocol {
@@ -56,6 +58,7 @@ class BanksPresenter: BanksPresenterProtocol {
     
     func reloadData() {
         banksAPI.reloadData { model, error in
+            self.view?.endResfreshing()
             if let error = error {
                 print(error.localizedDescription)
             }

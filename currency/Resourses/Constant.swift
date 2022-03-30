@@ -6,6 +6,9 @@ var directoryName = "currency"
 var oneday =  24 * 60 * 60.0
 var updateNeededData = "01.01.1970"
 
+var serialQueue = DispatchQueue(label: "apiQueue", attributes: .concurrent)
+var apiSemaphore = DispatchSemaphore(value: 1)
+
 var isViewShown: Bool {
     set {
         UserDefaults.standard.set(!newValue, forKey: UserDefaultsKeys.isViewShown.rawValue)
@@ -34,6 +37,9 @@ enum AppImage  {
     case bankIcon
     case nationakBankIcon
     case nearMeIcon
+    case arrow_up
+    case arrow_down
+    case arrow_static
     
     var image : UIImage {
         switch self {
@@ -45,7 +51,9 @@ enum AppImage  {
         case .bankIcon: return UIImage(named: "bankIcon")!
         case .nationakBankIcon: return UIImage(named: "nationalBank_ic")!
         case .nearMeIcon: return UIImage(named: "nearMe_ic")!
-        
+        case .arrow_up: return UIImage(named: "up_arrow")!
+        case .arrow_down: return UIImage(named: "arrow-down")!
+        case .arrow_static: return UIImage(named: "arow_static")!
         }
     }
 }

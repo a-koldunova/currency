@@ -25,7 +25,6 @@ class MainTabBarPresenter: MainTabBarPresenterProtocol {
     required init(view: MainTabBarViewProtocol, bankAPI: BankAPIProtocol) {
         self.view = view
         self.bankAPI = bankAPI
-        getBankData()
     }
     
     func getBankData() {

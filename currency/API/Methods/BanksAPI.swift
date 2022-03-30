@@ -25,13 +25,18 @@ class BankAPI: NSObject, BankAPIProtocol {
     }
     
     func getBankAPI(completion: @escaping(Bool?, Error?)->Void) {
-        APIManager.jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
-            if model != nil {
-                let res = QueryHelper.shared.insertRates(model!)
-                UserDefaults.standard.set(Double(model!.ts), forKey: banks_key)
-                completion(res, error)
+        serialQueue.async {
+            apiSemaphore.wait()
+    //        sleep(10)
+            APIManager.jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
+                if model != nil {
+                    let res = QueryHelper.shared.insertRates(model!)
+                    UserDefaults.standard.set(Double(model!.ts), forKey: banks_key)
+                    completion(res, error)
+                    apiSemaphore.signal()
+                }
+                
             }
-            
         }
     }
     
