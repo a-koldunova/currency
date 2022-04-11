@@ -11,7 +11,7 @@
 		9F0E462A27EA28BF006E8EE8 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0E462527EA28BF006E8EE8 /* Introduction.storyboard */; };
 		9F0E462B27EA28BF006E8EE8 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462727EA28BF006E8EE8 /* IntroductionViewController.swift */; };
 		9F0E462C27EA28BF006E8EE8 /* IntroductionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462927EA28BF006E8EE8 /* IntroductionPresenter.swift */; };
-		9F0E462E27EA2DD0006E8EE8 /* CurvedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */; };
+		9F0E462E27EA2DD0006E8EE8 /* CurvedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0E462D27EA2DD0006E8EE8 /* CurvedView.swift */; };
 		9F309F9227E8D40200458CBB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F309F9427E8D40200458CBB /* Localizable.strings */; };
 		9F309F9727E8D70C00458CBB /* BlackMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F309F9927E8D70C00458CBB /* BlackMarket.storyboard */; };
 		9F309FA127E921CD00458CBB /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9F309FA027E921CD00458CBB /* swiftgen.yml */; };
@@ -113,7 +113,7 @@
 		9F0E462527EA28BF006E8EE8 /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Introduction.storyboard; sourceTree = "<group>"; };
 		9F0E462727EA28BF006E8EE8 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		9F0E462927EA28BF006E8EE8 /* IntroductionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionPresenter.swift; sourceTree = "<group>"; };
-		9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedHeaderView.swift; sourceTree = "<group>"; };
+		9F0E462D27EA2DD0006E8EE8 /* CurvedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedView.swift; sourceTree = "<group>"; };
 		9F309F8E27E8D3EE00458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
 		9F309F8F27E8D3EE00458CBB /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9F309F9027E8D3F900458CBB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -638,7 +638,7 @@
 				D19C56A727DBC4CB00D30904 /* FileUtils.swift */,
 				D19C56BA27DBD89F00D30904 /* CryptoUtils.swift */,
 				9FCE931E27E2391B00497B30 /* SwiftMessagesManager.swift */,
-				9F0E462D27EA2DD0006E8EE8 /* CurvedHeaderView.swift */,
+				9F0E462D27EA2DD0006E8EE8 /* CurvedView.swift */,
 				D1A12C7127ECDACC00128FE0 /* Date.swift */,
 			);
 			path = Helpers;
@@ -1002,7 +1002,7 @@
 			files = (
 				D1D00C6A27E3989B002922ED /* MainTabBarPresenter.swift in Sources */,
 				9FD9B2FF27DA67050077EA98 /* ViewController.swift in Sources */,
-				9F0E462E27EA2DD0006E8EE8 /* CurvedHeaderView.swift in Sources */,
+				9F0E462E27EA2DD0006E8EE8 /* CurvedView.swift in Sources */,
 				9FD9B34327DB937C0077EA98 /* BlackMarketViewController.swift in Sources */,
 				D1811EF427DFA56300B4D274 /* NationalBankAPI.swift in Sources */,
 				D19C56BD27DBD95C00D30904 /* BanksAPI.swift in Sources */,

@@ -25,6 +25,7 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
             //            textField.backgroundColor = UIColor(red: 0.879, green: 0.942, blue: 0.881, alpha: 1)
             let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(userTextFieldGesture(gesture:)))
             userTextField.addGestureRecognizer(swipeRecognizer)
+            //            userTextField.addTarget(self, action: #selector(myTextFieldDidChange), for: .editingDidBegin)
             
         }
     }
@@ -174,7 +175,10 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
         } else {
             addCaracterToTextField(userTextField, character: tag)
         }
-        buyTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.buy, from: 1)
+        var str = userTextField.text!
+        let regex = try! NSRegularExpression(pattern: "[^0-9]", options: .caseInsensitive)
+        str = regex.stringByReplacingMatches(in: str, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, str.count), withTemplate: "")
+        buyTextField.text = presenter.convert(value: (str as NSString).doubleValue, to: presenter.buy, from: 1)
         sellTextField.text = presenter.convert(value: (userTextField.text! as NSString).doubleValue, to: presenter.sell, from: 1)
     }
     
@@ -201,6 +205,13 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
     }
     
     // MARK: objc functions
+    
+    //    @objc func myTextFieldDidChange(_ textField: UITextField) {
+    //
+    //        if let amountString = textField.text?.currencyInputFormatting() {
+    //            textField.text = amountString
+    //        }
+    //    }
     
     @objc func removeView() {
         calculatorView.swipeAnimation.stop()
@@ -273,6 +284,7 @@ extension CalculatorViewController : UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("hello")
         return false
     }
     

@@ -1,7 +1,7 @@
 import UIKit
 
 protocol BuilderProtocol {
-
+    
     init()
     static func resolveIntroductionViewController() -> IntroductionViewController
     static func resolveBanksViewController()->BanksViewController
@@ -15,7 +15,7 @@ protocol BuilderProtocol {
 }
 
 class Builder: BuilderProtocol {
-   
+    
     required init() {
         
     }
@@ -37,7 +37,7 @@ class Builder: BuilderProtocol {
         vc.presenter = BanksPresenter(view: vc, banksAPI: BankAPI(queryHelper: QueryHelper.shared), router: Router.sharedInstance)
         return vc
     }
-
+    
     static func resolveCalculatorViewController(buy : Double, sell : Double, title : String) -> CalculatorViewController {
         let vc = CalculatorViewController.instantiateMyViewController(name: .calculator)
         vc.presenter = CalculatorPresenter(view: vc, buy: buy, sell: sell, title: title)
@@ -59,7 +59,7 @@ class Builder: BuilderProtocol {
     static func resolveBankMapViewController() -> BankMapViewController {
         let vc = BankMapViewController.instantiateMyViewController(name: .bankMap)
         vc.presenter = BankMapPresenter(view: vc, bankNearMeAPI: BankMapAPI(queryHelper: QueryHelper.shared))
-        return vc 
+        return vc
     }
     
     static func resolveBankMapPositionViewController(bankId: Int) -> BankMapPositionViewController {
@@ -78,8 +78,6 @@ class Builder: BuilderProtocol {
         
     }
     
-    
-    
 }
 
 enum ViewControllerKeys : String {
@@ -91,4 +89,4 @@ enum ViewControllerKeys : String {
     case calculator = "Calculator"
     case introduction = "Introduction"
 }
-    
+
