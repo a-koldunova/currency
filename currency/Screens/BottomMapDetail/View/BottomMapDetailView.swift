@@ -22,14 +22,14 @@ class BottomMapDetailView: UIView {
     }
     @IBOutlet weak var usdRateView: BlackMarketView! {
         didSet {
-            usdRateView.buyView.backgroundColor = .clear
-            usdRateView.sellView.backgroundColor = .clear
+//            usdRateView.buyView.backgroundColor = .clear
+//            usdRateView.sellView.backgroundColor = .clear
         }
     }
     @IBOutlet weak var eurRateView: BlackMarketView! {
         didSet {
-            eurRateView.buyView.backgroundColor = .clear
-            eurRateView.sellView.backgroundColor = .clear
+//            eurRateView.buyView.backgroundColor = .clear
+//            eurRateView.sellView.backgroundColor = .clear
         }
     }
     @IBOutlet weak var usdViewHeight: NSLayoutConstraint!

@@ -34,7 +34,7 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     }
     
     func getBlackMarket() {
-        self.view.activityIndictorStartAnimating()
+            self.view.activityIndictorStartAnimating()
         blackMarketAPI.getBlackMarketData { model, error in
             self.view.activityIndictorStopAnimating()
             self.view.endRefreshing()
