@@ -18,6 +18,16 @@ var isViewShown: Bool {
     }
 }
 
+var isFirstLaunch: Bool {
+    set {
+        UserDefaults.standard.set(!newValue, forKey: "isFirstLaunch")
+    }
+    get {
+        return !UserDefaults.standard.bool(forKey: "isFirstLaunch")
+    }
+}
+
+
 enum UserDefaultsKeys : String {
     case isViewShown = "IS_VIEW_SHOWN"
     case isfirstLaunch = "IS_FIRST_LAUCN"

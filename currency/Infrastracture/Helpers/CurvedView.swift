@@ -1,5 +1,5 @@
 //
-//  CurvedHeaderView.swift
+//  CurvedView.swift
 //  currency
 //
 //  Created by Anastasia Koldunova on 22.03.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable class CurvedHeaderView: UIView {
+@IBDesignable class CurvedView: UIView {
 
     @IBInspectable var curveHeight:CGFloat = 73.0
     @IBInspectable var secondCurveHeight:CGFloat = 65.0

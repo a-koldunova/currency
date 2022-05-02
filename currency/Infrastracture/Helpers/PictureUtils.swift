@@ -6,11 +6,6 @@ extension UIImageView {
     
     func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
         
-       /* self.image = nil
-        if let cachedImage = imageCache.object(forKey: NSString(string: URLString)) {
-            self.image = cachedImage
-            return
-        }*/
         DispatchQueue.main.async {
             self.image = placeHolder
         }
@@ -24,7 +19,6 @@ extension UIImageView {
                 DispatchQueue.main.async {
                     if let data = data {
                         if let downloadedImage = UIImage(data: data) {
-                            //imageCache.setObject(downloadedImage, forKey: NSString(string: URLString))
                             self.image = downloadedImage
                         }
                     }

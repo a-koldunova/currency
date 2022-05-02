@@ -39,8 +39,8 @@ class BaseMapViewController<T>: MainViewController<T>, CLLocationManagerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
-       
+        //  let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +49,7 @@ class BaseMapViewController<T>: MainViewController<T>, CLLocationManagerDelegate
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-           // self.locationManager.requestAlwaysAuthorization()
+            // self.locationManager.requestAlwaysAuthorization()
             switch locationManager.authorizationStatus {
             case .restricted, .denied:
                 print("no eccess")
@@ -96,12 +96,12 @@ class BaseMapViewController<T>: MainViewController<T>, CLLocationManagerDelegate
         print("got following error from loaction manager")
         print(error.localizedDescription)
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let baseMapDelegate = baseMapDelegate  {
-        if baseMapDelegate.shallUpdate(location: locations.first, userLocation: userLocation)  {
-            userLocation = locations.first
-        }
+            if baseMapDelegate.shallUpdate(location: locations.first, userLocation: userLocation)  {
+                userLocation = locations.first
+            }
         }
     }
     
@@ -143,5 +143,5 @@ class BaseMapViewController<T>: MainViewController<T>, CLLocationManagerDelegate
     }
     
     
-
+    
 }

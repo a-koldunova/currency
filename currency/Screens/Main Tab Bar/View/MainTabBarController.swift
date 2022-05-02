@@ -9,6 +9,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         FileUtils.createDirectory(directoryName)
         configureTabBarController()
+        isFirstLaunch = false
         
     }
     

@@ -30,7 +30,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjL-Dz-P39">
                                         <rect key="frame" x="828" y="0.0" width="414" height="896"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0j-au-Xvu" customClass="CurvedHeaderView" customModule="currency" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0j-au-Xvu" customClass="CurvedView" customModule="currency" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="403" width="414" height="493"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -85,13 +85,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXt-9G-Dd3">
                                         <rect key="frame" x="414" y="0.0" width="414" height="896"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-5d-VFy" customClass="CurvedHeaderView" customModule="currency" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-5d-VFy" customClass="CurvedView" customModule="currency" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="403" width="414" height="493"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMt-di-AcL">
-                                                <rect key="frame" x="78" y="517" width="258.5" height="70.5"/>
-                                                <string key="text">Get banks posotions 
+                                                <rect key="frame" x="81" y="517" width="252" height="70.5"/>
+                                                <string key="text">Get banks posotions
 all over the word</string>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="29"/>
                                                 <color key="textColor" name="fontColor"/>
@@ -135,13 +135,13 @@ all over the word</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stB-ao-e5u">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-8o-o5T" customClass="CurvedHeaderView" customModule="currency" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-8o-o5T" customClass="CurvedView" customModule="currency" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="403" width="414" height="493"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEn-uj-3NG">
                                                 <rect key="frame" x="92" y="517" width="230.5" height="70.5"/>
-                                                <string key="text">Get accurate 
+                                                <string key="text">Get accurate
 currency exchange</string>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="29"/>
                                                 <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>

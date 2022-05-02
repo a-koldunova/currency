@@ -1,11 +1,3 @@
-//
-//  CryptoUtils.swift
-//  currency
-//
-//  Created by Tanya Koldunova on 11.03.2022.
-//
-
-
 import Foundation
 
 class APIManager {

@@ -6,7 +6,6 @@ protocol MainViewProtocol {
     func initRefreshControl()
 }
 
-
 class MainViewController<T>: UIViewController, MainViewProtocol {
     
     var presenter : T!
@@ -15,7 +14,7 @@ class MainViewController<T>: UIViewController, MainViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setNavigationBar()
+        setNavigationBar()
     }
     
     private func setNavigationBar() {
@@ -42,10 +41,8 @@ class MainViewController<T>: UIViewController, MainViewProtocol {
         return vc
     }
     
-        func initRefreshControl() {
+    func initRefreshControl() {
         refreshControl = UIRefreshControl()
-//        refreshControl!.attributedTitle = attributedText("Update")
-//        refreshControl!.backgroundColor=UIColor(named: "backgroundColor")
         refreshControl!.tintColor = UIColor(red: 0.533, green: 0.6, blue: 0.49, alpha: 1)
     }
 }

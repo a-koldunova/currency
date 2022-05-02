@@ -21,12 +21,10 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
             anView.setViewShadow()
             anView.backgroundColor = UIColor(red: 0.98, green: 1, blue: 0.976, alpha: 1)
             anView.layer.cornerRadius = 16
-//            anView.layer.borderColor =
         }
     }
     let animationView = AnimationView(name: "chartView")
     let chartUpAnimation = AnimationView(name: "chart_up")
-//    var chartView : ChartView?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,16 +32,17 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
         initRefreshControl()
         refreshControl!.addTarget(self, action: #selector(self.updateScrollView), for: .valueChanged)
         scrollView.addSubview(refreshControl!)
-//        chartView.animate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        chartView.setView(id: 1)
+        setChartView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if let id = presenter.blackMarketModel?.forecast {
-            setAnimationStart(id: 1)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.setAnimationStart(id: id)
+            }
         }
 
     }
@@ -60,11 +59,8 @@ class BlackMarketViewController: MainViewController<BlackMarketPresenterProtocol
         anView.addSubview(view)
     }
     
-    
-    
-    
     @objc func updateScrollView() {
-//        presenter.getBlackMarket()
+        presenter.getBlackMarket()
     }
     
     /*
@@ -83,27 +79,6 @@ extension BlackMarketViewController : BlackMarketProtocol {
     func setAnimationStart(id : Int) {
         DispatchQueue.main.async {
             self.chartView.animate(id: id)
-//            self.animationView.isHidden = true
-//            self.chartUpAnimation.isHidden = true
-//            self.animationView.currentFrame = 82
-//            self.animationView.animationSpeed = 0.25
-//            self.animationView.play(fromFrame: 82, toFrame: 87)
-//            self.chartUpAnimation.animationSpeed = 0.5
-//            self.chartUpAnimation.play(fromFrame: 0, toFrame: 30)
-            
-//            switch id {
-//            case 0:
-//                self.animationView.currentFrame = 60
-//                self.animationView.play(fromFrame: 60, toFrame: 87)
-//            case -1 :
-//                self.animationView.currentFrame = 0
-//                self.animationView.play(fromFrame: 0, toFrame: 60)
-//            case 1:
-//                self.animationView.currentFrame = 60
-//                self.animationView.play(fromFrame: 60, toFrame: 120)
-//            default:
-//                break;
-//            }
         }
     }
     
@@ -132,7 +107,12 @@ extension BlackMarketViewController : BlackMarketProtocol {
                 self.refreshControl!.endRefreshing()
         }
     }
-    
+    func setChartView() {
+        DispatchQueue.main.async {
+            self.chartView.setView(id: self.presenter.blackMarketModel?.forecast)
+        }
+        
+    }
 }
 
 extension BlackMarketViewController : UITableViewDataSource, UITableViewDelegate {

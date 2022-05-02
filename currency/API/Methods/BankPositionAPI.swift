@@ -1,10 +1,3 @@
-//
-//  BankPositionAPI.swift
-//  currency
-//
-//  Created by Tanya Koldunova on 17.03.2022.
-//
-
 import Foundation
 
 protocol BankMapPositionApiProtocol {

@@ -6,6 +6,7 @@ protocol BlackMarketProtocol : SwiftMessagesManager {
     func activityIndictorStartAnimating()
     func activityIndictorStopAnimating()
     func endRefreshing()
+    func setChartView()
 }
 
 protocol BlackMarketPresenterProtocol : AnyObject {
@@ -33,7 +34,7 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     }
     
     func getBlackMarket() {
-        self.view.activityIndictorStartAnimating()
+            self.view.activityIndictorStartAnimating()
         blackMarketAPI.getBlackMarketData { model, error in
             self.view.activityIndictorStopAnimating()
             self.view.endRefreshing()
@@ -45,6 +46,7 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
                 }
             } else {
             self.blackMarketModel = model
+            self.view.setChartView()
             }
             if let id = self.blackMarketModel?.forecast { self.view.setAnimationStart(id: id) }
             self.view.tableViewReloadData()
