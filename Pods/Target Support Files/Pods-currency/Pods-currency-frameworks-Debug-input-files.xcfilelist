@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-currency/Pods-currency-frameworks.sh
-${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
 ${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
 ${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework
 ${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework

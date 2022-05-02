@@ -24,7 +24,8 @@ class BankAPI: NSObject, BankAPIProtocol {
             APIManager.jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
                 if model != nil {
                     let res = QueryHelper.shared.insertRates(model!)
-                    UserDefaults.standard.set(Double(model!.ts), forKey: banks_key)
+                    //UserDefaults.standard.set(Double(model!.ts), forKey: banks_key)
+                    UserDefaultsValues.banksDate = Double(model!.ts)
                     completion(res, error)
                     apiSemaphore.signal()
                 }

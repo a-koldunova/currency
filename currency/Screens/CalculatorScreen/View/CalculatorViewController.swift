@@ -66,8 +66,8 @@ class CalculatorViewController: MainViewController<CalculatorPresenterProtocol>,
         super.viewDidLoad()
         
         navigationItem.title = presenter.title
-        if isViewShown {
-            isViewShown = false
+        if UserDefaultsValues.isViewShown {
+            UserDefaultsValues.isViewShown = false
             setUpCalculatorView()
         }
     }

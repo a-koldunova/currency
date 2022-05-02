@@ -9,30 +9,6 @@ var updateNeededData = "01.01.1970"
 var serialQueue = DispatchQueue(label: "apiQueue", attributes: .concurrent)
 var apiSemaphore = DispatchSemaphore(value: 1)
 
-var isViewShown: Bool {
-    set {
-        UserDefaults.standard.set(!newValue, forKey: UserDefaultsKeys.isViewShown.rawValue)
-    }
-    get {
-        return !UserDefaults.standard.bool(forKey: UserDefaultsKeys.isViewShown.rawValue)
-    }
-}
-
-var isFirstLaunch: Bool {
-    set {
-        UserDefaults.standard.set(!newValue, forKey: "isFirstLaunch")
-    }
-    get {
-        return !UserDefaults.standard.bool(forKey: "isFirstLaunch")
-    }
-}
-
-
-enum UserDefaultsKeys : String {
-    case isViewShown = "IS_VIEW_SHOWN"
-    case isfirstLaunch = "IS_FIRST_LAUCN"
-}
-
 enum FileNames: String {
     case blackMarcket = "blackMarcket.txt"
     case nationalBank = "nationalBank.txt"

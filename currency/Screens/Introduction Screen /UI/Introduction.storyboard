@@ -40,7 +40,7 @@
                                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сalculate the amount you need to dollars and euros" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thd-te-ojP">
-                                                <rect key="frame" x="42.5" y="517" width="329" height="70.5"/>
+                                                <rect key="frame" x="37" y="518" width="340.5" height="68"/>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="29"/>
                                                 <color key="textColor" name="fontColor"/>
                                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMt-di-AcL">
-                                                <rect key="frame" x="81" y="517" width="252" height="70.5"/>
+                                                <rect key="frame" x="72.5" y="518" width="269.5" height="68"/>
                                                 <string key="text">Get banks posotions
 all over the word</string>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="29"/>
@@ -140,7 +140,7 @@ all over the word</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEn-uj-3NG">
-                                                <rect key="frame" x="92" y="517" width="230.5" height="70.5"/>
+                                                <rect key="frame" x="83.5" y="518" width="247" height="68"/>
                                                 <string key="text">Get accurate
 currency exchange</string>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="29"/>
@@ -267,11 +267,6 @@ currency exchange</string>
             <point key="canvasLocation" x="-239.13043478260872" y="-668.30357142857144"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="2M1-W5-Ft5"/>
-        <designable name="tfn-cc-ZPi"/>
-        <designable name="vIN-hx-d3M"/>
-    </designables>
     <resources>
         <namedColor name="fontColor">
             <color red="0.53299999237060547" green="0.60000002384185791" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

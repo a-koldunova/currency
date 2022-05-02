@@ -82,5 +82,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E65607F9-18EE-492B-A098-379B89640C2F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "currency/API/Methods/BanksAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init(queryHelper:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E65607F9-18EE-492B-A098-379B89640C2F - 4c367c91f3f95ee2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "currency.BankAPI.__allocating_init(queryHelper: currency.QueryHelperProtocol) -&gt; currency.BankAPI"
+                  moduleName = "currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tkoldunova/Developer/currency/currency/API/Methods/BanksAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  uuid = "E65607F9-18EE-492B-A098-379B89640C2F - 6ec1e14707aac445"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "currency.BankAPI.init(queryHelper: currency.QueryHelperProtocol) -&gt; currency.BankAPI"
+                  moduleName = "currency"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tkoldunova/Developer/currency/currency/API/Methods/BanksAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "71">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
