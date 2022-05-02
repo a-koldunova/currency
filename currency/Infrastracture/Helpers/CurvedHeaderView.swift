@@ -25,7 +25,6 @@ import UIKit
             path.addLine(to: CGPoint(x: rect.width, y: rect.height))
             path.addLine(to: CGPoint(x: 0, y: rect.height))
             path.close()
-            
             curvedLayer.path = path.cgPath
             curvedLayer.fillColor = UIColor.white.cgColor
             curvedLayer.frame = rect
