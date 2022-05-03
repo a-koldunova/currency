@@ -21,7 +21,7 @@ class BankAPI: NSObject, BankAPIProtocol {
         serialQueue.async {
             apiSemaphore.wait()
     //        sleep(10)
-            APIManager.jsonGetRequest(url: "https://infoship.xyz/curr/uahb.php?cli=9", returningType: BanksModel.self) { model, error in
+            APIManager.jsonGetRequest(url: "----", returningType: BanksModel.self) { model, error in
                 if model != nil {
                     let res = QueryHelper.shared.insertRates(model!)
                     //UserDefaults.standard.set(Double(model!.ts), forKey: banks_key)

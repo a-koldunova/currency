@@ -25,7 +25,7 @@ struct UserDefaultsValues {
             UserDefaults.standard.set(newValue, forKey: "banksKey")
         }
         get {
-            return !UserDefaults.standard.double(forKey: "banksKey")
+            return UserDefaults.standard.double(forKey: "banksKey")
         }
     }
 }

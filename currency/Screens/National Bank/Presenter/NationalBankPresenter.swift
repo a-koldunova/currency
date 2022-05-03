@@ -36,7 +36,9 @@ class NationalBankPresenter: NationalBankPresneterProtocol {
         view?.activityIndicatorStartAnimating()
         nationalBankAPI.getNationalBankModel { model, error in
             if let error = error, model == nil {
-                self.view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
+                DispatchQueue.main.async {
+                    self.view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
+                }
                 self.nationalBankModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .nationalBank)
             } else {
                 self.nationalBankModel = model

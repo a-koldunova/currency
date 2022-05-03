@@ -7,7 +7,7 @@ protocol NationalBankAPIProtocol: NSObject  {
 class NationalBankAPI: NSObject, NationalBankAPIProtocol {
     
     func getNationalBankModel(completion: @escaping ([NationalBankModel]?, Error?) -> Void) {
-        APIManager.jsonGetRequest(url: "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json", returningType: [NationalBankModel].self) { model, error in
+        APIManager.jsonGetRequest(url: "---", returningType: [NationalBankModel].self) { model, error in
             FileUtils.writeToFile(directoryName: directoryName, fileName: .nationalBank, model: model)
             completion(model, error)
         }
