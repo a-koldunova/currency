@@ -1,0 +1,26 @@
+// tab bar titles
+"tabBar.item.blackMarket.title" = "Черный рынок";
+"tabBar.item.banks.title" = "Банки";
+"tabBar.item.natBank.title" = "Национальный банк";
+"tabBar.item.near.title" = "Возле меня";
+// Alert Controller
+"alert.action.map.title" = "Карта";
+"alert.action.site.title" = "Перейти к сайту";
+"alert.action.calculator.title" = "Перейти к калькулятору";
+"alert.action.cancel.title" = "Отмена ";
+// Calculator Screen
+"calculator.textField.placeholder.title" = "Пожалуйста, введите число";
+"calculator.buy.title" = "Покупка";
+"calculator.sell.title" = "Продажа";
+// Messages title
+"messages.error.title" = "Ошибка";
+"Messages.error.errorDesc.title" = "Что-то пошло не так. Попробуйте позже";
+// Database
+"dataBase.bankName.title"="BANK_NAME";
+"dataBase.adress.title"="ADDRESS";
+// Introduction Screen
+"introduction.view1.label.title" = "Получите точный\nобмен валюты";
+"introduction.view2.label.title" = "Получите позиции\nбанков по всему миру";
+"introduction.view3.label.title" = "Посчитайте необходимую сумму в долларах и евро";
+"introduction.button.title" = "Дальше";
+

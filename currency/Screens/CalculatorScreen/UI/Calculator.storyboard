@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cabin-Bold.ttf">
+            <string>Cabin-Bold</string>
+        </array>
+        <array key="Cabin-Medium.ttf">
+            <string>Cabin-Medium</string>
+        </array>
+        <array key="Cabin-Regular.ttf">
+            <string>Cabin-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Calculator" id="Y6W-OH-hqX" customClass="CalculatorViewController" customModule="currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите число" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-S3-C50">
+                                <rect key="frame" x="24" y="104" width="366" height="34"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Cy6-YP-f2H">
+                                <rect key="frame" x="36" y="415" width="342" height="423"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-xX-40h">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGz-JF-yMU">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="bRs-9p-BbJ"/>
+                                                    <constraint firstAttribute="width" constant="90" id="lrP-Wk-HGp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="na4-Yb-UUX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHY-lD-m0g">
+                                                <rect key="frame" x="126" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="K5S-zW-cFo"/>
+                                                    <constraint firstAttribute="height" constant="90" id="sB2-Mg-bEN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7gE-pE-Wz4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yki-x0-cRa">
+                                                <rect key="frame" x="252" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="MNe-CN-u0z"/>
+                                                    <constraint firstAttribute="height" constant="90" id="itj-Fa-8tx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vb8-64-wu3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Tvs-K8-kCB">
+                                        <rect key="frame" x="0.0" y="111" width="342" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dd-M8-5Kf">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="URY-RW-OCG"/>
+                                                    <constraint firstAttribute="width" constant="90" id="baX-NI-E79"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="x7I-0j-6P8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-VI-hGV">
+                                                <rect key="frame" x="126" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="AVk-LR-Mh7"/>
+                                                    <constraint firstAttribute="height" constant="90" id="txu-Je-Gfn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="icM-vc-v6p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDp-rd-Xbj">
+                                                <rect key="frame" x="252" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="TRe-6k-hBD"/>
+                                                    <constraint firstAttribute="width" constant="90" id="gnc-ha-3S2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9EU-DO-JVr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="S56-su-JI5">
+                                        <rect key="frame" x="0.0" y="222" width="342" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMK-hS-mOa">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="NAg-nx-PMj"/>
+                                                    <constraint firstAttribute="width" constant="90" id="lxX-ie-X3E"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LDc-4L-Hi3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYi-Od-gkb">
+                                                <rect key="frame" x="126" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="P42-pO-cI3"/>
+                                                    <constraint firstAttribute="height" constant="90" id="lrP-Ne-PgI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gFK-v9-Hs4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUZ-Bh-Keo">
+                                                <rect key="frame" x="252" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="O3f-6O-usy"/>
+                                                    <constraint firstAttribute="width" constant="90" id="qu1-K9-pOS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1VS-BQ-joJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="k7v-tI-cJ1">
+                                        <rect key="frame" x="0.0" y="333" width="342" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-Dw-M8X">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="AY9-XO-VH9"/>
+                                                    <constraint firstAttribute="height" constant="90" id="o4Q-QJ-Ua1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hbo-NO-e2J"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0m-X3-Fz9">
+                                                <rect key="frame" x="126" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="3mZ-ML-Ftd"/>
+                                                    <constraint firstAttribute="width" constant="90" id="Bmf-o2-jag"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="G7L-eS-LmP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fC-d3-mSl">
+                                                <rect key="frame" x="252" y="0.0" width="90" height="90"/>
+                                                <color key="backgroundColor" red="0.87450980389999999" green="1" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="Jm1-0j-gpM"/>
+                                                    <constraint firstAttribute="height" constant="90" id="a6e-qs-3cy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="CalculatorButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VFh-vd-tfe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Покупка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBx-VD-Ucx">
+                                <rect key="frame" x="318" y="154" width="64" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.53333333333333333" green="0.59999999999999998" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-Y4-dLE">
+                                <rect key="frame" x="24" y="181.5" width="366" height="34"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXf-4X-Ekx">
+                                <rect key="frame" x="24" y="259" width="366" height="34"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продажа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkJ-O4-wKZ">
+                                <rect key="frame" x="312.5" y="231.5" width="69.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="16"/>
+                                <color key="textColor" red="0.53333333329999999" green="0.59999999999999998" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jBx-VD-Ucx" firstAttribute="trailing" secondItem="BHa-S3-C50" secondAttribute="trailing" constant="-8" id="3Rw-I9-vr0"/>
+                            <constraint firstItem="jTC-Y4-dLE" firstAttribute="trailing" secondItem="BHa-S3-C50" secondAttribute="trailing" id="4WL-cc-BLK"/>
+                            <constraint firstItem="BHa-S3-C50" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="6d0-Pa-xWI"/>
+                            <constraint firstItem="BHa-S3-C50" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="BQb-jh-z7R"/>
+                            <constraint firstItem="Cy6-YP-f2H" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="CA9-wt-C58"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BHa-S3-C50" secondAttribute="trailing" constant="24" id="GVm-Tw-aam"/>
+                            <constraint firstItem="OXf-4X-Ekx" firstAttribute="trailing" secondItem="jTC-Y4-dLE" secondAttribute="trailing" id="N2S-qa-TkP"/>
+                            <constraint firstItem="jTC-Y4-dLE" firstAttribute="top" secondItem="jBx-VD-Ucx" secondAttribute="bottom" constant="8" id="Wfc-y1-wS5"/>
+                            <constraint firstItem="OXf-4X-Ekx" firstAttribute="leading" secondItem="jTC-Y4-dLE" secondAttribute="leading" id="hXX-B5-uQd"/>
+                            <constraint firstItem="dkJ-O4-wKZ" firstAttribute="trailing" secondItem="jBx-VD-Ucx" secondAttribute="trailing" id="nHC-gn-a0m"/>
+                            <constraint firstItem="jTC-Y4-dLE" firstAttribute="leading" secondItem="BHa-S3-C50" secondAttribute="leading" id="qXf-cL-6pH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Cy6-YP-f2H" secondAttribute="bottom" constant="24" id="s20-qm-DDU"/>
+                            <constraint firstItem="dkJ-O4-wKZ" firstAttribute="top" secondItem="jTC-Y4-dLE" secondAttribute="bottom" constant="16" id="uId-CH-A43"/>
+                            <constraint firstItem="OXf-4X-Ekx" firstAttribute="top" secondItem="dkJ-O4-wKZ" secondAttribute="bottom" constant="8" id="w61-O6-xWk"/>
+                            <constraint firstItem="jBx-VD-Ucx" firstAttribute="top" secondItem="BHa-S3-C50" secondAttribute="bottom" constant="16" id="wvg-om-0oD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MV1-N7-0PG"/>
+                    <connections>
+                        <outlet property="buyLabel" destination="jBx-VD-Ucx" id="Yxe-Iu-kbC"/>
+                        <outlet property="buyTextField" destination="jTC-Y4-dLE" id="BDg-QD-cIE"/>
+                        <outlet property="sellLabel" destination="dkJ-O4-wKZ" id="mEr-Xc-BSa"/>
+                        <outlet property="sellTextField" destination="OXf-4X-Ekx" id="RX4-Yy-Igt"/>
+                        <outlet property="userTextField" destination="BHa-S3-C50" id="TW6-mp-cY4"/>
+                        <outletCollection property="calculatorButtons" destination="2ge-Dw-M8X" collectionClass="NSMutableArray" id="XMf-oV-6oW"/>
+                        <outletCollection property="calculatorButtons" destination="UMK-hS-mOa" collectionClass="NSMutableArray" id="f8u-4Y-a6c"/>
+                        <outletCollection property="calculatorButtons" destination="MYi-Od-gkb" collectionClass="NSMutableArray" id="Bmm-hJ-3sW"/>
+                        <outletCollection property="calculatorButtons" destination="uUZ-Bh-Keo" collectionClass="NSMutableArray" id="3hi-HC-gou"/>
+                        <outletCollection property="calculatorButtons" destination="4Dd-M8-5Kf" collectionClass="NSMutableArray" id="R38-iT-QMr"/>
+                        <outletCollection property="calculatorButtons" destination="7Lx-VI-hGV" collectionClass="NSMutableArray" id="Rv3-hJ-Fpa"/>
+                        <outletCollection property="calculatorButtons" destination="HDp-rd-Xbj" collectionClass="NSMutableArray" id="bkO-Bq-9Hc"/>
+                        <outletCollection property="calculatorButtons" destination="aGz-JF-yMU" collectionClass="NSMutableArray" id="yfl-IW-U29"/>
+                        <outletCollection property="calculatorButtons" destination="eHY-lD-m0g" collectionClass="NSMutableArray" id="jbt-PJ-XsQ"/>
+                        <outletCollection property="calculatorButtons" destination="Yki-x0-cRa" collectionClass="NSMutableArray" id="ACT-3q-yN0"/>
+                        <outletCollection property="calculatorButtons" destination="x0m-X3-Fz9" collectionClass="NSMutableArray" id="H66-wS-8qi"/>
+                        <outletCollection property="calculatorButtons" destination="6fC-d3-mSl" collectionClass="NSMutableArray" id="w24-3w-euv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Kn-sP-dpc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="veX-dr-Fft" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWG-OR-zf7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="AdH-XV-Gaw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rir-dl-h46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

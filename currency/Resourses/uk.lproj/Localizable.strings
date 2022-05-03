@@ -1,0 +1,26 @@
+// tab bar titles
+"tabBar.item.blackMarket.title" = "Чорний ринок";
+"tabBar.item.banks.title" = "Банки";
+"tabBar.item.natBank.title" = "Національний банк";
+"tabBar.item.near.title" = "Біля мене";
+// Alert Controller
+"alert.action.map.title" = "Map";
+"alert.action.site.title" = "Перейти на сайт";
+"alert.action.calculator.title" = "Перейдіти до калькулятора";
+"alert.action.cancel.title" = "Скасувати";
+// Calculator Screen
+"calculator.textField.placeholder.title" = "Будь ласка, введіть номер";
+"calculator.buy.title" = "Покупка";
+"calculator.sell.title" = "Продаж";
+// Messages title
+"messages.error.title" = "Помилка";
+"Messages.error.errorDesc.title" = "Щось пішло не так. Спробуй пізніше";
+// Database
+"dataBase.bankName.title"="BANK_NAME_UA";
+"dataBase.adress.title"="ADDRESS_UA";
+// Introduction Screen
+"introduction.view1.label.title" = "Получіть точний\nобмін валюти";
+"introduction.view2.label.title" = "Получіть позицій\nбанків по всьому світу";
+"introduction.view3.label.title" = "Розрахуйте необхідну суму в доларах і євро";
+"introduction.button.title" = "Далі";
+

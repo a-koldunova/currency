@@ -1,0 +1,25 @@
+// tab bar titles
+"tabBar.item.blackMarket.title" = "Black Market";
+"tabBar.item.banks.title" = "Banks";
+"tabBar.item.natBank.title" = "National Banks";
+"tabBar.item.near.title" = "Near me";
+// Alert Controller
+"alert.action.map.title" = "Map";
+"alert.action.site.title" = "Go to site";
+"alert.action.calculator.title" = "Go to calculator";
+"alert.action.cancel.title" = "Cancel";
+// Calculator Screen
+"calculator.textField.placeholder.title" = "Please, enter a number";
+"calculator.buy.title" = "Buy";
+"calculator.sell.title" = "Sell";
+// Messages title
+"notMessages.error.title" = "Error";
+"notMessages.error.errorDesc.title" = "Something went wrong. Try later";
+// Database
+"dataBase.bankName.title"="BANK_NAME_UA";
+"dataBase.adress.title"="ADDRESS_UA";
+// Introduction Screen
+"introduction.view1.label.title" = "Get accurate\ncurrency exchange";
+"introduction.view2.label.title" = "Get banks posotions\nall over the word";
+"introduction.view3.label.title" = "Сalculate the amount you need to dollars and euros";
+"introduction.button.title" = "Next";

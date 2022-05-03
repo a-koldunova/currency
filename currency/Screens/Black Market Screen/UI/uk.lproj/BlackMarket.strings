@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Продажа"; ObjectID = "MNe-10-WkZ"; */
+"MNe-10-WkZ.text" = "Продаж";
+
+/* Class = "UILabel"; text = "Прогноз:"; ObjectID = "au3-iI-a4g"; */
+"au3-iI-a4g.text" = "Прогноз:";
+
+/* Class = "UILabel"; text = "Покупка"; ObjectID = "wT1-qo-tSL"; */
+"wT1-qo-tSL.text" = "Покупка";

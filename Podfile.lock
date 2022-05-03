@@ -1,0 +1,38 @@
+PODS:
+  - FMDB/SQLCipher (2.7.5):
+    - SQLCipher
+  - lottie-ios (3.3.0)
+  - SQLCipher (4.5.1):
+    - SQLCipher/standard (= 4.5.1)
+  - SQLCipher/common (4.5.1)
+  - SQLCipher/standard (4.5.1):
+    - SQLCipher/common
+  - SwiftGen (6.5.1)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+
+DEPENDENCIES:
+  - FMDB/SQLCipher
+  - lottie-ios
+  - SwiftGen
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - lottie-ios
+    - SQLCipher
+    - SwiftGen
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  SQLCipher: 712e8416685e8e575b9b0706ffee71678b2fdcf8
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+
+PODFILE CHECKSUM: 2dac04907831253f7b1ee9e7ee3c390829085e90
+
+COCOAPODS: 1.11.2
