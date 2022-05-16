@@ -24,7 +24,7 @@ protocol CalculatorPresenterProtocol : AnyObject {
 }
 
 class CalculatorPresenter : CalculatorPresenterProtocol {
-    let view : CalculatorProtocol
+    weak var view : CalculatorProtocol?
     var buy : Double
     var sell : Double
     var clearUserTF : Bool = true

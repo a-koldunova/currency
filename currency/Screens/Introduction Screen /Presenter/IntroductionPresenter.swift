@@ -12,7 +12,7 @@ protocol IntroductionPresenterProtocol : AnyObject {
 
 class IntroductionPresenter : IntroductionPresenterProtocol {
    
-    let view : IntroductionProtocol
+    weak var view : IntroductionProtocol?
     
     required init(view: IntroductionProtocol) {
         self.view  = view

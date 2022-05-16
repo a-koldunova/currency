@@ -20,7 +20,7 @@ protocol BlackMarketPresenterProtocol : AnyObject {
 
 class BlackMarketPresenter : BlackMarketPresenterProtocol {
     var blackImage: [AppImage] = [.dollarImage, .euroImage, .rubleImage]
-    let view : BlackMarketProtocol
+    weak var view : BlackMarketProtocol?
     let blackMarketAPI : BlackMarketAPILMP
     var blackMarketModel : BlackMarketModel?
     let router :  RouterProtocol?
@@ -34,22 +34,22 @@ class BlackMarketPresenter : BlackMarketPresenterProtocol {
     }
     
     func getBlackMarket() {
-            self.view.activityIndictorStartAnimating()
+        self.view?.activityIndictorStartAnimating()
         blackMarketAPI.getBlackMarketData { model, error in
-            self.view.activityIndictorStopAnimating()
-            self.view.endRefreshing()
+            self.view?.activityIndictorStopAnimating()
+            self.view?.endRefreshing()
             if error != nil || model == nil {
                 print(error!.localizedDescription)
                 self.blackMarketModel = FileUtils.getStructFromFile(directoryName: directoryName, fileName: .blackMarcket)
                 DispatchQueue.main.async {
-                    self.view.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
+                    self.view?.showMessages(theme: .error, withMessage: MessagesText.error, isForeverDuration: false, actionText: nil, action: nil)
                 }
             } else {
             self.blackMarketModel = model
-            self.view.setChartView()
+            self.view?.setChartView()
             }
-            if let id = self.blackMarketModel?.forecast { self.view.setAnimationStart(id: id) }
-            self.view.tableViewReloadData()
+            if let id = self.blackMarketModel?.forecast { self.view?.setAnimationStart(id: id) }
+            self.view?.tableViewReloadData()
         }
     }
     
