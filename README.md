@@ -24,9 +24,6 @@ displaying the location of nearby banks, the presence of a calculator will help 
 - lottie-ios
 - FMDB/SQLCipher
 - SwiftGen
-## Database design(in developing...)
-
-![](currencyBD-2-2.png)
 
 ## Authors
 
